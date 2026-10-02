@@ -1,0 +1,72 @@
+{
+  "_comment": "Add any recipe website here. The crawler will auto-detect Schema.org sitemaps or fall back to HTML scraping.",
+  "sites": [
+    {
+      "name": "AllRecipes",
+      "url": "https://www.allrecipes.com",
+      "sitemap": "https://www.allrecipes.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Food Network",
+      "url": "https://www.foodnetwork.com",
+      "sitemap": "https://www.foodnetwork.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Simply Recipes",
+      "url": "https://www.simplyrecipes.com",
+      "sitemap": "https://www.simplyrecipes.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Serious Eats",
+      "url": "https://www.seriouseats.com",
+      "sitemap": "https://www.seriouseats.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Bon Appétit",
+      "url": "https://www.bonappetit.com",
+      "sitemap": "https://www.bonappetit.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Tasty",
+      "url": "https://tasty.co",
+      "sitemap": "https://tasty.co/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Budget Bytes",
+      "url": "https://www.budgetbytes.com",
+      "sitemap": "https://www.budgetbytes.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "The Pioneer Woman",
+      "url": "https://www.thepioneerwoman.com",
+      "sitemap": "https://www.thepioneerwoman.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Minimalist Baker",
+      "url": "https://minimalistbaker.com",
+      "sitemap": "https://minimalistbaker.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Skinnytaste",
+      "url": "https://www.skinnytaste.com",
+      "sitemap": "https://www.skinnytaste.com/sitemap.xml",
+      "enabled": true
+    }
+  ],
+  "crawler": {
+    "max_recipes_per_site": 200,
+    "request_delay_seconds": 1.5,
+    "request_timeout_seconds": 15,
+    "user_agent": "CraveBox-NutritionAutotune/1.0 (github.com/solo204/recipe-extractor-android; educational use)",
+    "max_workers": 4
+  }
+}

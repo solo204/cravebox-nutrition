@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Autotune working files (not committed — regenerated each run)
+autotune/crawled_ingredients.json
+autotune/parse_report.json
+autotune/proposals.json
+autotune/autotune_summary.json
+
+# USDA / GroceryDB raw data files (large, download locally)
+autotune/data/usda_sr_legacy.csv
+autotune/data/food_nutrient.csv
+autotune/data/nutrient.csv
+autotune/data/grocerydb.csv
+autotune/data/.usda_cache_key
+
+# OS
+.DS_Store
+Thumbs.db
