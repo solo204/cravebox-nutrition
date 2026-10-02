@@ -115,18 +115,4 @@ jobs:
 
       - name: Print summary
         if: always()
-        run: |
-          [ -f autotune/autotune_summary.json ] && python -c "
-import json
-d  = json.load(open('autotune/autotune_summary.json'))
-pr = d.get('parse_report', {})
-ap = d.get('apply', {})
-v  = d.get('version', {})
-print(f'Crawled:       {d.get(\"crawled_ingredients\", \"?\"):,}')
-print(f'Parse OK:      {pr.get(\"ok\", \"?\")}  ({pr.get(\"ok_pct\", \"?\")}%)')
-print(f'UNKNOWN gaps:  {pr.get(\"unknown\", \"?\")}')
-print(f'New entries:   {ap.get(\"new_entries_applied\", \"?\")}')
-print(f'New synonyms:  {ap.get(\"new_synonyms_applied\", \"?\")}')
-print(f'DB version:    {v.get(\"version\", \"?\")}  ({v.get(\"entry_count\", \"?\")} entries)')
-print(f'Elapsed:       {d.get(\"elapsed_seconds\", \"?\")}s')
-"
+        run: python autotune/print_summary.py
