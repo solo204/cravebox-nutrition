@@ -52,25 +52,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r autotune/requirements.txt
 
-      - name: Cache USDA data files (30 days)
-        uses: actions/cache@v4
-        with:
-          path: autotune/data/
-          key: usda-data-${{ hashFiles('autotune/data/.usda_cache_key') }}
-
-      - name: Fetch USDA SR Legacy CSVs if not cached
+      - name: Check USDA data files
         run: |
-          if [ ! -f autotune/data/food_nutrient.csv ]; then
-            echo "Downloading USDA FoodData Central SR Legacy ..."
-            mkdir -p autotune/data
-            curl -L "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2019-04.zip" \
-                 -o /tmp/usda_sr.zip --max-time 180
-            unzip -j /tmp/usda_sr.zip "*.csv" -d autotune/data/
-            mv autotune/data/food.csv autotune/data/usda_sr_legacy.csv 2>/dev/null || true
-            date +%Y-%m > autotune/data/.usda_cache_key
-            echo "USDA data ready"
+          if [ -f autotune/data/food_nutrient.csv ]; then
+            echo "USDA data files present (uploaded to repo or cached)"
           else
-            echo "USDA data already cached"
+            echo "WARNING: autotune/data/ is missing USDA CSVs."
+            echo "Upload usda_sr_legacy.csv, food_nutrient.csv, nutrient.csv via git-lfs or manually."
+            echo "Enricher will fall back to USDA FDC API only."
           fi
 
       - name: Run autotune pipeline
