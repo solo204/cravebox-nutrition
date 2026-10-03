@@ -69523,5 +69523,11 @@
     "protein": 10.3,
     "fat": 1.6,
     "carbs": 75.9
+  },
+  "chili paste": {
+    "calories": 56,
+    "protein": 2.2,
+    "fat": 0.8,
+    "carbs": 11.6
   }
 }
