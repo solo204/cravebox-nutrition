@@ -69517,5 +69517,11 @@
     "protein": 6.9,
     "fat": 3.9,
     "carbs": 76.8
+  },
+  "rye": {
+    "calories": 338,
+    "protein": 10.3,
+    "fat": 1.6,
+    "carbs": 75.9
   }
 }
