@@ -79,7 +79,7 @@ jobs:
           [ "${{ github.event.inputs.dry_run }}"   = "true" ] && ARGS="$ARGS --dry-run"
           [ -n "${{ github.event.inputs.sites }}"  ] && ARGS="$ARGS --sites '${{ github.event.inputs.sites }}'"
           [ -n "${{ github.event.inputs.urls }}"   ] && ARGS="$ARGS --urls '${{ github.event.inputs.urls }}'"
-          [ -n "${{ github.event.inputs.dataset }}" ] && ARGS="$ARGS --dataset '${{ github.event.inputs.dataset }}' --max-dataset-rows '${{ github.event.inputs.max_dataset_rows || '500000' }}'"
+          [ -n "${{ github.event.inputs.dataset }}" ] && ARGS="$ARGS --dataset ${{ github.event.inputs.dataset }} --max-dataset-rows ${{ github.event.inputs.max_dataset_rows || '500000' }}"
           python autotune/autotune.py $ARGS
 
       - name: Check for changes
