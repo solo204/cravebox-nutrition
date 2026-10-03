@@ -48654,13 +48654,10 @@
     "na": 0
   },
   "pita bread": {
-    "kcal": 275,
-    "p": 9.1,
-    "c": 55.7,
-    "f": 1.2,
-    "fb": 2.2,
-    "sg": 0.5,
-    "na": 536
+    "calories": 275,
+    "protein": 9.1,
+    "fat": 1.2,
+    "carbs": 55.7
   },
   "pitanga surinam-cherry raw": {
     "kcal": 33.0,
