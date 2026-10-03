@@ -23660,6 +23660,15 @@
     "sg": 24.0,
     "na": 20.0
   },
+  "chocolate fudge instant pudding mix": {
+    "kcal": 378.0,
+    "p": 2.3,
+    "c": 87.9,
+    "f": 1.9,
+    "fb": 3.6,
+    "sg": 67.9,
+    "na": 1771.0
+  },
   "chocolate sandwich cookie": {
     "kcal": 480,
     "p": 5,
@@ -51371,6 +51380,15 @@
     "sg": 0.8,
     "na": 5.0
   },
+  "prepared horseradish": {
+    "kcal": 48.0,
+    "p": 1.2,
+    "c": 11.3,
+    "f": 0.7,
+    "fb": 3.3,
+    "sg": 8.0,
+    "na": 420.0
+  },
   "preserved lemon": {
     "kcal": 51,
     "p": 2,
@@ -63736,6 +63754,24 @@
     "fb": 1.5,
     "sg": 9.4,
     "na": 3
+  },
+  "unsweetened baking chocolate": {
+    "kcal": 472.0,
+    "p": 12.1,
+    "c": 36.2,
+    "f": 47.7,
+    "fb": 18.1,
+    "sg": 0.0,
+    "na": 12.0
+  },
+  "unsweetened chocolate squares": {
+    "kcal": 642.0,
+    "p": 14.3,
+    "c": 28.4,
+    "f": 52.3,
+    "fb": 16.6,
+    "sg": 0.9,
+    "na": 24.0
   },
   "urad dal": {
     "kcal": 59,
