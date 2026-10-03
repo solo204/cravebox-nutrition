@@ -21,3 +21,5 @@ autotune/data/.usda_cache_key
 # OS
 .DS_Store
 Thumbs.db
+autotune/synonyms.json
+autotune/modifiers.json
