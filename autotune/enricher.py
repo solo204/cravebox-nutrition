@@ -237,22 +237,42 @@ def query_fdc_api(query: str, api_key: str, timeout: int = 10) -> Optional[dict]
 
 def fuzzy_match(query: str, corpus: list[dict], threshold: float = CONFIDENCE_THRESHOLD) -> Optional[tuple[dict, float]]:
     """
-    Match query against corpus entries by name.
-    Returns (entry, confidence) or None.
+    Match query against USDA corpus entries by name.
+
+    USDA names are verbose ("nuts, cashew nuts, dry roasted, without salt added") so
+    we use a two-stage approach:
+      1. Pre-filter: only keep entries where ALL meaningful query words (len>2) appear
+         in the USDA name — eliminates false positives like "liquid smoke" → "chocolate liquid"
+      2. Among filtered candidates, score with WRatio (balanced) and return best.
+
+    Falls back to full corpus WRatio search at a higher threshold if pre-filter returns nothing.
     """
     if not corpus:
         return None
 
+    query_words = [w for w in query.lower().split() if len(w) > 2]
+
+    # Stage 1: pre-filter to candidates containing ALL query words
+    filtered = [e for e in corpus if all(w in e["name"] for w in query_words)]
+
+    if filtered:
+        names = [e["name"] for e in filtered]
+        result = process.extractOne(query, names, scorer=fuzz.WRatio)
+        if result:
+            best_name, score, idx = result
+            confidence = score / 100.0
+            if confidence >= threshold:
+                return filtered[idx], confidence
+
+    # Stage 2: fallback — full corpus WRatio at stricter threshold
     names = [e["name"] for e in corpus]
-    result = process.extractOne(query, names, scorer=fuzz.token_sort_ratio)
-    if not result:
-        return None
+    result = process.extractOne(query, names, scorer=fuzz.WRatio)
+    if result:
+        best_name, score, idx = result
+        confidence = score / 100.0
+        if confidence >= max(threshold, 0.92):   # stricter to avoid false positives
+            return corpus[idx], confidence
 
-    best_name, score, idx = result
-    confidence = score / 100.0
-
-    if confidence >= threshold:
-        return corpus[idx], confidence
     return None
 
 
