@@ -1007,6 +1007,15 @@
     "sg": 0.0,
     "na": 150.0
   },
+  "anjou pears": {
+    "kcal": 62.0,
+    "p": 0.3,
+    "c": 14.9,
+    "f": 0.1,
+    "fb": 3.0,
+    "sg": 9.5,
+    "na": 1.0
+  },
   "annatto oil": {
     "kcal": 857.0,
     "p": 0.0,
@@ -1555,6 +1564,15 @@
     "fb": 1.6,
     "sg": 10.7,
     "na": 4.0
+  },
+  "apricots in light syrup": {
+    "kcal": 49.0,
+    "p": 0.6,
+    "c": 12.5,
+    "f": 0.1,
+    "fb": 1.6,
+    "sg": 0.0,
+    "na": 2.0
   },
   "apricots in syrup": {
     "kcal": 83.0,
@@ -2663,6 +2681,15 @@
     "sg": 0,
     "na": 656
   },
+  "bean liquid": {
+    "kcal": 47.0,
+    "p": 1.8,
+    "c": 2.8,
+    "f": 3.2,
+    "fb": 0.1,
+    "sg": 0.0,
+    "na": 2.0
+  },
   "bean paste": {
     "kcal": 90,
     "p": 4.5,
@@ -3672,6 +3699,15 @@
     "na": 12.0
   },
   "bear black meat alaska native": {
+    "kcal": 155.0,
+    "p": 20.1,
+    "c": 0.0,
+    "f": 8.3,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
+  "bear meat": {
     "kcal": 155.0,
     "p": 20.1,
     "c": 0.0,
@@ -14633,6 +14669,15 @@
     "sg": 0,
     "na": 2900
   },
+  "black bean soup": {
+    "kcal": 103.0,
+    "p": 5.1,
+    "c": 14.8,
+    "f": 2.6,
+    "fb": 4.9,
+    "sg": 0.9,
+    "na": 311.0
+  },
   "black beans": {
     "kcal": 118,
     "p": 6.91,
@@ -14641,6 +14686,15 @@
     "fb": 0,
     "sg": 0,
     "na": 218
+  },
+  "black caviar": {
+    "kcal": 264.0,
+    "p": 24.6,
+    "c": 4.0,
+    "f": 17.9,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 1500.0
   },
   "black cod": {
     "kcal": 70,
@@ -14678,6 +14732,15 @@
     "sg": 0,
     "na": 11
   },
+  "black turtle bean": {
+    "kcal": 339.0,
+    "p": 21.2,
+    "c": 63.2,
+    "f": 0.9,
+    "fb": 15.5,
+    "sg": 2.1,
+    "na": 9.0
+  },
   "black vinegar": {
     "kcal": 260,
     "p": 8.88,
@@ -14695,6 +14758,15 @@
     "fb": 1.35,
     "sg": 0,
     "na": 0
+  },
+  "blackberrie": {
+    "kcal": 52.0,
+    "p": 0.8,
+    "c": 9.8,
+    "f": 1.1,
+    "fb": 3.2,
+    "sg": 3.6,
+    "na": 6.0
   },
   "blackberries canned heavy syrup solids and liquids": {
     "kcal": 92.0,
@@ -14820,6 +14892,15 @@
     "f": 0.6,
     "fb": 2.7,
     "sg": 8.4,
+    "na": 1.0
+  },
+  "blueberries in heavy syrup": {
+    "kcal": 107.0,
+    "p": 0.6,
+    "c": 28.3,
+    "f": 0.3,
+    "fb": 4.9,
+    "sg": 19.3,
     "na": 1.0
   },
   "blueberries in light syrup": {
@@ -16046,6 +16127,15 @@
     "sg": 0,
     "na": 0
   },
+  "brown sesame seed": {
+    "kcal": 392.0,
+    "p": 7.6,
+    "c": 81.5,
+    "f": 3.8,
+    "fb": 5.4,
+    "sg": 0.0,
+    "na": 227.0
+  },
   "brown sugar": {
     "kcal": 380,
     "p": 0.0,
@@ -16432,6 +16522,15 @@
     "fb": 1.96,
     "sg": 0,
     "na": 0
+  },
+  "butterscotch topping": {
+    "kcal": 216.0,
+    "p": 1.2,
+    "c": 57.0,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 57.0,
+    "na": 341.0
   },
   "cabbage": {
     "kcal": 31,
@@ -18062,6 +18161,15 @@
     "sg": 5.8,
     "na": 452.0
   },
+  "canned strawberries in syrup": {
+    "kcal": 92.0,
+    "p": 0.6,
+    "c": 23.5,
+    "f": 0.3,
+    "fb": 1.7,
+    "sg": 21.8,
+    "na": 4.0
+  },
   "canned tomatoes": {
     "kcal": 23,
     "p": 0.87,
@@ -18151,6 +18259,24 @@
     "fb": 0.0,
     "sg": 13.3,
     "na": 12.0
+  },
+  "carbonated beverages": {
+    "kcal": 62.0,
+    "p": 0.4,
+    "c": 15.0,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 13.8,
+    "na": 48.0
+  },
+  "carbonated chocolate soda": {
+    "kcal": 42.0,
+    "p": 0.0,
+    "c": 10.7,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 10.7,
+    "na": 4.0
   },
   "carbonated lemon-lime beverage": {
     "kcal": 41.0,
@@ -20375,6 +20501,15 @@
     "sg": 0,
     "na": 1100
   },
+  "chapati": {
+    "kcal": 297.0,
+    "p": 11.2,
+    "c": 46.4,
+    "f": 7.5,
+    "fb": 4.9,
+    "sg": 2.7,
+    "na": 409.0
+  },
   "char siu sauce": {
     "kcal": 29,
     "p": 1.44,
@@ -21302,6 +21437,15 @@
     "sg": 1.8,
     "na": 704.0
   },
+  "cheesecake": {
+    "kcal": 321.0,
+    "p": 5.5,
+    "c": 25.5,
+    "f": 22.5,
+    "fb": 0.4,
+    "sg": 21.8,
+    "na": 438.0
+  },
   "cheesefurter cheese smokie pork beef": {
     "kcal": 328.0,
     "p": 14.1,
@@ -21337,6 +21481,24 @@
     "fb": 1.8,
     "sg": 0,
     "na": 656
+  },
+  "cherries in juice": {
+    "kcal": 54.0,
+    "p": 0.9,
+    "c": 13.8,
+    "f": 0.0,
+    "fb": 1.5,
+    "sg": 12.3,
+    "na": 3.0
+  },
+  "cherries in syrup": {
+    "kcal": 91.0,
+    "p": 0.7,
+    "c": 23.3,
+    "f": 0.1,
+    "fb": 1.1,
+    "sg": 22.2,
+    "na": 7.0
   },
   "cherries sour canned water pack drained": {
     "kcal": 42.0,
@@ -23831,6 +23993,15 @@
     "sg": 8,
     "na": 900
   },
+  "chinese vegetables": {
+    "kcal": 95.0,
+    "p": 8.2,
+    "c": 5.4,
+    "f": 4.6,
+    "fb": 0.9,
+    "sg": 2.9,
+    "na": 413.0
+  },
   "chipotle chiles": {
     "kcal": 23,
     "p": 0.72,
@@ -23894,6 +24065,24 @@
     "sg": 1.9,
     "na": 3.0
   },
+  "chocolate bars": {
+    "kcal": 466.0,
+    "p": 5.8,
+    "c": 63.8,
+    "f": 24.9,
+    "fb": 3.4,
+    "sg": 0.0,
+    "na": 200.0
+  },
+  "chocolate candy bar": {
+    "kcal": 495.0,
+    "p": 8.9,
+    "c": 63.9,
+    "f": 23.2,
+    "fb": 3.6,
+    "sg": 53.6,
+    "na": 321.0
+  },
   "chocolate chips": {
     "kcal": 480,
     "p": 5,
@@ -23929,6 +24118,15 @@
     "fb": 10.9,
     "sg": 24.0,
     "na": 20.0
+  },
+  "chocolate flavored syrup": {
+    "kcal": 153.0,
+    "p": 1.4,
+    "c": 34.6,
+    "f": 1.0,
+    "fb": 0.0,
+    "sg": 28.6,
+    "na": 100.0
   },
   "chocolate fudge frosting": {
     "kcal": 264.0,
@@ -23983,6 +24181,15 @@
     "fb": 2.2,
     "sg": 46,
     "na": 400
+  },
+  "chocolate spread": {
+    "kcal": 539.0,
+    "p": 5.4,
+    "c": 62.4,
+    "f": 29.7,
+    "fb": 5.4,
+    "sg": 54.0,
+    "na": 41.0
   },
   "chocolate stick": {
     "kcal": 521.0,
@@ -24101,6 +24308,15 @@
     "sg": 25.7,
     "na": 305.0
   },
+  "citron": {
+    "kcal": 99.0,
+    "p": 1.8,
+    "c": 25.3,
+    "f": 0.5,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 6.0
+  },
   "citrus juice": {
     "kcal": 162.0,
     "p": 1.2,
@@ -24127,6 +24343,15 @@
     "fb": 0,
     "sg": 0,
     "na": 56
+  },
+  "claret wine": {
+    "kcal": 83.0,
+    "p": 0.1,
+    "c": 3.0,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
   },
   "clarified butter": {
     "kcal": 876,
@@ -24451,6 +24676,24 @@
     "fb": 2.3,
     "sg": 32.0,
     "na": 380.0
+  },
+  "cookie dough": {
+    "kcal": 458.0,
+    "p": 8.2,
+    "c": 52.1,
+    "f": 25.0,
+    "fb": 1.1,
+    "sg": 0.0,
+    "na": 397.0
+  },
+  "cookie mix": {
+    "kcal": 497.0,
+    "p": 4.6,
+    "c": 66.1,
+    "f": 25.2,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 290.0
   },
   "cookie vanilla with caramel coconut and chocolate coating": {
     "kcal": 489.0,
@@ -25883,6 +26126,15 @@
     "sg": 0.0,
     "na": 395
   },
+  "crabapple": {
+    "kcal": 76.0,
+    "p": 0.4,
+    "c": 19.9,
+    "f": 0.3,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 1.0
+  },
   "crabapples raw": {
     "kcal": 76.0,
     "p": 0.4,
@@ -27260,6 +27512,15 @@
     "sg": 2.76,
     "na": 52
   },
+  "custard mix": {
+    "kcal": 410.0,
+    "p": 6.9,
+    "c": 82.8,
+    "f": 6.4,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 281.0
+  },
   "custard-apple bullock's-heart raw": {
     "kcal": 101.0,
     "p": 1.7,
@@ -27395,6 +27656,15 @@
     "sg": 24.2,
     "na": 11
   },
+  "dark rye": {
+    "kcal": 325.0,
+    "p": 15.9,
+    "c": 68.6,
+    "f": 2.2,
+    "fb": 23.8,
+    "sg": 2.3,
+    "na": 2.0
+  },
   "dark soy sauce": {
     "kcal": 66,
     "p": 5.7,
@@ -27448,6 +27718,15 @@
     "fb": 6.7,
     "sg": 66.5,
     "na": 1.0
+  },
+  "decaffeinated espresso": {
+    "kcal": 9.0,
+    "p": 0.1,
+    "c": 1.7,
+    "f": 0.2,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 14.0
   },
   "deer venison sitka raw alaska native": {
     "kcal": 116.0,
@@ -27637,6 +27916,15 @@
     "fb": 0,
     "sg": 0,
     "na": 125
+  },
+  "diet v8 splash": {
+    "kcal": 4.0,
+    "p": 0.0,
+    "c": 1.3,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.4,
+    "na": 15.0
   },
   "digiorno pizza cheese topping cheese stuffed crust frozen baked": {
     "kcal": 279.0,
@@ -27925,6 +28213,15 @@
     "fb": 2,
     "sg": 0,
     "na": 2700
+  },
+  "dough rolls": {
+    "kcal": 330.0,
+    "p": 4.3,
+    "c": 53.4,
+    "f": 11.3,
+    "fb": 1.4,
+    "sg": 21.3,
+    "na": 780.0
   },
   "doughnut": {
     "kcal": 412.0,
@@ -28294,6 +28591,15 @@
     "fb": 0,
     "sg": 0,
     "na": 88
+  },
+  "duck meat": {
+    "kcal": 84.0,
+    "p": 20.2,
+    "c": 0.0,
+    "f": 0.4,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
   },
   "duck scoter white-winged meat alaska native": {
     "kcal": 84.0,
@@ -31616,6 +31922,24 @@
     "sg": 1.8,
     "na": 561.0
   },
+  "foie gras pate": {
+    "kcal": 462.0,
+    "p": 11.4,
+    "c": 4.7,
+    "f": 43.8,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 697.0
+  },
+  "frank": {
+    "kcal": 140.0,
+    "p": 12.0,
+    "c": 1.6,
+    "f": 9.5,
+    "fb": 0.0,
+    "sg": 0.8,
+    "na": 744.0
+  },
   "frankfurter beef heated": {
     "kcal": 322.0,
     "p": 11.7,
@@ -32129,6 +32453,33 @@
     "sg": 17.1,
     "na": 6.0
   },
+  "fruit cocktail in juice": {
+    "kcal": 46.0,
+    "p": 0.5,
+    "c": 11.9,
+    "f": 0.0,
+    "fb": 1.0,
+    "sg": 10.9,
+    "na": 4.0
+  },
+  "fruit cocktail in light syrup": {
+    "kcal": 45.0,
+    "p": 0.4,
+    "c": 11.6,
+    "f": 0.1,
+    "fb": 1.1,
+    "sg": 0.0,
+    "na": 4.0
+  },
+  "fruit cocktail in syrup": {
+    "kcal": 70.0,
+    "p": 0.5,
+    "c": 18.8,
+    "f": 0.1,
+    "fb": 1.7,
+    "sg": 17.1,
+    "na": 6.0
+  },
   "fruit cocktail peach and pineapple and pear and grape and cherry canned extra heavy syrup solids and liquids": {
     "kcal": 88.0,
     "p": 0.4,
@@ -32191,6 +32542,15 @@
     "fb": 1.7,
     "sg": 42.0,
     "na": 157.0
+  },
+  "fruit juice concentrate": {
+    "kcal": 162.0,
+    "p": 1.2,
+    "c": 40.2,
+    "f": 0.1,
+    "fb": 0.2,
+    "sg": 28.6,
+    "na": 3.0
   },
   "fruit juice smoothie bolthouse farms berry boost": {
     "kcal": 46.0,
@@ -32282,6 +32642,15 @@
     "sg": 42.0,
     "na": 0.0
   },
+  "fruit punch concentrate": {
+    "kcal": 162.0,
+    "p": 0.2,
+    "c": 41.4,
+    "f": 0.0,
+    "fb": 0.4,
+    "sg": 0.0,
+    "na": 8.0
+  },
   "fruit salad in syrup": {
     "kcal": 86.0,
     "p": 0.4,
@@ -32344,6 +32713,15 @@
     "fb": 0.1,
     "sg": 53.0,
     "na": 0.0
+  },
+  "fruitcake": {
+    "kcal": 324.0,
+    "p": 2.9,
+    "c": 61.6,
+    "f": 9.1,
+    "fb": 3.7,
+    "sg": 27.4,
+    "na": 101.0
   },
   "frybread made with lard apache": {
     "kcal": 309.0,
@@ -33074,6 +33452,15 @@
     "sg": 0.0,
     "na": 345.0
   },
+  "gewurztraminer wine": {
+    "kcal": 81.0,
+    "p": 0.1,
+    "c": 2.6,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
   "ghee": {
     "kcal": 900,
     "p": 0.3,
@@ -33128,6 +33515,15 @@
     "sg": 46.6,
     "na": 657.0
   },
+  "glace fruit": {
+    "kcal": 316,
+    "p": 0.3,
+    "c": 82.0,
+    "f": 0.2,
+    "fb": 1.5,
+    "sg": 75.0,
+    "na": 21
+  },
   "glass noodles": {
     "kcal": 345,
     "p": 0.1,
@@ -33145,6 +33541,15 @@
     "fb": 0.0,
     "sg": 80.4,
     "na": 6.0
+  },
+  "glazed doughnuts": {
+    "kcal": 412.0,
+    "p": 3.1,
+    "c": 59.5,
+    "f": 18.3,
+    "fb": 1.2,
+    "sg": 35.1,
+    "na": 345.0
   },
   "glutino gluten free cookies chocolate vanilla creme": {
     "kcal": 474.0,
@@ -33290,6 +33695,15 @@
     "sg": 0.0,
     "na": 140.0
   },
+  "goose meat": {
+    "kcal": 305.0,
+    "p": 25.2,
+    "c": 0.0,
+    "f": 21.9,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 70.0
+  },
   "gooseberries canned light syrup pack solids and liquids": {
     "kcal": 73.0,
     "p": 0.7,
@@ -33397,6 +33811,33 @@
     "fb": 2.7,
     "sg": 26.2,
     "na": 614
+  },
+  "grain bagel": {
+    "kcal": 255.0,
+    "p": 9.3,
+    "c": 54.5,
+    "f": 0.0,
+    "fb": 4.7,
+    "sg": 9.3,
+    "na": 372.0
+  },
+  "grain bagels": {
+    "kcal": 255.0,
+    "p": 9.3,
+    "c": 54.5,
+    "f": 0.0,
+    "fb": 4.7,
+    "sg": 9.3,
+    "na": 372.0
+  },
+  "grain cracker": {
+    "kcal": 471.0,
+    "p": 7.6,
+    "c": 67.6,
+    "f": 18.9,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 730.0
   },
   "granny smith apples": {
     "kcal": 58.0,
@@ -33947,6 +34388,15 @@
     "sg": 5.7,
     "na": 5
   },
+  "green salad": {
+    "kcal": 17,
+    "p": 1.2,
+    "c": 2.8,
+    "f": 0.2,
+    "fb": 2.0,
+    "sg": 1.0,
+    "na": 28
+  },
   "green seedless grapes": {
     "kcal": 69.0,
     "p": 0.7,
@@ -34136,6 +34586,15 @@
     "sg": 0.0,
     "na": 69.0
   },
+  "gumdrop": {
+    "kcal": 396.0,
+    "p": 0.0,
+    "c": 98.9,
+    "f": 0.0,
+    "fb": 0.1,
+    "sg": 59.0,
+    "na": 44.0
+  },
   "gums seed gums includes locust bean guar": {
     "kcal": 332.0,
     "p": 4.6,
@@ -34316,6 +34775,24 @@
     "sg": 5.4,
     "na": 6
   },
+  "hard roll": {
+    "kcal": 293.0,
+    "p": 9.9,
+    "c": 52.7,
+    "f": 4.3,
+    "fb": 2.3,
+    "sg": 1.8,
+    "na": 544.0
+  },
+  "hard rolls": {
+    "kcal": 293.0,
+    "p": 9.9,
+    "c": 52.7,
+    "f": 4.3,
+    "fb": 2.3,
+    "sg": 1.8,
+    "na": 544.0
+  },
   "harissa": {
     "kcal": 82,
     "p": 2.7,
@@ -34333,6 +34810,15 @@
     "fb": 4.3,
     "sg": 0,
     "na": 1100
+  },
+  "hash brown patty": {
+    "kcal": 272.0,
+    "p": 2.6,
+    "c": 28.9,
+    "f": 17.0,
+    "fb": 2.7,
+    "sg": 0.6,
+    "na": 566.0
   },
   "hash browns": {
     "kcal": 218,
@@ -34432,6 +34918,24 @@
     "fb": 0,
     "sg": 0,
     "na": 90
+  },
+  "hershey's syrup": {
+    "kcal": 153.0,
+    "p": 1.4,
+    "c": 34.6,
+    "f": 1.0,
+    "fb": 0.0,
+    "sg": 28.6,
+    "na": 100.0
+  },
+  "hock": {
+    "kcal": 171.0,
+    "p": 19.1,
+    "c": 0.0,
+    "f": 10.5,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 1050.0
   },
   "hoisin sauce": {
     "kcal": 29,
@@ -35719,6 +36223,15 @@
     "fb": 3.01,
     "sg": 0,
     "na": 0.77
+  },
+  "kit kat bar": {
+    "kcal": 518.0,
+    "p": 6.5,
+    "c": 64.6,
+    "f": 26.0,
+    "fb": 1.0,
+    "sg": 48.7,
+    "na": 54.0
   },
   "kiwi": {
     "kcal": 65,
@@ -38906,6 +39419,15 @@
     "sg": 2.5,
     "na": 2.0
   },
+  "lentil soup": {
+    "kcal": 56.0,
+    "p": 3.7,
+    "c": 8.2,
+    "f": 1.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 532.0
+  },
   "lentils": {
     "kcal": 116,
     "p": 9.0,
@@ -39473,6 +39995,24 @@
     "sg": 0,
     "na": 1
   },
+  "low fat biscuits": {
+    "kcal": 270.0,
+    "p": 6.7,
+    "c": 43.7,
+    "f": 7.8,
+    "fb": 2.0,
+    "sg": 7.2,
+    "na": 828.0
+  },
+  "low-fat chocolate": {
+    "kcal": 409.0,
+    "p": 3.7,
+    "c": 69.4,
+    "f": 13.0,
+    "fb": 14.9,
+    "sg": 33.4,
+    "na": 483.0
+  },
   "lumpia wrapper": {
     "kcal": 280,
     "p": 8.5,
@@ -39734,6 +40274,15 @@
     "sg": 8.1,
     "na": 13.0
   },
+  "malt drink powder": {
+    "kcal": 86.0,
+    "p": 3.7,
+    "c": 10.7,
+    "f": 3.2,
+    "fb": 0.0,
+    "sg": 8.4,
+    "na": 72.0
+  },
   "malt syrup": {
     "kcal": 318,
     "p": 5,
@@ -39779,6 +40328,15 @@
     "sg": 0,
     "na": 654
   },
+  "mandarin juice": {
+    "kcal": 38.0,
+    "p": 0.8,
+    "c": 9.4,
+    "f": 0.0,
+    "fb": 1.2,
+    "sg": 8.2,
+    "na": 5.0
+  },
   "mandarin oranges in juice": {
     "kcal": 38.0,
     "p": 0.8,
@@ -39789,6 +40347,15 @@
     "na": 5.0
   },
   "mandarin oranges in light syrup": {
+    "kcal": 61.0,
+    "p": 0.5,
+    "c": 16.2,
+    "f": 0.1,
+    "fb": 0.7,
+    "sg": 15.5,
+    "na": 6.0
+  },
+  "mandarin syrup": {
     "kcal": 61.0,
     "p": 0.5,
     "c": 16.2,
@@ -40301,6 +40868,15 @@
     "sg": 60.0,
     "na": 56.0
   },
+  "mars bars": {
+    "kcal": 553.0,
+    "p": 7.3,
+    "c": 56.0,
+    "f": 33.3,
+    "fb": 3.0,
+    "sg": 53.0,
+    "na": 266.0
+  },
   "marshmallow": {
     "kcal": 318,
     "p": 1.8,
@@ -40471,6 +41047,24 @@
     "fb": 17.5,
     "sg": 0.0,
     "na": 10.0
+  },
+  "meat ravioli": {
+    "kcal": 97.0,
+    "p": 3.2,
+    "c": 13.3,
+    "f": 3.4,
+    "fb": 1.5,
+    "sg": 2.0,
+    "na": 283.0
+  },
+  "meat seasoning": {
+    "kcal": 196.0,
+    "p": 24.1,
+    "c": 0.0,
+    "f": 11.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 337.0
   },
   "meatballs frozen italian style": {
     "kcal": 286.0,
@@ -41174,6 +41768,15 @@
     "sg": 0,
     "na": 8
   },
+  "mixed beans": {
+    "kcal": 37.0,
+    "p": 1.4,
+    "c": 7.3,
+    "f": 0.2,
+    "fb": 3.1,
+    "sg": 2.4,
+    "na": 26.0
+  },
   "mixed berries": {
     "kcal": 57,
     "p": 0.7,
@@ -41722,6 +42325,15 @@
     "fb": 0,
     "sg": 0,
     "na": 699
+  },
+  "mr noodle soup mix": {
+    "kcal": 377.0,
+    "p": 15.4,
+    "c": 62.3,
+    "f": 6.5,
+    "fb": 3.2,
+    "sg": 1.9,
+    "na": 3161.0
   },
   "msg": {
     "kcal": 0,
@@ -43541,6 +44153,15 @@
     "sg": 0.8,
     "na": 19.0
   },
+  "oatmeal cookies": {
+    "kcal": 398.0,
+    "p": 2.6,
+    "c": 55.6,
+    "f": 18.3,
+    "fb": 2.6,
+    "sg": 31.4,
+    "na": 500.0
+  },
   "oats": {
     "kcal": 382,
     "p": 13.5,
@@ -44648,6 +45269,15 @@
     "sg": 0.0,
     "na": 0.0
   },
+  "open pit barbecue sauce": {
+    "kcal": 132.0,
+    "p": 0.4,
+    "c": 29.4,
+    "f": 1.4,
+    "fb": 0.5,
+    "sg": 23.5,
+    "na": 1517.0
+  },
   "orange": {
     "kcal": 47,
     "p": 0.91,
@@ -45107,6 +45737,15 @@
     "sg": 0.0,
     "na": 81.0
   },
+  "oven-roasted breast": {
+    "kcal": 134.0,
+    "p": 14.6,
+    "c": 1.8,
+    "f": 7.7,
+    "fb": 0.0,
+    "sg": 0.4,
+    "na": 883.0
+  },
   "owl horned flesh raw alaska native": {
     "kcal": 136.0,
     "p": 22.7,
@@ -45115,6 +45754,24 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 0.0
+  },
+  "ox kidney": {
+    "kcal": 93.0,
+    "p": 18.1,
+    "c": 1.4,
+    "f": 1.7,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 231.0
+  },
+  "ox tongue": {
+    "kcal": 225.0,
+    "p": 14.3,
+    "c": 0.0,
+    "f": 18.6,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 77.0
   },
   "oxtail": {
     "kcal": 143,
@@ -46979,6 +47636,15 @@
     "sg": 0.0,
     "na": 43.0
   },
+  "peppers and onions": {
+    "kcal": 41.0,
+    "p": 0.9,
+    "c": 8.8,
+    "f": 0.7,
+    "fb": 1.4,
+    "sg": 7.4,
+    "na": 368.0
+  },
   "peppers chili green canned": {
     "kcal": 21.0,
     "p": 0.7,
@@ -47744,6 +48410,15 @@
     "sg": 4.6,
     "na": 1070.0
   },
+  "pillsbury refrigerated biscuits": {
+    "kcal": 307.0,
+    "p": 5.9,
+    "c": 41.2,
+    "f": 13.2,
+    "fb": 1.2,
+    "sg": 5.9,
+    "na": 1059.0
+  },
   "piloncillo": {
     "kcal": 380,
     "p": 0.2,
@@ -47959,6 +48634,15 @@
     "fb": 16,
     "sg": 2,
     "na": 11
+  },
+  "pista": {
+    "kcal": 560.0,
+    "p": 20.2,
+    "c": 27.2,
+    "f": 45.3,
+    "fb": 10.6,
+    "sg": 7.7,
+    "na": 1.0
   },
   "pistachios": {
     "kcal": 598,
@@ -48220,6 +48904,15 @@
     "fb": 7.1,
     "sg": 38.1,
     "na": 2.0
+  },
+  "plums in heavy syrup": {
+    "kcal": 89.0,
+    "p": 0.4,
+    "c": 23.1,
+    "f": 0.1,
+    "fb": 1.5,
+    "sg": 21.6,
+    "na": 19.0
   },
   "plums raw": {
     "kcal": 46.0,
@@ -52172,6 +52865,15 @@
     "sg": 0.0,
     "na": 653.0
   },
+  "powdered drink mix": {
+    "kcal": 218.0,
+    "p": 0.5,
+    "c": 87.4,
+    "f": 0.0,
+    "fb": 0.1,
+    "sg": 0.0,
+    "na": 404.0
+  },
   "powdered sugar": {
     "kcal": 385,
     "p": 0,
@@ -52199,6 +52901,24 @@
     "sg": 0.8,
     "na": 5.0
   },
+  "praline": {
+    "kcal": 485.0,
+    "p": 3.3,
+    "c": 59.6,
+    "f": 25.9,
+    "fb": 3.5,
+    "sg": 55.8,
+    "na": 48.0
+  },
+  "prepared chocolate pudding": {
+    "kcal": 105.0,
+    "p": 3.1,
+    "c": 18.9,
+    "f": 1.9,
+    "fb": 0.4,
+    "sg": 0.0,
+    "na": 284.0
+  },
   "prepared custard": {
     "kcal": 122.0,
     "p": 4.0,
@@ -52216,6 +52936,15 @@
     "fb": 3.3,
     "sg": 8.0,
     "na": 420.0
+  },
+  "prepared pizza": {
+    "kcal": 328.0,
+    "p": 8.7,
+    "c": 50.7,
+    "f": 10.0,
+    "fb": 1.2,
+    "sg": 3.7,
+    "na": 599.0
   },
   "prepared topping": {
     "kcal": 194.0,
@@ -53234,6 +53963,15 @@
     "sg": 13.4,
     "na": 1
   },
+  "red and peppers": {
+    "kcal": 18.0,
+    "p": 0.8,
+    "c": 3.9,
+    "f": 0.3,
+    "fb": 1.2,
+    "sg": 0.0,
+    "na": 1369.0
+  },
   "red bean paste": {
     "kcal": 244,
     "p": 5.4,
@@ -53261,6 +53999,15 @@
     "sg": 0,
     "na": 0
   },
+  "red bull energy drink": {
+    "kcal": 5.0,
+    "p": 0.2,
+    "c": 0.7,
+    "f": 0.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 83.0
+  },
   "red cabbage": {
     "kcal": 34,
     "p": 1.24,
@@ -53269,6 +54016,15 @@
     "fb": 0,
     "sg": 0,
     "na": 11.7
+  },
+  "red currants": {
+    "kcal": 56.0,
+    "p": 1.4,
+    "c": 13.8,
+    "f": 0.2,
+    "fb": 4.3,
+    "sg": 7.4,
+    "na": 1.0
   },
   "red curry paste": {
     "kcal": 165,
@@ -53287,6 +54043,15 @@
     "fb": 2.3,
     "sg": 10.5,
     "na": 1.0
+  },
+  "red fruit punch": {
+    "kcal": 46.0,
+    "p": 0.1,
+    "c": 11.7,
+    "f": 0.0,
+    "fb": 0.1,
+    "sg": 0.0,
+    "na": 5.0
   },
   "red lentils": {
     "kcal": 34,
@@ -53351,6 +54116,15 @@
     "sg": 15.5,
     "na": 2.0
   },
+  "red table wine": {
+    "kcal": 85.0,
+    "p": 0.1,
+    "c": 2.6,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.6,
+    "na": 4.0
+  },
   "red wine": {
     "kcal": 85,
     "p": 0.1,
@@ -53369,6 +54143,15 @@
     "sg": 0,
     "na": 8
   },
+  "red zinfandel wine": {
+    "kcal": 88.0,
+    "p": 0.1,
+    "c": 2.9,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
   "reddi wip fat free whipped topping": {
     "kcal": 149.0,
     "p": 3.0,
@@ -53377,6 +54160,15 @@
     "fb": 0.4,
     "sg": 16.0,
     "na": 72.0
+  },
+  "refined oil": {
+    "kcal": 884.0,
+    "p": 0.0,
+    "c": 0.0,
+    "f": 100.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
   },
   "refried beans": {
     "kcal": 90,
@@ -53422,6 +54214,15 @@
     "fb": 4.7,
     "sg": 0.6,
     "na": 430.0
+  },
+  "regular hamburger": {
+    "kcal": 297.0,
+    "p": 16.5,
+    "c": 31.5,
+    "f": 12.0,
+    "fb": 1.7,
+    "sg": 4.9,
+    "na": 331.0
   },
   "rendang paste": {
     "kcal": 165,
@@ -53855,6 +54656,15 @@
     "sg": 0.0,
     "na": 2
   },
+  "rice-a-roni": {
+    "kcal": 356.0,
+    "p": 10.6,
+    "c": 76.1,
+    "f": 1.0,
+    "fb": 1.2,
+    "sg": 0.7,
+    "na": 884.0
+  },
   "ricotta": {
     "kcal": 157,
     "p": 7.81,
@@ -54170,6 +54980,15 @@
     "sg": 3.8,
     "na": 5
   },
+  "rotis": {
+    "kcal": 297,
+    "p": 9.2,
+    "c": 59.9,
+    "f": 2.8,
+    "fb": 3.0,
+    "sg": 1.0,
+    "na": 485
+  },
   "rowal raw": {
     "kcal": 111.0,
     "p": 2.3,
@@ -54286,6 +55105,15 @@
     "fb": 15.1,
     "sg": 1.0,
     "na": 2.0
+  },
+  "rye rolls": {
+    "kcal": 286.0,
+    "p": 10.3,
+    "c": 53.1,
+    "f": 3.4,
+    "fb": 4.9,
+    "sg": 1.2,
+    "na": 650.0
   },
   "saffron": {
     "kcal": 310.0,
@@ -55763,6 +56591,15 @@
     "sg": 0.0,
     "na": 879.0
   },
+  "sauvignon blanc wine": {
+    "kcal": 81.0,
+    "p": 0.1,
+    "c": 2.0,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
   "savory": {
     "kcal": 272,
     "p": 6.7,
@@ -56672,6 +57509,15 @@
     "sg": 0.0,
     "na": 10
   },
+  "semisweet baking chocolate": {
+    "kcal": 517.0,
+    "p": 4.4,
+    "c": 66.0,
+    "f": 26.1,
+    "fb": 6.7,
+    "sg": 53.1,
+    "na": 2.0
+  },
   "semolina enriched": {
     "kcal": 360.0,
     "p": 12.7,
@@ -57391,6 +58237,15 @@
     "fb": 0,
     "sg": 0,
     "na": 44.8
+  },
+  "skittles candies": {
+    "kcal": 402.0,
+    "p": 0.2,
+    "c": 90.8,
+    "f": 4.2,
+    "fb": 0.0,
+    "sg": 75.9,
+    "na": 15.0
   },
   "smart soup french lentil": {
     "kcal": 53.0,
@@ -59750,6 +60605,15 @@
     "sg": 9.3,
     "na": 9.0
   },
+  "soy lecithin": {
+    "kcal": 763.0,
+    "p": 0.0,
+    "c": 0.0,
+    "f": 100.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
   "soy meal defatted raw": {
     "kcal": 337.0,
     "p": 49.2,
@@ -60695,6 +61559,15 @@
     "sg": 1.9,
     "na": 566.0
   },
+  "split pea soup": {
+    "kcal": 71.0,
+    "p": 3.9,
+    "c": 11.8,
+    "f": 0.9,
+    "fb": 1.9,
+    "sg": 5.1,
+    "na": 166.0
+  },
   "split peas": {
     "kcal": 354,
     "p": 21.2,
@@ -61586,6 +62459,15 @@
     "sg": 0,
     "na": 0.46
   },
+  "sweet 'n low": {
+    "kcal": 24.0,
+    "p": 0.0,
+    "c": 5.9,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 1.5,
+    "na": 10.0
+  },
   "sweet and sour sauce": {
     "kcal": 154.0,
     "p": 0.3,
@@ -61595,6 +62477,15 @@
     "sg": 18.8,
     "na": 539.0
   },
+  "sweet baking chocolate": {
+    "kcal": 472.0,
+    "p": 12.1,
+    "c": 36.2,
+    "f": 47.7,
+    "fb": 18.1,
+    "sg": 0.0,
+    "na": 12.0
+  },
   "sweet chili sauce": {
     "kcal": 250,
     "p": 0.5,
@@ -61603,6 +62494,24 @@
     "fb": 0.5,
     "sg": 57.0,
     "na": 2200
+  },
+  "sweet chocolate squares": {
+    "kcal": 642.0,
+    "p": 14.3,
+    "c": 28.4,
+    "f": 52.3,
+    "fb": 16.6,
+    "sg": 0.9,
+    "na": 24.0
+  },
+  "sweet dessert wine": {
+    "kcal": 160.0,
+    "p": 0.2,
+    "c": 13.7,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 7.8,
+    "na": 9.0
   },
   "sweet pickles": {
     "kcal": 91.0,
@@ -62126,6 +63035,15 @@
     "sg": 2.45,
     "na": 1100
   },
+  "tabasco pepper": {
+    "kcal": 12.0,
+    "p": 1.3,
+    "c": 0.8,
+    "f": 0.8,
+    "fb": 0.6,
+    "sg": 0.1,
+    "na": 633.0
+  },
   "taco sauce": {
     "kcal": 28,
     "p": 0.8,
@@ -62188,6 +63106,15 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 23750.0
+  },
+  "tamale": {
+    "kcal": 153.0,
+    "p": 6.3,
+    "c": 18.1,
+    "f": 6.1,
+    "fb": 3.1,
+    "sg": 1.0,
+    "na": 427.0
   },
   "tamales masa and pork filling hopi": {
     "kcal": 168.0,
@@ -63043,6 +63970,15 @@
     "fb": 1.5,
     "sg": 3.6,
     "na": 11.0
+  },
+  "tomato-based meat sauce": {
+    "kcal": 215.0,
+    "p": 9.4,
+    "c": 31.9,
+    "f": 5.5,
+    "fb": 0.8,
+    "sg": 3.9,
+    "na": 378.0
   },
   "tomatoes crushed canned": {
     "kcal": 32.0,
@@ -64835,6 +65771,24 @@
     "sg": 0.0,
     "na": 12.0
   },
+  "unsweetened berries": {
+    "kcal": 35.0,
+    "p": 0.4,
+    "c": 9.1,
+    "f": 0.1,
+    "fb": 2.1,
+    "sg": 4.6,
+    "na": 2.0
+  },
+  "unsweetened cherries": {
+    "kcal": 46.0,
+    "p": 0.9,
+    "c": 11.0,
+    "f": 0.4,
+    "fb": 1.6,
+    "sg": 9.0,
+    "na": 1.0
+  },
   "unsweetened chocolate squares": {
     "kcal": 642.0,
     "p": 14.3,
@@ -64843,6 +65797,15 @@
     "fb": 16.6,
     "sg": 0.9,
     "na": 24.0
+  },
+  "unsweetened fruit juice": {
+    "kcal": 43.0,
+    "p": 0.6,
+    "c": 10.3,
+    "f": 0.1,
+    "fb": 0.1,
+    "sg": 10.2,
+    "na": 3.0
   },
   "urad dal": {
     "kcal": 59,
@@ -64862,6 +65825,15 @@
     "sg": 0,
     "na": 10
   },
+  "v8 diet tropical blend": {
+    "kcal": 4.0,
+    "p": 0.0,
+    "c": 1.3,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.4,
+    "na": 15.0
+  },
   "v8 juice": {
     "kcal": 22,
     "p": 1.0,
@@ -64870,6 +65842,24 @@
     "fb": 0.6,
     "sg": 3.8,
     "na": 267
+  },
+  "v8 splash berry blend": {
+    "kcal": 29.0,
+    "p": 0.0,
+    "c": 7.4,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 7.4,
+    "na": 21.0
+  },
+  "v8 tropical blend": {
+    "kcal": 4.0,
+    "p": 0.0,
+    "c": 1.3,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.4,
+    "na": 15.0
   },
   "v8 vegetable juice": {
     "kcal": 22.0,
@@ -65960,6 +66950,15 @@
     "sg": 0,
     "na": 656
   },
+  "vegetable cocktail": {
+    "kcal": 22.0,
+    "p": 0.9,
+    "c": 3.9,
+    "f": 0.3,
+    "fb": 0.5,
+    "sg": 2.8,
+    "na": 169.0
+  },
   "vegetable juice bolthouse farms daily greens": {
     "kcal": 31.0,
     "p": 0.5,
@@ -66338,6 +67337,15 @@
     "sg": 0.0,
     "na": 1
   },
+  "wafer cookies": {
+    "kcal": 541.0,
+    "p": 4.1,
+    "c": 62.8,
+    "f": 30.4,
+    "fb": 1.6,
+    "sg": 41.0,
+    "na": 122.0
+  },
   "waffle buttermilk frozen ready-to-heat microwaved": {
     "kcal": 289.0,
     "p": 6.9,
@@ -66463,6 +67471,15 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 0.0
+  },
+  "wasa": {
+    "kcal": 367,
+    "p": 10.0,
+    "c": 72.0,
+    "f": 3.5,
+    "fb": 11.0,
+    "sg": 2.0,
+    "na": 315
   },
   "wasabi": {
     "kcal": 292.0,
@@ -66716,6 +67733,15 @@
     "sg": 0.0,
     "na": 0.0
   },
+  "wheat biscuits": {
+    "kcal": 407.0,
+    "p": 8.0,
+    "c": 72.5,
+    "f": 9.3,
+    "fb": 5.9,
+    "sg": 24.9,
+    "na": 259.0
+  },
   "wheat bran crude": {
     "kcal": 216.0,
     "p": 15.6,
@@ -66733,6 +67759,15 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 2.0
+  },
+  "wheat flakes": {
+    "kcal": 390.0,
+    "p": 10.2,
+    "c": 79.8,
+    "f": 3.4,
+    "fb": 16.9,
+    "sg": 17.2,
+    "na": 586.0
   },
   "wheat flour white all-purpose enriched bleached": {
     "kcal": 364.0,
@@ -66994,6 +68029,15 @@
     "fb": 11.1,
     "sg": 7.8,
     "na": 5.0
+  },
+  "wheat rolls": {
+    "kcal": 269.0,
+    "p": 11.7,
+    "c": 47.3,
+    "f": 3.6,
+    "fb": 4.2,
+    "sg": 6.9,
+    "na": 463.0
   },
   "wheat soft red winter": {
     "kcal": 331.0,
