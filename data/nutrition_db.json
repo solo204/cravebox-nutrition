@@ -69505,5 +69505,17 @@
     "protein": 0.7,
     "fat": 0.3,
     "carbs": 14.5
+  },
+  "sauerkraut": {
+    "calories": 19,
+    "protein": 0.9,
+    "fat": 0.1,
+    "carbs": 4.3
+  },
+  "corn flour": {
+    "calories": 361,
+    "protein": 6.9,
+    "fat": 3.9,
+    "carbs": 76.8
   }
 }
