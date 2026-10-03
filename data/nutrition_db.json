@@ -69526,5 +69526,11 @@
     "protein": 2.2,
     "fat": 0.8,
     "carbs": 11.6
+  },
+  "mussels": {
+    "calories": 86,
+    "protein": 11.9,
+    "fat": 2.2,
+    "carbs": 3.7
   }
 }
