@@ -200,6 +200,10 @@ def main():
                         help="Extra site URLs to crawl (comma-separated)")
     parser.add_argument("--urls", default="",
                         help="Specific recipe URLs to scrape (comma-separated)")
+    parser.add_argument("--dataset", default="",
+                        help="Path to local open recipe dataset file (RecipeNLG CSV etc.)")
+    parser.add_argument("--max-dataset-rows", type=int, default=500000,
+                        help="Max rows to read from dataset (default: 500000)")
     args = parser.parse_args()
 
     started_at = time.time()
@@ -225,6 +229,9 @@ def main():
             crawler_args += ["--sites", args.sites]
         if args.urls:
             crawler_args += ["--urls", args.urls]
+        if args.dataset:
+            crawler_args += ["--dataset", args.dataset,
+                             "--max-dataset-rows", str(args.max_dataset_rows)]
         run_step("1/5  Crawler", crawler_args)
 
     crawled = json.loads(CRAWLED_FILE.read_text(encoding="utf-8"))
