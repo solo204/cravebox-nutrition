@@ -18,6 +18,14 @@ on:
         description: 'Specific recipe URLs to scrape (comma-separated)'
         required: false
         default: ''
+      dataset:
+        description: 'Path to local open recipe dataset file (RecipeNLG CSV etc.) relative to repo root'
+        required: false
+        default: ''
+      max_dataset_rows:
+        description: 'Max rows to read from dataset (default: 500000)'
+        required: false
+        default: '500000'
       skip_crawl:
         description: 'Skip crawl step (reuse last crawled_ingredients.json)'
         required: false
@@ -71,6 +79,7 @@ jobs:
           [ "${{ github.event.inputs.dry_run }}"   = "true" ] && ARGS="$ARGS --dry-run"
           [ -n "${{ github.event.inputs.sites }}"  ] && ARGS="$ARGS --sites '${{ github.event.inputs.sites }}'"
           [ -n "${{ github.event.inputs.urls }}"   ] && ARGS="$ARGS --urls '${{ github.event.inputs.urls }}'"
+          [ -n "${{ github.event.inputs.dataset }}" ] && ARGS="$ARGS --dataset '${{ github.event.inputs.dataset }}' --max-dataset-rows '${{ github.event.inputs.max_dataset_rows || '500000' }}'"
           python autotune/autotune.py $ARGS
 
       - name: Check for changes

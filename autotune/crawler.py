@@ -2,90 +2,135 @@
 """
 crawler.py
 ----------
-Crawls recipe websites listed in sites.json (or supplied via --sites / --urls),
-extracts Schema.org recipeIngredient arrays, and saves unique raw ingredient
-strings to crawled_ingredients.json.
+Crawls recipe websites and/or reads open recipe datasets to extract
+raw ingredient strings, saved to crawled_ingredients.json.
 
 Usage:
-  # Use sites.json (default)
+  # Crawl configured sites (sites.json) with bot-bypass headers
   python autotune/crawler.py
 
-  # Add extra sites on the fly (combined with sites.json)
+  # Add extra sites on the fly
   python autotune/crawler.py --sites "https://example.com,https://other.com"
 
   # Scrape specific recipe URLs directly
   python autotune/crawler.py --urls "https://example.com/pasta,https://example.com/soup"
 
-  # Limit recipes per site (overrides sites.json setting)
-  python autotune/crawler.py --max-per-site 50
+  # Read from a local RecipeNLG dataset (CSV with 'NER' column)
+  python autotune/crawler.py --dataset /path/to/full_dataset.csv
+
+  # Combine dataset + live crawl
+  python autotune/crawler.py --dataset /path/to/full_dataset.csv --sites "..."
+
+  # Limit recipes per site / dataset rows
+  python autotune/crawler.py --max-per-site 50 --max-dataset-rows 100000
 
 Output:
   autotune/crawled_ingredients.json  — deduplicated list of raw ingredient strings
 """
 
 import argparse
+import csv
 import json
 import re
 import sys
 import time
 import xml.etree.ElementTree as ET
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Optional
 from urllib.parse import urljoin, urlparse
 
-import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+
+# Try curl_cffi first (impersonates real Chrome, bypasses Cloudflare).
+# Fall back to requests if not installed.
+try:
+    from curl_cffi import requests as cffi_requests
+    _USE_CFFI = True
+except ImportError:
+    import requests as std_requests
+    _USE_CFFI = False
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = Path(__file__).parent
 SITES_FILE = SCRIPT_DIR / "sites.json"
 OUT_FILE = SCRIPT_DIR / "crawled_ingredients.json"
 
-# ── Default config (overridden by sites.json) ─────────────────────────────────
+# ── Default config ─────────────────────────────────────────────────────────────
 DEFAULT_MAX_PER_SITE = 200
+DEFAULT_MAX_DATASET_ROWS = 500_000
 DEFAULT_DELAY = 1.5
-DEFAULT_TIMEOUT = 15
-DEFAULT_UA = "CraveBox-NutritionAutotune/1.0 (github.com/solo204/recipe-extractor-android)"
+DEFAULT_TIMEOUT = 20
 DEFAULT_WORKERS = 4
 
+# Realistic Chrome UA
+CHROME_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/125.0.0.0 Safari/537.36"
+)
 
-# ── HTTP helpers ──────────────────────────────────────────────────────────────
+CHROME_HEADERS = {
+    "User-Agent": CHROME_UA,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "DNT": "1",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+}
 
-def make_session(user_agent: str) -> requests.Session:
-    s = requests.Session()
-    s.headers.update({
-        "User-Agent": user_agent,
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-    })
-    return s
+
+# ── HTTP session ───────────────────────────────────────────────────────────────
+
+def make_session():
+    """
+    Returns a session that impersonates Chrome at the TLS level (curl_cffi)
+    or falls back to a requests.Session with realistic headers.
+    """
+    if _USE_CFFI:
+        # curl_cffi impersonates Chrome's TLS fingerprint — passes Cloudflare
+        session = cffi_requests.Session(impersonate="chrome120")
+        session.headers.update(CHROME_HEADERS)
+        print("  [crawler] Using curl_cffi (Chrome TLS impersonation) ✓")
+    else:
+        session = std_requests.Session()
+        session.headers.update(CHROME_HEADERS)
+        print("  [crawler] WARNING: curl_cffi not installed — using requests (may be blocked by Cloudflare)")
+        print("  [crawler] Install with: pip install curl_cffi")
+    return session
 
 
-def safe_get(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT) -> Optional[requests.Response]:
+def safe_get(session, url: str, timeout: int = DEFAULT_TIMEOUT):
     try:
-        r = session.get(url, timeout=timeout, allow_redirects=True)
+        if _USE_CFFI:
+            r = session.get(url, timeout=timeout, allow_redirects=True)
+        else:
+            r = session.get(url, timeout=timeout, allow_redirects=True)
         r.raise_for_status()
         return r
-    except Exception:
+    except Exception as e:
         return None
 
 
-# ── Sitemap parsing ───────────────────────────────────────────────────────────
+# ── Sitemap parsing ────────────────────────────────────────────────────────────
 
-def get_recipe_urls_from_sitemap(session: requests.Session, sitemap_url: str,
+def get_recipe_urls_from_sitemap(session, sitemap_url: str,
                                   max_urls: int, timeout: int) -> list[str]:
     """Recursively walks sitemap XML. Returns up to max_urls recipe-looking URLs."""
     urls: list[str] = []
     queue = [sitemap_url]
-    visited_sitemaps: set[str] = set()
+    visited: set[str] = set()
 
     while queue and len(urls) < max_urls:
         url = queue.pop(0)
-        if url in visited_sitemaps:
+        if url in visited:
             continue
-        visited_sitemaps.add(url)
+        visited.add(url)
 
         r = safe_get(session, url, timeout)
         if not r:
@@ -100,7 +145,6 @@ def get_recipe_urls_from_sitemap(session: requests.Session, sitemap_url: str,
         tag = root.tag.split("}")[-1] if "}" in root.tag else root.tag
 
         if tag == "sitemapindex":
-            # Index of sitemaps — recurse into each
             for loc in root.findall(".//sm:loc", ns):
                 if loc.text:
                     queue.append(loc.text.strip())
@@ -114,7 +158,30 @@ def get_recipe_urls_from_sitemap(session: requests.Session, sitemap_url: str,
     return urls[:max_urls]
 
 
-def get_recipe_urls_by_crawling(session: requests.Session, base_url: str,
+def discover_sitemap(session, base_url: str, timeout: int) -> Optional[str]:
+    """Try robots.txt first, then common sitemap paths."""
+    parsed = urlparse(base_url)
+    root = f"{parsed.scheme}://{parsed.netloc}"
+
+    # Check robots.txt
+    r = safe_get(session, f"{root}/robots.txt", timeout)
+    if r:
+        for line in r.text.splitlines():
+            if line.lower().startswith("sitemap:"):
+                return line.split(":", 1)[1].strip()
+
+    # Try common paths
+    for path in ["/sitemap.xml", "/sitemap_index.xml", "/sitemap/recipes.xml",
+                 "/recipe-sitemap.xml", "/sitemaps/recipes.xml"]:
+        candidate = root + path
+        r = safe_get(session, candidate, timeout)
+        if r and r.status_code == 200 and b"<urlset" in r.content[:500]:
+            return candidate
+
+    return None
+
+
+def get_recipe_urls_by_crawling(session, base_url: str,
                                  max_urls: int, timeout: int) -> list[str]:
     """Fallback: crawl homepage links looking for recipe-like URLs."""
     r = safe_get(session, base_url, timeout)
@@ -136,11 +203,11 @@ def get_recipe_urls_by_crawling(session: requests.Session, base_url: str,
 
 
 def _looks_like_recipe_url(url: str) -> bool:
-    """Heuristic: URL path suggests a recipe page."""
     path = urlparse(url).path.lower()
     recipe_signals = ["/recipe", "/recipes/", "/food/", "/dish/", "/cook/"]
     skip_signals = ["/sitemap", "/category/", "/tag/", "/author/", "/page/",
-                    "/search", "/login", "/account", ".xml", ".json", ".jpg", ".png"]
+                    "/search", "/login", "/account", ".xml", ".json",
+                    ".jpg", ".png", ".gif", ".webp"]
     if any(s in path for s in skip_signals):
         return False
     return any(s in path for s in recipe_signals) or (
@@ -148,10 +215,9 @@ def _looks_like_recipe_url(url: str) -> bool:
     )
 
 
-# ── Schema.org ingredient extraction ─────────────────────────────────────────
+# ── Schema.org extraction ──────────────────────────────────────────────────────
 
-def extract_ingredients_from_url(session: requests.Session, url: str,
-                                   timeout: int) -> list[str]:
+def extract_ingredients_from_url(session, url: str, timeout: int) -> list[str]:
     """Fetch a recipe page and extract Schema.org recipeIngredient values."""
     r = safe_get(session, url, timeout)
     if not r:
@@ -160,13 +226,12 @@ def extract_ingredients_from_url(session: requests.Session, url: str,
     soup = BeautifulSoup(r.text, "lxml")
     ingredients: list[str] = []
 
-    # 1. JSON-LD blocks (most reliable)
+    # 1. JSON-LD
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             data = json.loads(script.string or "")
         except (json.JSONDecodeError, TypeError):
             continue
-
         for obj in _flatten_jsonld(data):
             if isinstance(obj, dict) and obj.get("@type") in ("Recipe", "recipe"):
                 raw = obj.get("recipeIngredient", [])
@@ -186,7 +251,6 @@ def extract_ingredients_from_url(session: requests.Session, url: str,
 
 
 def _flatten_jsonld(obj) -> list:
-    """Flatten @graph arrays and nested objects."""
     if isinstance(obj, list):
         result = []
         for item in obj:
@@ -199,10 +263,9 @@ def _flatten_jsonld(obj) -> list:
     return []
 
 
-# ── Site crawl orchestration ──────────────────────────────────────────────────
+# ── Site crawl ─────────────────────────────────────────────────────────────────
 
-def crawl_site(site: dict, config: dict, session: requests.Session) -> list[str]:
-    """Crawl one site entry and return ingredient strings."""
+def crawl_site(site: dict, config: dict, session) -> list[str]:
     name = site.get("name", site.get("url", "?"))
     url = site.get("url", "")
     sitemap = site.get("sitemap", "")
@@ -211,10 +274,18 @@ def crawl_site(site: dict, config: dict, session: requests.Session) -> list[str]
     timeout = config.get("request_timeout_seconds", DEFAULT_TIMEOUT)
 
     print(f"\n  [{name}] Finding recipe URLs ...")
+
+    # Use explicit sitemap, or try to discover one, or fall back to crawling
     if sitemap:
         recipe_urls = get_recipe_urls_from_sitemap(session, sitemap, max_per, timeout)
     else:
-        recipe_urls = get_recipe_urls_by_crawling(session, url, max_per, timeout)
+        discovered = discover_sitemap(session, url, timeout)
+        if discovered:
+            print(f"  [{name}] Discovered sitemap: {discovered}")
+            recipe_urls = get_recipe_urls_from_sitemap(session, discovered, max_per, timeout)
+        else:
+            print(f"  [{name}] No sitemap found — crawling homepage links ...")
+            recipe_urls = get_recipe_urls_by_crawling(session, url, max_per, timeout)
 
     print(f"  [{name}] Found {len(recipe_urls)} recipe URLs — scraping ingredients ...")
     all_ingredients: list[str] = []
@@ -228,8 +299,7 @@ def crawl_site(site: dict, config: dict, session: requests.Session) -> list[str]
     return all_ingredients
 
 
-def crawl_urls_direct(urls: list[str], config: dict, session: requests.Session) -> list[str]:
-    """Scrape a list of explicit recipe URLs directly."""
+def crawl_urls_direct(urls: list[str], config: dict, session) -> list[str]:
     delay = config.get("request_delay_seconds", DEFAULT_DELAY)
     timeout = config.get("request_timeout_seconds", DEFAULT_TIMEOUT)
     all_ingredients: list[str] = []
@@ -242,13 +312,125 @@ def crawl_urls_direct(urls: list[str], config: dict, session: requests.Session) 
     return all_ingredients
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# ── Dataset helpers ────────────────────────────────────────────────────────────
+
+def _parse_list_field(value: str) -> list:
+    """
+    Parse a list field that may be JSON (['a','b']) or Python repr (['a', 'b']).
+    Food.com / Kaggle uses Python repr with single quotes.
+    """
+    if not value or value.strip() in ("", "[]"):
+        return []
+    try:
+        return json.loads(value)
+    except (json.JSONDecodeError, TypeError):
+        pass
+    # Python repr fallback: replace single quotes → double quotes carefully
+    try:
+        import ast
+        result = ast.literal_eval(value)
+        if isinstance(result, list):
+            return result
+    except Exception:
+        pass
+    return []
+
+
+# ── Dataset ingestion ──────────────────────────────────────────────────────────
+
+def load_from_dataset(dataset_path: str, max_rows: int) -> list[str]:
+    """
+    Load ingredient strings from a local open recipe dataset.
+
+    Supports:
+      - RecipeNLG CSV  (columns: 'NER' — JSON list of canonical ingredient names,
+                                 'ingredients' — raw ingredient strings)
+      - Generic JSON   (list of objects with 'ingredients' or 'recipeIngredient' key)
+      - Plain text     (one ingredient per line)
+
+    RecipeNLG download: https://recipenlg.cs.put.poznan.pl/
+    (~2.2M recipes, ~2GB CSV)
+    """
+    path = Path(dataset_path)
+    if not path.exists():
+        print(f"  [dataset] ERROR: file not found: {dataset_path}")
+        return []
+
+    suffix = path.suffix.lower()
+    ingredients: list[str] = []
+
+    print(f"  [dataset] Loading {path.name} (max {max_rows:,} rows) ...")
+
+    if suffix == ".csv":
+        with open(path, encoding="utf-8", errors="replace", newline="") as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames or []
+
+            # RecipeNLG format: 'ingredients' = raw strings (list as JSON string)
+            # 'NER' = canonical names (list as JSON string)
+            use_raw = "ingredients" in fieldnames
+            use_ner = "NER" in fieldnames
+
+            if not use_raw and not use_ner:
+                print(f"  [dataset] WARNING: no 'ingredients' or 'NER' column found.")
+                print(f"  [dataset] Available columns: {fieldnames}")
+                return []
+
+            for i, row in enumerate(tqdm(reader, desc="  Reading dataset", total=max_rows)):
+                if i >= max_rows:
+                    break
+
+                # Prefer raw ingredient strings (e.g. "2 cups flour") over NER
+                if use_raw:
+                    raw_list = _parse_list_field(row.get("ingredients", "[]"))
+                    ingredients.extend(str(s).strip() for s in raw_list if s)
+
+                # Also pull NER canonical names as fallback
+                if use_ner and not use_raw:
+                    ner_list = _parse_list_field(row.get("NER", "[]"))
+                    ingredients.extend(str(s).strip() for s in ner_list if s)
+
+    elif suffix == ".json":
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            for i, obj in enumerate(tqdm(data, desc="  Reading dataset")):
+                if i >= max_rows:
+                    break
+                if isinstance(obj, dict):
+                    for key in ("ingredients", "recipeIngredient", "ingredient_lines"):
+                        val = obj.get(key, [])
+                        if isinstance(val, list):
+                            ingredients.extend(str(s).strip() for s in val if s)
+                            break
+
+    elif suffix in (".txt", ".tsv"):
+        with open(path, encoding="utf-8", errors="replace") as f:
+            for i, line in enumerate(f):
+                if i >= max_rows:
+                    break
+                line = line.strip()
+                if line:
+                    ingredients.append(line)
+
+    else:
+        print(f"  [dataset] Unsupported format: {suffix}. Use .csv, .json, or .txt")
+        return []
+
+    print(f"  [dataset] Loaded {len(ingredients):,} raw ingredient strings from dataset")
+    return ingredients
+
+
+# ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="CraveBox recipe ingredient crawler")
     parser.add_argument("--sites", help="Comma-separated site URLs to crawl (adds to sites.json)")
     parser.add_argument("--urls", help="Comma-separated specific recipe page URLs to scrape directly")
+    parser.add_argument("--dataset", help="Path to a local open recipe dataset (RecipeNLG CSV, JSON, or TXT)")
     parser.add_argument("--max-per-site", type=int, help="Override max recipes per site")
+    parser.add_argument("--max-dataset-rows", type=int, default=DEFAULT_MAX_DATASET_ROWS,
+                        help=f"Max rows to read from dataset (default: {DEFAULT_MAX_DATASET_ROWS:,})")
     parser.add_argument("--out", default=str(OUT_FILE), help="Output JSON path")
     args = parser.parse_args()
 
@@ -269,37 +451,45 @@ def main():
             if raw_url:
                 sites.append({"name": raw_url, "url": raw_url, "sitemap": "", "enabled": True})
 
-    # Override max per site
     if args.max_per_site:
         config["max_recipes_per_site"] = args.max_per_site
 
-    ua = config.get("user_agent", DEFAULT_UA)
-    session = make_session(ua)
-
-    print(f"=== CraveBox Ingredient Crawler ===")
-    print(f"Sites: {len(sites)}  |  Max per site: {config.get('max_recipes_per_site', DEFAULT_MAX_PER_SITE)}")
-
     all_ingredients: list[str] = []
 
-    # Crawl configured sites
-    for site in sites:
-        try:
-            ings = crawl_site(site, config, session)
+    # ── Dataset ingestion (no HTTP needed) ──
+    if args.dataset:
+        print(f"\n=== CraveBox Dataset Ingestion ===")
+        dataset_ings = load_from_dataset(args.dataset, args.max_dataset_rows)
+        all_ingredients.extend(dataset_ings)
+
+    # ── Live site crawling ──
+    if sites or args.urls:
+        session = make_session()
+
+        print(f"\n=== CraveBox Ingredient Crawler ===")
+        print(f"Sites: {len(sites)}  |  Max per site: {config.get('max_recipes_per_site', DEFAULT_MAX_PER_SITE)}")
+
+        for site in sites:
+            try:
+                ings = crawl_site(site, config, session)
+                all_ingredients.extend(ings)
+            except KeyboardInterrupt:
+                print("\nInterrupted — saving partial results ...")
+                break
+            except Exception as e:
+                print(f"  ERROR crawling {site.get('name', '?')}: {e}")
+
+        if args.urls:
+            direct_urls = [u.strip() for u in args.urls.split(",") if u.strip()]
+            print(f"\nScraping {len(direct_urls)} direct URL(s) ...")
+            ings = crawl_urls_direct(direct_urls, config, session)
             all_ingredients.extend(ings)
-        except KeyboardInterrupt:
-            print("\nInterrupted — saving partial results ...")
-            break
-        except Exception as e:
-            print(f"  ERROR crawling {site.get('name', '?')}: {e}")
 
-    # Scrape explicit URLs
-    if args.urls:
-        direct_urls = [u.strip() for u in args.urls.split(",") if u.strip()]
-        print(f"\nScraping {len(direct_urls)} direct URL(s) ...")
-        ings = crawl_urls_direct(direct_urls, config, session)
-        all_ingredients.extend(ings)
+    if not all_ingredients:
+        print("\nNo ingredients collected. Use --dataset, --sites, or --urls.")
+        sys.exit(0)
 
-    # Deduplicate (preserve order, case-sensitive for now — parser_sim lowercases)
+    # Deduplicate (preserve order, case-sensitive — parser_sim lowercases)
     seen: set[str] = set()
     unique: list[str] = []
     for ing in all_ingredients:
