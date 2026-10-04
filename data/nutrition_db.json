@@ -1,4 +1,49 @@
 {
+  "-large anchovies": {
+    "kcal": 131.0,
+    "p": 20.4,
+    "c": 0.0,
+    "f": 4.8,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 104.0
+  },
+  "a 1½\"–2\"-diameter cutter": {
+    "kcal": 355.0,
+    "p": 11.6,
+    "c": 71.8,
+    "f": 1.4,
+    "fb": 4.4,
+    "sg": 0.5,
+    "na": 328.0
+  },
+  "a deep-fry thermometer": {
+    "kcal": 884.0,
+    "p": 0.0,
+    "c": 0.0,
+    "f": 100.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
+  "a food mill and deep-fry thermometer": {
+    "kcal": 884.0,
+    "p": 0.0,
+    "c": 0.0,
+    "f": 100.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
+  },
+  "a spray bottle filled with": {
+    "kcal": 37.0,
+    "p": 0.5,
+    "c": 7.5,
+    "f": 0.6,
+    "fb": 0.6,
+    "sg": 7.7,
+    "na": 2.0
+  },
   "abiyuch raw": {
     "kcal": 69.0,
     "p": 1.5,
@@ -764,6 +809,15 @@
     "sg": 0,
     "na": 52
   },
+  "aleppo-style pepper or other chile flakes": {
+    "kcal": 324.0,
+    "p": 10.6,
+    "c": 69.9,
+    "f": 5.8,
+    "fb": 28.7,
+    "sg": 41.1,
+    "na": 91.0
+  },
   "alfalfa seeds sprouted raw": {
     "kcal": 23.0,
     "p": 4.0,
@@ -1007,6 +1061,15 @@
     "sg": 0.0,
     "na": 150.0
   },
+  "anise": {
+    "kcal": 337,
+    "protein": 17.6,
+    "fat": 15.9,
+    "carbs": 50.0,
+    "fiber": 14.6,
+    "sugar": 0.0,
+    "sodium": 16
+  },
   "anjou pears": {
     "kcal": 62.0,
     "p": 0.3,
@@ -1060,6 +1123,15 @@
     "fb": 0,
     "sg": 0.4,
     "na": 5
+  },
+  "apple juice": {
+    "kcal": 46,
+    "protein": 0.1,
+    "fat": 0.1,
+    "carbs": 11.3,
+    "fiber": 0.2,
+    "sugar": 9.6,
+    "sodium": 5
   },
   "apple juice canned or bottled unsweetened with added ascorbic acid": {
     "kcal": 46.0,
@@ -1366,6 +1438,15 @@
     "fb": 2.8,
     "sg": 11.6,
     "na": 1.0
+  },
+  "applesauce": {
+    "kcal": 42,
+    "protein": 0.2,
+    "fat": 0.1,
+    "carbs": 11.3,
+    "fiber": 1.5,
+    "sugar": 9.7,
+    "sodium": 2
   },
   "applesauce canned sweetened with salt": {
     "kcal": 76.0,
@@ -2014,6 +2095,15 @@
     "fb": 2.1,
     "sg": 1.9,
     "na": 2.0
+  },
+  "assorted odeng": {
+    "kcal": 250.0,
+    "p": 8.3,
+    "c": 27.3,
+    "f": 11.9,
+    "fb": 2.6,
+    "sg": 0.0,
+    "na": 468.0
   },
   "au gratin potatoes": {
     "kcal": 134.0,
@@ -15173,6 +15263,15 @@
     "sg": 6.9,
     "na": 1.0
   },
+  "bran": {
+    "kcal": 216,
+    "protein": 15.6,
+    "fat": 4.3,
+    "carbs": 64.5,
+    "fiber": 42.8,
+    "sugar": 0.9,
+    "sodium": 2
+  },
   "brandy": {
     "kcal": 231,
     "p": 0.0,
@@ -16270,6 +16369,12 @@
     "fb": 0,
     "sg": 3.5,
     "na": 2500
+  },
+  "bulgur": {
+    "calories": 342,
+    "protein": 12.3,
+    "fat": 1.3,
+    "carbs": 75.9
   },
   "bulgur cooked": {
     "kcal": 83.0,
@@ -23867,6 +23972,15 @@
     "sg": 2.6,
     "na": 15.0
   },
+  "chile de árbol": {
+    "kcal": 315.0,
+    "p": 6.8,
+    "c": 55.4,
+    "f": 7.3,
+    "fb": 0.0,
+    "sg": 49.7,
+    "na": 129.0
+  },
   "chili": {
     "kcal": 99,
     "p": 7.0,
@@ -23920,6 +24034,12 @@
     "fb": 0,
     "sg": 0,
     "na": 0
+  },
+  "chili paste": {
+    "calories": 56,
+    "protein": 2.2,
+    "fat": 0.8,
+    "carbs": 11.6
   },
   "chili pepper": {
     "kcal": 40,
@@ -24046,6 +24166,15 @@
     "fb": 2.5,
     "sg": 1.9,
     "na": 3
+  },
+  "chives": {
+    "kcal": 30,
+    "protein": 3.3,
+    "fat": 0.7,
+    "carbs": 4.4,
+    "fiber": 2.5,
+    "sugar": 1.9,
+    "sodium": 3
   },
   "chives freeze-dried": {
     "kcal": 311.0,
@@ -24281,6 +24410,15 @@
     "sg": 0.0,
     "na": 118.0
   },
+  "chuck roast": {
+    "kcal": 267,
+    "protein": 28.5,
+    "fat": 16.3,
+    "carbs": 0.0,
+    "fiber": 0.0,
+    "sugar": 0.0,
+    "sodium": 63
+  },
   "cilantro": {
     "kcal": 23,
     "p": 2.1,
@@ -24397,6 +24535,15 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 0.0
+  },
+  "clove": {
+    "kcal": 323,
+    "protein": 5.9,
+    "fat": 13.0,
+    "carbs": 65.5,
+    "fiber": 33.9,
+    "sugar": 2.4,
+    "sodium": 277
   },
   "cloves": {
     "kcal": 545,
@@ -25298,6 +25445,12 @@
     "sg": 21.3,
     "na": 4.0
   },
+  "corn flour": {
+    "calories": 361,
+    "protein": 6.9,
+    "fat": 3.9,
+    "carbs": 76.8
+  },
   "corn flour masa enriched white": {
     "kcal": 363.0,
     "p": 8.5,
@@ -26144,6 +26297,15 @@
     "sg": 0.0,
     "na": 1.0
   },
+  "cracker": {
+    "kcal": 421,
+    "protein": 9.5,
+    "fat": 9.5,
+    "carbs": 71.5,
+    "fiber": 2.4,
+    "sugar": 1.7,
+    "sodium": 757
+  },
   "cracker barrel chicken tenderloin platter fried": {
     "kcal": 293.0,
     "p": 18.1,
@@ -26729,6 +26891,12 @@
     "sg": 4.3,
     "na": 2
   },
+  "cranberry juice": {
+    "calories": 46,
+    "protein": 0.4,
+    "fat": 0.1,
+    "carbs": 12.2
+  },
   "cranberry juice blend 100 juice bottled with added vitamin c and calcium": {
     "kcal": 45.0,
     "p": 0.3,
@@ -27025,6 +27193,15 @@
     "fb": 0.0,
     "sg": 5.3,
     "na": 897.0
+  },
+  "creme de cacao": {
+    "kcal": 275,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbs": 41.0,
+    "fiber": 0.0,
+    "sugar": 40.0,
+    "sodium": 5
   },
   "cremini mushroom": {
     "kcal": 40,
@@ -28520,6 +28697,12 @@
     "sg": 1.0,
     "na": 5
   },
+  "duck": {
+    "calories": 337,
+    "protein": 19.0,
+    "fat": 28.4,
+    "carbs": 0.0
+  },
   "duck breast": {
     "kcal": 107,
     "p": 22.5,
@@ -29563,6 +29746,15 @@
     "fb": 2.7,
     "sg": 2.7,
     "na": 6
+  },
+  "fiddlehead fern": {
+    "kcal": 34,
+    "protein": 4.6,
+    "fat": 0.4,
+    "carbs": 5.7,
+    "fiber": 0.0,
+    "sugar": 0.0,
+    "sodium": 1
   },
   "fiddlehead ferns raw": {
     "kcal": 34.0,
@@ -31904,6 +32096,15 @@
     "sg": 0,
     "na": 2
   },
+  "flour tortilla": {
+    "kcal": 306,
+    "protein": 7.5,
+    "fat": 7.5,
+    "carbs": 53.2,
+    "fiber": 3.1,
+    "sugar": 2.5,
+    "sodium": 571
+  },
   "fluid replacement electrolyte solution include pedialyte": {
     "kcal": 10.0,
     "p": 0.0,
@@ -32425,6 +32626,12 @@
     "fb": 0.0,
     "sg": 24.0,
     "na": 87.0
+  },
+  "fruit": {
+    "calories": 57,
+    "protein": 0.7,
+    "fat": 0.3,
+    "carbs": 14.5
   },
   "fruit butters apple": {
     "kcal": 173.0,
@@ -33848,6 +34055,15 @@
     "sg": 9.6,
     "na": 1.0
   },
+  "granola": {
+    "kcal": 471,
+    "protein": 10.5,
+    "fat": 20.4,
+    "carbs": 65.0,
+    "fiber": 7.7,
+    "sugar": 27.7,
+    "sodium": 24
+  },
   "granola bar soft milk chocolate coated peanut butter": {
     "kcal": 536.0,
     "p": 9.6,
@@ -34838,6 +35054,15 @@
     "sg": 0,
     "na": 654
   },
+  "hazelnut": {
+    "kcal": 646,
+    "protein": 15.0,
+    "fat": 61.5,
+    "carbs": 16.7,
+    "fiber": 9.7,
+    "sugar": 4.3,
+    "sodium": 1
+  },
   "hazelnuts": {
     "kcal": 642,
     "p": 13.5,
@@ -35063,6 +35288,15 @@
     "sg": 0.0,
     "na": 2.0
   },
+  "horseradish": {
+    "kcal": 48,
+    "protein": 1.2,
+    "fat": 0.5,
+    "carbs": 11.3,
+    "fiber": 3.3,
+    "sugar": 7.6,
+    "sodium": 420
+  },
   "hot dog": {
     "kcal": 290,
     "p": 11.0,
@@ -35242,6 +35476,15 @@
     "fb": 3.3,
     "sg": 4.1,
     "na": 2.0
+  },
+  "ice cream": {
+    "kcal": 207,
+    "protein_g": 3.5,
+    "fat_g": 11.0,
+    "carbs_g": 23.6,
+    "fiber_g": 0.7,
+    "source": "USDA SR Legacy",
+    "notes": "Vanilla ice cream per 100g"
   },
   "ice cream bar covered with chocolate and nuts": {
     "kcal": 303.0,
@@ -39365,6 +39608,12 @@
     "sg": 2.5,
     "na": 1.0
   },
+  "lemon peel": {
+    "calories": 47,
+    "protein": 1.5,
+    "fat": 0.3,
+    "carbs": 16.0
+  },
   "lemon peel raw": {
     "kcal": 47.0,
     "p": 1.5,
@@ -39761,6 +40010,15 @@
     "sg": 2.7,
     "na": 6
   },
+  "liquid smoke": {
+    "kcal": 5,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbs": 1.3,
+    "fiber": 0.0,
+    "sugar": 0.0,
+    "sodium": 230
+  },
   "liquid sweetener": {
     "kcal": 279.0,
     "p": 0.0,
@@ -40129,6 +40387,15 @@
     "fb": 0.2,
     "sg": 24.4,
     "na": 54.0
+  },
+  "macadamia": {
+    "kcal": 718,
+    "protein": 7.9,
+    "fat": 76.1,
+    "carbs": 13.4,
+    "fiber": 8.6,
+    "sugar": 4.6,
+    "sodium": 4
   },
   "macadamia nuts": {
     "kcal": 712,
@@ -40858,6 +41125,15 @@
     "fb": 1.8,
     "sg": 6.0,
     "na": 419
+  },
+  "marjoram": {
+    "kcal": 271,
+    "protein": 12.7,
+    "fat": 7.0,
+    "carbs": 60.6,
+    "fiber": 40.3,
+    "sugar": 4.1,
+    "sodium": 77
   },
   "marmalade orange": {
     "kcal": 246.0,
@@ -41812,6 +42088,15 @@
     "fb": 20,
     "sg": 4,
     "na": 80
+  },
+  "mixed sweet and tart apples": {
+    "kcal": 47.0,
+    "p": 0.3,
+    "c": 11.4,
+    "f": 0.1,
+    "fb": 0.5,
+    "sg": 9.6,
+    "na": 5.0
   },
   "mixed vegetables": {
     "kcal": 65,
@@ -42839,6 +43124,12 @@
     "sg": 0,
     "na": 286
   },
+  "mussels": {
+    "calories": 86,
+    "protein": 11.9,
+    "fat": 2.2,
+    "carbs": 3.7
+  },
   "mustard": {
     "kcal": 61,
     "p": 4.25,
@@ -43081,6 +43372,15 @@
     "fb": 1.7,
     "sg": 7.9,
     "na": 0.0
+  },
+  "nerds gummy clusters": {
+    "kcal": 28.0,
+    "p": 3.0,
+    "c": 5.1,
+    "f": 0.3,
+    "fb": 2.3,
+    "sg": 1.5,
+    "na": 27.0
   },
   "new zealand spinach cooked boiled drained with salt": {
     "kcal": 12.0,
@@ -44152,6 +44452,15 @@
     "fb": 6.5,
     "sg": 0.8,
     "na": 19.0
+  },
+  "oatmeal": {
+    "kcal": 71,
+    "protein": 2.5,
+    "fat": 1.5,
+    "carbs": 12.0,
+    "fiber": 1.7,
+    "sugar": 0.0,
+    "sodium": 49
   },
   "oatmeal cookies": {
     "kcal": 398.0,
@@ -45413,6 +45722,15 @@
     "sg": 34,
     "na": 2
   },
+  "orange peel": {
+    "kcal": 97,
+    "protein": 1.5,
+    "fat": 0.2,
+    "carbs": 25.0,
+    "fiber": 10.6,
+    "sugar": 4.5,
+    "sodium": 3
+  },
   "orange peel raw": {
     "kcal": 97.0,
     "p": 1.5,
@@ -45853,6 +46171,15 @@
     "fb": 1.2,
     "sg": 21.9,
     "na": 445.0
+  },
+  "pancake": {
+    "kcal": 227,
+    "protein": 6.0,
+    "fat": 5.5,
+    "carbs": 38.5,
+    "fiber": 1.5,
+    "sugar": 8.3,
+    "sodium": 641
   },
   "pancake mix": {
     "kcal": 349.0,
@@ -46718,6 +47045,12 @@
     "sg": 8.4,
     "na": 0.0
   },
+  "peanut": {
+    "calories": 567,
+    "protein": 25.8,
+    "fat": 49.2,
+    "carbs": 16.1
+  },
   "peanut brittle": {
     "kcal": 486.0,
     "p": 7.6,
@@ -47455,6 +47788,15 @@
     "fb": 8.3,
     "sg": 2.9,
     "na": 2.0
+  },
+  "pecan": {
+    "kcal": 691,
+    "protein_g": 9.2,
+    "fat_g": 72.0,
+    "carbs_g": 13.9,
+    "fiber_g": 9.6,
+    "source": "USDA SR Legacy",
+    "notes": "Pecans per 100g"
   },
   "pecans": {
     "kcal": 750,
@@ -48527,6 +48869,12 @@
     "sg": 21.1,
     "na": 2.0
   },
+  "pineapple juice": {
+    "calories": 53,
+    "protein": 0.4,
+    "fat": 0.1,
+    "carbs": 12.9
+  },
   "pineapple juice canned not from concentrate unsweetened with added vitamins a c and e": {
     "kcal": 50.0,
     "p": 0.4,
@@ -48599,6 +48947,15 @@
     "sg": 8.3,
     "na": 1.0
   },
+  "pink lady or other": {
+    "kcal": 127.0,
+    "p": 3.0,
+    "c": 21.6,
+    "f": 3.6,
+    "fb": 0.0,
+    "sg": 19.9,
+    "na": 63.0
+  },
   "pinon nuts roasted navajo": {
     "kcal": 541.0,
     "p": 7.4,
@@ -48643,6 +49000,15 @@
     "fb": 10.6,
     "sg": 7.7,
     "na": 1.0
+  },
+  "pistachio": {
+    "kcal": 572,
+    "protein": 21.4,
+    "fat": 45.8,
+    "carbs": 27.5,
+    "fiber": 10.3,
+    "sugar": 7.7,
+    "sodium": 6
   },
   "pistachios": {
     "kcal": 598,
@@ -49046,6 +49412,15 @@
     "sg": 0,
     "na": 1500
   },
+  "popcorn": {
+    "kcal": 387,
+    "protein": 12.9,
+    "fat": 4.5,
+    "carbs": 77.8,
+    "fiber": 14.5,
+    "sugar": 0.9,
+    "sodium": 8
+  },
   "popcorn microwave low fat and sodium": {
     "kcal": 429.0,
     "p": 12.6,
@@ -49207,6 +49582,15 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 906.0
+  },
+  "poppy seed": {
+    "kcal": 525,
+    "protein": 17.9,
+    "fat": 41.6,
+    "carbs": 28.1,
+    "fiber": 19.5,
+    "sugar": 2.9,
+    "sodium": 26
   },
   "poppy seeds": {
     "kcal": 554,
@@ -52358,6 +52742,15 @@
     "sg": 0,
     "na": 0
   },
+  "potato chips": {
+    "kcal": 536,
+    "protein_g": 7.0,
+    "fat_g": 34.6,
+    "carbs_g": 52.9,
+    "fiber_g": 4.4,
+    "source": "USDA SR Legacy",
+    "notes": "Potato chips per 100g"
+  },
   "potato chips without salt reduced fat": {
     "kcal": 487.0,
     "p": 7.1,
@@ -52961,6 +53354,15 @@
     "sg": 4.2,
     "na": 148
   },
+  "pretzel": {
+    "kcal": 380,
+    "protein": 9.2,
+    "fat": 3.5,
+    "carbs": 79.1,
+    "fiber": 2.9,
+    "sugar": 2.3,
+    "sodium": 1029
+  },
   "pretzels soft": {
     "kcal": 338.0,
     "p": 8.2,
@@ -53024,6 +53426,15 @@
     "sg": 0.9,
     "na": 5
   },
+  "protein powder": {
+    "kcal": 352,
+    "protein": 78.1,
+    "fat": 4.0,
+    "carbs": 9.0,
+    "fiber": 0.0,
+    "sugar": 7.0,
+    "sodium": 280
+  },
   "protein supplement milk based muscle milk light powder": {
     "kcal": 396.0,
     "p": 50.0,
@@ -53050,6 +53461,15 @@
     "fb": 0,
     "sg": 0,
     "na": 601
+  },
+  "prune": {
+    "kcal": 240,
+    "protein": 2.2,
+    "fat": 0.4,
+    "carbs": 63.9,
+    "fiber": 7.1,
+    "sugar": 38.1,
+    "sodium": 2
   },
   "prune juice canned": {
     "kcal": 71.0,
@@ -53770,6 +54190,15 @@
     "fb": 3.7,
     "sg": 59.2,
     "na": 11
+  },
+  "raisins": {
+    "kcal": 299,
+    "protein": 3.1,
+    "fat": 0.5,
+    "carbs": 79.2,
+    "fiber": 3.7,
+    "sugar": 59.2,
+    "sodium": 11
   },
   "raisins dark seedless includes foods for usda's food distribution program": {
     "kcal": 299.0,
@@ -55067,6 +55496,12 @@
     "sg": 4.5,
     "na": 12.0
   },
+  "rye": {
+    "calories": 338,
+    "protein": 10.3,
+    "fat": 1.6,
+    "carbs": 75.9
+  },
   "rye flour dark": {
     "kcal": 325.0,
     "p": 15.9,
@@ -56291,6 +56726,12 @@
     "sg": 10.0,
     "na": 1300.0
   },
+  "sauerkraut": {
+    "calories": 19,
+    "protein": 0.9,
+    "fat": 0.1,
+    "carbs": 4.3
+  },
   "sauerkraut canned solids and liquids": {
     "kcal": 19.0,
     "p": 0.9,
@@ -56948,6 +57389,15 @@
     "sg": 10.8,
     "na": 7200.0
   },
+  "seaweed": {
+    "kcal": 35,
+    "protein": 5.8,
+    "fat": 0.3,
+    "carbs": 5.1,
+    "fiber": 0.3,
+    "sugar": 0.5,
+    "sodium": 48
+  },
   "seaweed agar dried": {
     "kcal": 306.0,
     "p": 6.2,
@@ -57514,6 +57964,15 @@
     "fb": 6.7,
     "sg": 53.1,
     "na": 2.0
+  },
+  "semolina": {
+    "kcal": 360,
+    "protein": 12.7,
+    "fat": 1.1,
+    "carbs": 72.8,
+    "fiber": 3.9,
+    "sugar": 0.0,
+    "sodium": 1
   },
   "semolina enriched": {
     "kcal": 360.0,
@@ -63347,6 +63806,12 @@
     "sg": 0.4,
     "na": 11.0
   },
+  "taro root": {
+    "calories": 112,
+    "protein": 1.5,
+    "fat": 0.2,
+    "carbs": 26.5
+  },
   "taro shoots cooked with salt": {
     "kcal": 14.0,
     "p": 0.7,
@@ -63814,6 +64279,15 @@
     "fb": 0.8,
     "sg": 3.3,
     "na": 58.0
+  },
+  "tomato juice": {
+    "kcal": 17,
+    "protein": 0.9,
+    "fat": 0.1,
+    "carbs": 4.2,
+    "fiber": 0.5,
+    "sugar": 3.6,
+    "sodium": 269
   },
   "tomato juice canned with salt added": {
     "kcal": 17.0,
@@ -67118,6 +67592,15 @@
     "sg": 4.5,
     "na": 5
   },
+  "very bananas": {
+    "kcal": 53.0,
+    "p": 2.5,
+    "c": 7.8,
+    "f": 1.6,
+    "fb": 0.4,
+    "sg": 6.6,
+    "na": 58.0
+  },
   "vinegar": {
     "kcal": 18,
     "p": 0,
@@ -69179,6 +69662,15 @@
     "sg": 0,
     "na": 1100
   },
+  "zest of 3 lemons": {
+    "kcal": 608.0,
+    "p": 24.5,
+    "c": 17.0,
+    "f": 54.2,
+    "fb": 6.1,
+    "sg": 3.1,
+    "na": 356.0
+  },
   "zucchini": {
     "kcal": 19,
     "p": 0.98,
@@ -69197,379 +69689,202 @@
     "sg": 12.5,
     "na": 227.0
   },
-  "oatmeal": {
-    "kcal": 71,
-    "protein": 2.5,
-    "fat": 1.5,
-    "carbs": 12.0,
-    "fiber": 1.7,
-    "sugar": 0.0,
-    "sodium": 49
+  "¼ 2 onions": {
+    "kcal": 40.0,
+    "p": 1.1,
+    "c": 9.3,
+    "f": 0.1,
+    "fb": 1.7,
+    "sg": 4.2,
+    "na": 4.0
   },
-  "applesauce": {
-    "kcal": 42,
-    "protein": 0.2,
-    "fat": 0.1,
-    "carbs": 11.3,
-    "fiber": 1.5,
-    "sugar": 9.7,
-    "sodium": 2
+  "¼ cup mascarpone": {
+    "kcal": 515.0,
+    "p": 10.2,
+    "c": 55.4,
+    "f": 30.5,
+    "fb": 3.6,
+    "sg": 47.2,
+    "na": 357.0
   },
-  "marjoram": {
-    "kcal": 271,
-    "protein": 12.7,
-    "fat": 7.0,
-    "carbs": 60.6,
-    "fiber": 40.3,
-    "sugar": 4.1,
-    "sodium": 77
+  "¼ cup pernod": {
+    "kcal": 515.0,
+    "p": 10.2,
+    "c": 55.4,
+    "f": 30.5,
+    "fb": 3.6,
+    "sg": 47.2,
+    "na": 357.0
   },
-  "semolina": {
-    "kcal": 360,
-    "protein": 12.7,
-    "fat": 1.1,
-    "carbs": 72.8,
-    "fiber": 3.9,
-    "sugar": 0.0,
-    "sodium": 1
+  "¼ cup whole-milk greek": {
+    "kcal": 106.0,
+    "p": 7.3,
+    "c": 12.3,
+    "f": 3.0,
+    "fb": 0.0,
+    "sg": 12.0,
+    "na": 37.0
   },
-  "bran": {
-    "kcal": 216,
-    "protein": 15.6,
-    "fat": 4.3,
-    "carbs": 64.5,
-    "fiber": 42.8,
-    "sugar": 0.9,
-    "sodium": 2
+  "¼ oz cointreau": {
+    "kcal": 189.0,
+    "p": 26.8,
+    "c": 0.0,
+    "f": 9.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 604.0
   },
-  "cracker": {
-    "kcal": 421,
-    "protein": 9.5,
-    "fat": 9.5,
-    "carbs": 71.5,
-    "fiber": 2.4,
-    "sugar": 1.7,
-    "sodium": 757
+  "¼ tsp pepper": {
+    "kcal": 27.0,
+    "p": 1.7,
+    "c": 5.3,
+    "f": 0.5,
+    "fb": 3.4,
+    "sg": 1.9,
+    "na": 13.0
   },
-  "pancake": {
-    "kcal": 227,
-    "protein": 6.0,
-    "fat": 5.5,
-    "carbs": 38.5,
-    "fiber": 1.5,
-    "sugar": 8.3,
-    "sodium": 641
+  "½ cup hot": {
+    "kcal": 515.0,
+    "p": 10.2,
+    "c": 55.4,
+    "f": 30.5,
+    "fb": 3.6,
+    "sg": 47.2,
+    "na": 357.0
   },
-  "liquid smoke": {
-    "kcal": 5,
-    "protein": 0.0,
-    "fat": 0.0,
-    "carbs": 1.3,
-    "fiber": 0.0,
-    "sugar": 0.0,
-    "sodium": 230
+  "½ cup or wild blueberries": {
+    "kcal": 44.0,
+    "p": 0.7,
+    "c": 10.4,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
   },
-  "orange peel": {
-    "kcal": 97,
-    "protein": 1.5,
-    "fat": 0.2,
-    "carbs": 25.0,
-    "fiber": 10.6,
-    "sugar": 4.5,
-    "sodium": 3
+  "½ cup peperoncini": {
+    "kcal": 515.0,
+    "p": 10.2,
+    "c": 55.4,
+    "f": 30.5,
+    "fb": 3.6,
+    "sg": 47.2,
+    "na": 357.0
   },
-  "fiddlehead fern": {
-    "kcal": 34,
-    "protein": 4.6,
-    "fat": 0.4,
-    "carbs": 5.7,
-    "fiber": 0.0,
-    "sugar": 0.0,
-    "sodium": 1
+  "½ cup store-bought coleslaw mix": {
+    "kcal": 120.0,
+    "p": 0.8,
+    "c": 13.2,
+    "f": 7.1,
+    "fb": 2.8,
+    "sg": 9.3,
+    "na": 178.0
   },
-  "creme de cacao": {
-    "kcal": 275,
-    "protein": 0.0,
-    "fat": 0.0,
-    "carbs": 41.0,
-    "fiber": 0.0,
-    "sugar": 40.0,
-    "sodium": 5
+  "½ cup whole-milk greek": {
+    "kcal": 106.0,
+    "p": 7.3,
+    "c": 12.3,
+    "f": 3.0,
+    "fb": 0.0,
+    "sg": 12.0,
+    "na": 37.0
   },
-  "pistachio": {
-    "kcal": 572,
-    "protein": 21.4,
-    "fat": 45.8,
-    "carbs": 27.5,
-    "fiber": 10.3,
-    "sugar": 7.7,
-    "sodium": 6
+  "½ lb": {
+    "kcal": 268.0,
+    "p": 13.7,
+    "c": 17.7,
+    "f": 15.8,
+    "fb": 1.1,
+    "sg": 4.5,
+    "na": 473.0
   },
-  "pretzel": {
-    "kcal": 380,
-    "protein": 9.2,
-    "fat": 3.5,
-    "carbs": 79.1,
-    "fiber": 2.9,
-    "sugar": 2.3,
-    "sodium": 1029
+  "½ lb fingerling potatoes": {
+    "kcal": 268.0,
+    "p": 13.7,
+    "c": 17.7,
+    "f": 15.8,
+    "fb": 1.1,
+    "sg": 4.5,
+    "na": 473.0
   },
-  "popcorn": {
-    "kcal": 387,
-    "protein": 12.9,
-    "fat": 4.5,
-    "carbs": 77.8,
-    "fiber": 14.5,
-    "sugar": 0.9,
-    "sodium": 8
+  "½ oz italicus or st-germain": {
+    "kcal": 189.0,
+    "p": 26.8,
+    "c": 0.0,
+    "f": 9.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 604.0
   },
-  "seaweed": {
-    "kcal": 35,
-    "protein": 5.8,
-    "fat": 0.3,
-    "carbs": 5.1,
-    "fiber": 0.3,
-    "sugar": 0.5,
-    "sodium": 48
+  "½ tsp pepper": {
+    "kcal": 27.0,
+    "p": 1.7,
+    "c": 5.3,
+    "f": 0.5,
+    "fb": 3.4,
+    "sg": 1.9,
+    "na": 13.0
   },
-  "flour tortilla": {
-    "kcal": 306,
-    "protein": 7.5,
-    "fat": 7.5,
-    "carbs": 53.2,
-    "fiber": 3.1,
-    "sugar": 2.5,
-    "sodium": 571
+  "½–1 serrano chile": {
+    "kcal": 32.0,
+    "p": 1.7,
+    "c": 6.7,
+    "f": 0.4,
+    "fb": 3.7,
+    "sg": 3.8,
+    "na": 10.0
   },
-  "macadamia": {
-    "kcal": 718,
-    "protein": 7.9,
-    "fat": 76.1,
-    "carbs": 13.4,
-    "fiber": 8.6,
-    "sugar": 4.6,
-    "sodium": 4
+  "½–3 lb": {
+    "kcal": 608.0,
+    "p": 24.5,
+    "c": 17.0,
+    "f": 54.2,
+    "fb": 6.1,
+    "sg": 3.1,
+    "na": 356.0
   },
-  "chuck roast": {
-    "kcal": 267,
-    "protein": 28.5,
-    "fat": 16.3,
-    "carbs": 0.0,
-    "fiber": 0.0,
-    "sugar": 0.0,
-    "sodium": 63
+  "¾ cup whole-milk greek": {
+    "kcal": 106.0,
+    "p": 7.3,
+    "c": 12.3,
+    "f": 3.0,
+    "fb": 0.0,
+    "sg": 12.0,
+    "na": 37.0
   },
-  "protein powder": {
-    "kcal": 352,
-    "protein": 78.1,
-    "fat": 4.0,
-    "carbs": 9.0,
-    "fiber": 0.0,
-    "sugar": 7.0,
-    "sodium": 280
+  "¾ oz cointreau": {
+    "kcal": 189.0,
+    "p": 26.8,
+    "c": 0.0,
+    "f": 9.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 604.0
   },
-  "anise": {
-    "kcal": 337,
-    "protein": 17.6,
-    "fat": 15.9,
-    "carbs": 50.0,
-    "fiber": 14.6,
-    "sugar": 0.0,
-    "sodium": 16
+  "¾ oz simple syrup": {
+    "kcal": 341.0,
+    "p": 0.0,
+    "c": 85.1,
+    "f": 0.0,
+    "fb": 0.1,
+    "sg": 53.0,
+    "na": 0.0
   },
-  "raisins": {
-    "kcal": 299,
-    "protein": 3.1,
-    "fat": 0.5,
-    "carbs": 79.2,
-    "fiber": 3.7,
-    "sugar": 59.2,
-    "sodium": 11
+  "¾ oz triple sec": {
+    "kcal": 189.0,
+    "p": 26.8,
+    "c": 0.0,
+    "f": 9.1,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 604.0
   },
-  "poppy seed": {
-    "kcal": 525,
-    "protein": 17.9,
-    "fat": 41.6,
-    "carbs": 28.1,
-    "fiber": 19.5,
-    "sugar": 2.9,
-    "sodium": 26
-  },
-  "granola": {
-    "kcal": 471,
-    "protein": 10.5,
-    "fat": 20.4,
-    "carbs": 65.0,
-    "fiber": 7.7,
-    "sugar": 27.7,
-    "sodium": 24
-  },
-  "hazelnut": {
-    "kcal": 646,
-    "protein": 15.0,
-    "fat": 61.5,
-    "carbs": 16.7,
-    "fiber": 9.7,
-    "sugar": 4.3,
-    "sodium": 1
-  },
-  "horseradish": {
-    "kcal": 48,
-    "protein": 1.2,
-    "fat": 0.5,
-    "carbs": 11.3,
-    "fiber": 3.3,
-    "sugar": 7.6,
-    "sodium": 420
-  },
-  "clove": {
-    "kcal": 323,
-    "protein": 5.9,
-    "fat": 13.0,
-    "carbs": 65.5,
-    "fiber": 33.9,
-    "sugar": 2.4,
-    "sodium": 277
-  },
-  "apple juice": {
-    "kcal": 46,
-    "protein": 0.1,
-    "fat": 0.1,
-    "carbs": 11.3,
-    "fiber": 0.2,
-    "sugar": 9.6,
-    "sodium": 5
-  },
-  "chives": {
-    "kcal": 30,
-    "protein": 3.3,
-    "fat": 0.7,
-    "carbs": 4.4,
-    "fiber": 2.5,
-    "sugar": 1.9,
-    "sodium": 3
-  },
-  "tomato juice": {
-    "kcal": 17,
-    "protein": 0.9,
-    "fat": 0.1,
-    "carbs": 4.2,
-    "fiber": 0.5,
-    "sugar": 3.6,
-    "sodium": 269
-  },
-  "prune": {
-    "kcal": 240,
-    "protein": 2.2,
-    "fat": 0.4,
-    "carbs": 63.9,
-    "fiber": 7.1,
-    "sugar": 38.1,
-    "sodium": 2
-  },
-  "duck": {
-    "calories": 337,
-    "protein": 19.0,
-    "fat": 28.4,
-    "carbs": 0.0
-  },
-  "peanut": {
-    "calories": 567,
-    "protein": 25.8,
-    "fat": 49.2,
-    "carbs": 16.1
-  },
-  "lemon peel": {
-    "calories": 47,
-    "protein": 1.5,
-    "fat": 0.3,
-    "carbs": 16.0
-  },
-  "pineapple juice": {
-    "calories": 53,
-    "protein": 0.4,
-    "fat": 0.1,
-    "carbs": 12.9
-  },
-  "cranberry juice": {
-    "calories": 46,
-    "protein": 0.4,
-    "fat": 0.1,
-    "carbs": 12.2
-  },
-  "fruit": {
-    "calories": 57,
-    "protein": 0.7,
-    "fat": 0.3,
-    "carbs": 14.5
-  },
-  "sauerkraut": {
-    "calories": 19,
-    "protein": 0.9,
-    "fat": 0.1,
-    "carbs": 4.3
-  },
-  "corn flour": {
-    "calories": 361,
-    "protein": 6.9,
-    "fat": 3.9,
-    "carbs": 76.8
-  },
-  "rye": {
-    "calories": 338,
-    "protein": 10.3,
-    "fat": 1.6,
-    "carbs": 75.9
-  },
-  "chili paste": {
-    "calories": 56,
-    "protein": 2.2,
-    "fat": 0.8,
-    "carbs": 11.6
-  },
-  "mussels": {
-    "calories": 86,
-    "protein": 11.9,
-    "fat": 2.2,
-    "carbs": 3.7
-  },
-  "taro root": {
-    "calories": 112,
-    "protein": 1.5,
-    "fat": 0.2,
-    "carbs": 26.5
-  },
-  "bulgur": {
-    "calories": 342,
-    "protein": 12.3,
-    "fat": 1.3,
-    "carbs": 75.9
-  },
-  "ice cream": {
-    "kcal": 207,
-    "protein_g": 3.5,
-    "fat_g": 11.0,
-    "carbs_g": 23.6,
-    "fiber_g": 0.7,
-    "source": "USDA SR Legacy",
-    "notes": "Vanilla ice cream per 100g"
-  },
-  "pecan": {
-    "kcal": 691,
-    "protein_g": 9.2,
-    "fat_g": 72.0,
-    "carbs_g": 13.9,
-    "fiber_g": 9.6,
-    "source": "USDA SR Legacy",
-    "notes": "Pecans per 100g"
-  },
-  "potato chips": {
-    "kcal": 536,
-    "protein_g": 7.0,
-    "fat_g": 34.6,
-    "carbs_g": 52.9,
-    "fiber_g": 4.4,
-    "source": "USDA SR Legacy",
-    "notes": "Potato chips per 100g"
+  "–3 eggs": {
+    "kcal": 55.0,
+    "p": 10.7,
+    "c": 2.4,
+    "f": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 0.0
   }
 }
