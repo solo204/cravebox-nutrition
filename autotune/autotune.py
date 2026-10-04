@@ -29,11 +29,15 @@ Environment variables:
 import argparse
 import hashlib
 import json
+import os
 import subprocess
 import sys
 import time
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.request import urlopen, Request
+from urllib.error import URLError
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = Path(__file__).parent
@@ -44,6 +48,8 @@ DB_FILE = DATA_DIR_ROOT / "nutrition_db.json"
 SYNONYMS_FILE = DATA_DIR_ROOT / "synonyms.json"
 MODIFIERS_FILE = DATA_DIR_ROOT / "modifiers.json"
 VERSION_FILE = DATA_DIR_ROOT / "nutrition_version.json"
+
+SYNONYM_PROPOSALS_FILE = DATA_DIR_ROOT / "synonym_proposals.json"
 
 CRAWLED_FILE = SCRIPT_DIR / "crawled_ingredients.json"
 REPORT_FILE = SCRIPT_DIR / "parse_report.json"
@@ -129,6 +135,145 @@ def apply_proposals(proposals_path: Path, db_path: Path,
     }
 
 
+# ── Synonym candidates from backend ──────────────────────────────────────────
+
+def apply_synonym_candidates(db_path: Path, synonyms_path: Path,
+                              dry_run: bool, min_seen: int = 3) -> dict:
+    """
+    Fetch ingredient_mappings candidates collected by the backend, aggregate
+    by seen count, validate against the DB, and merge into synonyms.json.
+    Clears the backend file after successful processing.
+    """
+    backend_url = os.environ.get("BACKEND_URL", "https://cravebox-backend.onrender.com")
+    candidates_url = f"{backend_url}/synonym-candidates"
+
+    print(f"  Fetching candidates from {candidates_url}...")
+    try:
+        with urlopen(Request(candidates_url), timeout=15) as resp:
+            raw = resp.read().decode("utf-8").strip()
+    except URLError as e:
+        print(f"  WARNING: Could not reach backend — skipping synonym candidates: {e}")
+        return {"candidates_fetched": 0, "synonyms_added": 0, "skipped": 0}
+
+    if not raw:
+        print("  No candidates on backend — nothing to process.")
+        return {"candidates_fetched": 0, "synonyms_added": 0, "skipped": 0}
+
+    # Parse JSONL
+    pairs = []
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            m = json.loads(line)
+            original = m.get("original", "").strip().lower()
+            canonical = m.get("canonical", "").strip().lower()
+            if original and canonical:
+                pairs.append((original, canonical))
+        except Exception:
+            continue
+
+    print(f"  Parsed {len(pairs)} candidate lines.")
+
+    # Aggregate: count (original, canonical) pairs
+    counts = Counter(pairs)
+
+    db = json.loads(db_path.read_text(encoding="utf-8"))
+    synonyms = json.loads(synonyms_path.read_text(encoding="utf-8")) if synonyms_path.exists() else {}
+
+    proposals = []
+    skipped = 0
+
+    for (original, canonical), seen in counts.most_common():
+        if seen < min_seen:
+            break  # most_common is sorted descending — everything below is too rare
+        if original == canonical:
+            print(f"    SKIP '{original}' → '{canonical}' (self-mapping)")
+            skipped += 1
+            continue
+        if original in synonyms:
+            print(f"    SKIP '{original}' → '{canonical}' (original already mapped to '{synonyms[original]}')")
+            skipped += 1
+            continue
+        if canonical in synonyms:
+            print(f"    SKIP '{original}' → '{canonical}' (canonical is itself a synonym — use its target instead)")
+            skipped += 1
+            continue
+        if canonical not in db:
+            print(f"    SKIP '{original}' → '{canonical}' (canonical not in DB)")
+            skipped += 1
+            continue
+        proposals.append({"original": original, "canonical": canonical, "seen": seen})
+        print(f"    PROPOSE: '{original}' → '{canonical}' (seen {seen}x)")
+
+    # Write proposals file for human review — never auto-merges into synonyms.json
+    if not dry_run:
+        SYNONYM_PROPOSALS_FILE.write_text(
+            json.dumps({"proposals": proposals, "generated_at": datetime.now(timezone.utc).isoformat()},
+                       indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
+        print(f"  Wrote {len(proposals)} proposals to {SYNONYM_PROPOSALS_FILE.name} — review before applying.")
+
+    # Clear backend candidates file after processing
+    if not dry_run:
+        try:
+            req = Request(candidates_url, method="DELETE")
+            with urlopen(req, timeout=10):
+                pass
+            print("  Backend candidates cleared.")
+        except Exception as e:
+            print(f"  WARNING: Could not clear backend candidates: {e}")
+
+    return {
+        "candidates_fetched": len(pairs),
+        "proposals_written": len(proposals),
+        "skipped": skipped,
+    }
+
+
+# ── Apply approved synonym proposals ─────────────────────────────────────────
+
+def apply_approved_synonym_proposals(db_path: Path, synonyms_path: Path,
+                                      proposals_path: Path, dry_run: bool) -> dict:
+    """
+    Merge synonym_proposals.json into synonyms.json.
+    Called only when --apply-synonym-proposals flag is passed (after human review).
+    """
+    if not proposals_path.exists():
+        print("  No synonym_proposals.json found — nothing to apply.")
+        return {"synonyms_applied": 0}
+
+    data = json.loads(proposals_path.read_text(encoding="utf-8"))
+    proposals = data.get("proposals", [])
+
+    db = json.loads(db_path.read_text(encoding="utf-8"))
+    synonyms = json.loads(synonyms_path.read_text(encoding="utf-8")) if synonyms_path.exists() else {}
+
+    applied = 0
+    for p in proposals:
+        original = p.get("original", "").strip().lower()
+        canonical = p.get("canonical", "").strip().lower()
+        if not original or not canonical:
+            continue
+        if original in synonyms or canonical not in db:
+            continue
+        if not dry_run:
+            synonyms[original] = canonical
+        print(f"    {'[DRY] ' if dry_run else ''}APPLY: '{original}' → '{canonical}'")
+        applied += 1
+
+    if applied > 0 and not dry_run:
+        synonyms_path.write_text(json.dumps(synonyms, indent=2, ensure_ascii=False), encoding="utf-8")
+        # Clear proposals after applying
+        proposals_path.write_text(json.dumps({"proposals": [], "applied_at": datetime.now(timezone.utc).isoformat()},
+                                              indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"  Applied {applied} synonyms. synonym_proposals.json cleared.")
+
+    return {"synonyms_applied": applied}
+
+
 # ── Version manifest ──────────────────────────────────────────────────────────
 
 def bump_version(db_path: Path, synonyms_path: Path, version_path: Path, dry_run: bool) -> dict:
@@ -204,6 +349,8 @@ def main():
                         help="Path to local open recipe dataset file (RecipeNLG CSV etc.)")
     parser.add_argument("--max-dataset-rows", type=int, default=500000,
                         help="Max rows to read from dataset (default: 500000)")
+    parser.add_argument("--apply-synonym-proposals", action="store_true",
+                        help="Merge synonym_proposals.json into synonyms.json (after human review)")
     args = parser.parse_args()
 
     started_at = time.time()
@@ -261,6 +408,24 @@ def main():
     apply_result = apply_proposals(PROPOSALS_FILE, DB_FILE, SYNONYMS_FILE, dry_run=args.dry_run)
     summary["apply"] = apply_result
 
+    # ── Step 4a: Apply approved synonym proposals (if flag set) ───────────────
+    if args.apply_synonym_proposals:
+        print(f"\n{'='*60}")
+        print(f"  STEP: 4a/5  Apply approved synonym proposals")
+        print(f"{'='*60}")
+        approved_result = apply_approved_synonym_proposals(
+            DB_FILE, SYNONYMS_FILE, SYNONYM_PROPOSALS_FILE, dry_run=args.dry_run)
+        summary["synonym_proposals_applied"] = approved_result
+    else:
+        summary["synonym_proposals_applied"] = {"synonyms_applied": 0}
+
+    # ── Step 4b: Synonym candidates from backend ───────────────────────────────
+    print(f"\n{'='*60}")
+    print(f"  STEP: 4b/5  Synonym candidates (backend → synonyms.json)")
+    print(f"{'='*60}")
+    candidates_result = apply_synonym_candidates(DB_FILE, SYNONYMS_FILE, dry_run=args.dry_run)
+    summary["synonym_candidates"] = candidates_result
+
     # ── Step 5: Bump version ───────────────────────────────────────────────────
     print(f"\n{'='*60}")
     print(f"  STEP: 5/5  Bump version manifest")
@@ -279,7 +444,12 @@ def main():
     print(f"║   Autotune complete in {elapsed}s")
     print(f"║   DB entries:    {version_manifest.get('entry_count', '?'):,}")
     print(f"║   New entries:   {apply_result.get('new_entries_applied', 0):,}")
-    print(f"║   New synonyms:  {apply_result.get('new_synonyms_applied', 0):,}")
+    approved = summary.get("synonym_proposals_applied", {}).get("synonyms_applied", 0)
+    total_synonyms = apply_result.get('new_synonyms_applied', 0) + approved
+    proposals_pending = candidates_result.get('proposals_written', 0)
+    print(f"║   New synonyms:  {total_synonyms:,}  ({approved} user-approved)")
+    if proposals_pending:
+        print(f"║   Pending review:{proposals_pending:,} synonym proposals in data/synonym_proposals.json")
     print(f"║   Version:       {version_manifest.get('version', '?')}")
     print(f"╚══════════════════════════════════════════════════╝")
 
