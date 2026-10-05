@@ -1,13 +1,4 @@
 {
-  "-large anchovies": {
-    "kcal": 131.0,
-    "p": 20.4,
-    "c": 0.0,
-    "f": 4.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 104.0
-  },
   "abiyuch raw": {
     "kcal": 69.0,
     "p": 1.5,
@@ -143,33 +134,6 @@
     "sg": 68.0,
     "na": 4.0
   },
-  "agutuk fish with shortening alaskan ice cream alaska native": {
-    "kcal": 470.0,
-    "p": 9.0,
-    "c": 10.5,
-    "f": 43.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 24.0
-  },
-  "agutuk fishberry with seal oil alaskan ice cream alaska native": {
-    "kcal": 353.0,
-    "p": 3.4,
-    "c": 13.4,
-    "f": 31.8,
-    "fb": 0.5,
-    "sg": 0.0,
-    "na": 21.0
-  },
-  "agutuk meat-caribou alaskan ice cream alaska native": {
-    "kcal": 258.0,
-    "p": 21.7,
-    "c": 0.9,
-    "f": 18.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 95.0
-  },
   "ahi tuna": {
     "kcal": 102,
     "p": 24.7,
@@ -196,573 +160,6 @@
     "fb": 3,
     "sg": 0,
     "na": 10
-  },
-  "alcoholic beverage beer light": {
-    "kcal": 29.0,
-    "p": 0.2,
-    "c": 1.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.1,
-    "na": 4.0
-  },
-  "alcoholic beverage beer light bud light": {
-    "kcal": 29.0,
-    "p": 0.2,
-    "c": 1.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "alcoholic beverage beer light budweiser select": {
-    "kcal": 28.0,
-    "p": 0.2,
-    "c": 0.9,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "alcoholic beverage beer light higher alcohol": {
-    "kcal": 46.0,
-    "p": 0.2,
-    "c": 0.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.1,
-    "na": 4.0
-  },
-  "alcoholic beverage beer light low carb": {
-    "kcal": 27.0,
-    "p": 0.2,
-    "c": 0.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "alcoholic beverage beer regular all": {
-    "kcal": 43.0,
-    "p": 0.5,
-    "c": 3.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 4.0
-  },
-  "alcoholic beverage beer regular budweiser": {
-    "kcal": 41.0,
-    "p": 0.4,
-    "c": 3.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "alcoholic beverage creme de menthe 72 proof": {
-    "kcal": 371.0,
-    "p": 0.0,
-    "c": 41.6,
-    "f": 0.3,
-    "fb": 0.0,
-    "sg": 41.6,
-    "na": 5.0
-  },
-  "alcoholic beverage daiquiri canned": {
-    "kcal": 125.0,
-    "p": 0.0,
-    "c": 15.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 40.0
-  },
-  "alcoholic beverage distilled all gin rum vodka whiskey 100 proof": {
-    "kcal": 295.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled all gin rum vodka whiskey 80 proof": {
-    "kcal": 231.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled all gin rum vodka whiskey 86 proof": {
-    "kcal": 250.0,
-    "p": 0.0,
-    "c": 0.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled all gin rum vodka whiskey 90 proof": {
-    "kcal": 263.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled all gin rum vodka whiskey 94 proof": {
-    "kcal": 275.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled rum 80 proof": {
-    "kcal": 231.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled vodka 80 proof": {
-    "kcal": 231.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "alcoholic beverage distilled whiskey 86 proof": {
-    "kcal": 250.0,
-    "p": 0.0,
-    "c": 0.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.1,
-    "na": 0.0
-  },
-  "alcoholic beverage liqueur coffee 53 proof": {
-    "kcal": 336.0,
-    "p": 0.1,
-    "c": 46.8,
-    "f": 0.3,
-    "fb": 0.0,
-    "sg": 38.3,
-    "na": 8.0
-  },
-  "alcoholic beverage liqueur coffee 63 proof": {
-    "kcal": 308.0,
-    "p": 0.1,
-    "c": 32.2,
-    "f": 0.3,
-    "fb": 0.0,
-    "sg": 32.2,
-    "na": 8.0
-  },
-  "alcoholic beverage liqueur coffee with cream 34 proof": {
-    "kcal": 327.0,
-    "p": 2.8,
-    "c": 20.9,
-    "f": 15.7,
-    "fb": 0.0,
-    "sg": 19.8,
-    "na": 92.0
-  },
-  "alcoholic beverage malt beer hard lemonade": {
-    "kcal": 68.0,
-    "p": 0.0,
-    "c": 10.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 9.8,
-    "na": 5.0
-  },
-  "alcoholic beverage pina colada canned": {
-    "kcal": 237.0,
-    "p": 0.6,
-    "c": 27.6,
-    "f": 7.6,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 71.0
-  },
-  "alcoholic beverage rice sake": {
-    "kcal": 134.0,
-    "p": 0.5,
-    "c": 5.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 2.0
-  },
-  "alcoholic beverage tequila sunrise canned": {
-    "kcal": 110.0,
-    "p": 0.3,
-    "c": 11.3,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 57.0
-  },
-  "alcoholic beverage whiskey sour": {
-    "kcal": 149.0,
-    "p": 0.0,
-    "c": 13.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 20.0
-  },
-  "alcoholic beverage whiskey sour canned": {
-    "kcal": 119.0,
-    "p": 0.0,
-    "c": 13.4,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 44.0
-  },
-  "alcoholic beverage wine cooking": {
-    "kcal": 50.0,
-    "p": 0.5,
-    "c": 6.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.6,
-    "na": 626.0
-  },
-  "alcoholic beverage wine dessert dry": {
-    "kcal": 152.0,
-    "p": 0.2,
-    "c": 11.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.1,
-    "na": 9.0
-  },
-  "alcoholic beverage wine dessert sweet": {
-    "kcal": 160.0,
-    "p": 0.2,
-    "c": 13.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.8,
-    "na": 9.0
-  },
-  "alcoholic beverage wine light": {
-    "kcal": 49.0,
-    "p": 0.1,
-    "c": 1.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.1,
-    "na": 7.0
-  },
-  "alcoholic beverage wine table all": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 2.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.8,
-    "na": 5.0
-  },
-  "alcoholic beverage wine table red": {
-    "kcal": 85.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.6,
-    "na": 4.0
-  },
-  "alcoholic beverage wine table red barbera": {
-    "kcal": 85.0,
-    "p": 0.1,
-    "c": 2.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red burgundy": {
-    "kcal": 86.0,
-    "p": 0.1,
-    "c": 3.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red cabernet franc": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 2.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red cabernet sauvignon": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red carignane": {
-    "kcal": 74.0,
-    "p": 0.1,
-    "c": 2.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red claret": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 3.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red gamay": {
-    "kcal": 78.0,
-    "p": 0.1,
-    "c": 2.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red lemberger": {
-    "kcal": 80.0,
-    "p": 0.1,
-    "c": 2.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red merlot": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 2.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.6,
-    "na": 4.0
-  },
-  "alcoholic beverage wine table red mouvedre": {
-    "kcal": 88.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red petite sirah": {
-    "kcal": 85.0,
-    "p": 0.1,
-    "c": 2.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red pinot noir": {
-    "kcal": 82.0,
-    "p": 0.1,
-    "c": 2.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red sangiovese": {
-    "kcal": 86.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red syrah": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table red zinfandel": {
-    "kcal": 88.0,
-    "p": 0.1,
-    "c": 2.9,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white": {
-    "kcal": 82.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.0,
-    "na": 5.0
-  },
-  "alcoholic beverage wine table white chardonnay": {
-    "kcal": 84.0,
-    "p": 0.1,
-    "c": 2.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.0,
-    "na": 5.0
-  },
-  "alcoholic beverage wine table white chenin blanc": {
-    "kcal": 80.0,
-    "p": 0.1,
-    "c": 3.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white fume blanc": {
-    "kcal": 82.0,
-    "p": 0.1,
-    "c": 2.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white gewurztraminer": {
-    "kcal": 81.0,
-    "p": 0.1,
-    "c": 2.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white late harvest": {
-    "kcal": 112.0,
-    "p": 0.1,
-    "c": 13.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white late harvest gewurztraminer": {
-    "kcal": 108.0,
-    "p": 0.1,
-    "c": 11.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white muller thurgau": {
-    "kcal": 76.0,
-    "p": 0.1,
-    "c": 3.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white muscat": {
-    "kcal": 82.0,
-    "p": 0.1,
-    "c": 5.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white pinot blanc": {
-    "kcal": 81.0,
-    "p": 0.1,
-    "c": 1.9,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white pinot gris grigio": {
-    "kcal": 83.0,
-    "p": 0.1,
-    "c": 2.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white riesling": {
-    "kcal": 80.0,
-    "p": 0.1,
-    "c": 3.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white sauvignon blanc": {
-    "kcal": 81.0,
-    "p": 0.1,
-    "c": 2.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverage wine table white semillon": {
-    "kcal": 82.0,
-    "p": 0.1,
-    "c": 3.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "alcoholic beverages beer higher alcohol": {
-    "kcal": 58.0,
-    "p": 0.9,
-    "c": 0.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 4.0
-  },
-  "alcoholic beverages wine rose": {
-    "kcal": 83.0,
-    "p": 0.4,
-    "c": 3.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 3.8,
-    "na": 5.0
   },
   "aleppo pepper": {
     "kcal": 282,
@@ -926,24 +323,6 @@
     "sg": 1.7,
     "na": 4.0
   },
-  "amaranth leaves cooked boiled drained with salt": {
-    "kcal": 21.0,
-    "p": 2.1,
-    "c": 4.1,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 257.0
-  },
-  "amaranth leaves cooked boiled drained without salt": {
-    "kcal": 21.0,
-    "p": 2.1,
-    "c": 4.1,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 21.0
-  },
   "amaranth leaves raw": {
     "kcal": 23.0,
     "p": 2.5,
@@ -1027,12 +406,12 @@
   },
   "anise": {
     "kcal": 337,
-    "protein": 17.6,
-    "fat": 15.9,
-    "carbs": 50.0,
-    "fiber": 14.6,
-    "sugar": 0.0,
-    "sodium": 16
+    "p": 17.6,
+    "f": 15.9,
+    "c": 50.0,
+    "fb": 14.6,
+    "sg": 0.0,
+    "na": 16
   },
   "anjou pears": {
     "kcal": 62.0,
@@ -1090,12 +469,12 @@
   },
   "apple juice": {
     "kcal": 46,
-    "protein": 0.1,
-    "fat": 0.1,
-    "carbs": 11.3,
-    "fiber": 0.2,
-    "sugar": 9.6,
-    "sodium": 5
+    "p": 0.1,
+    "f": 0.1,
+    "c": 11.3,
+    "fb": 0.2,
+    "sg": 9.6,
+    "na": 5
   },
   "apple juice canned or bottled unsweetened with added ascorbic acid": {
     "kcal": 46.0,
@@ -1132,96 +511,6 @@
     "fb": 0.4,
     "sg": 38.8,
     "na": 25.0
-  },
-  "applebee's 9 oz house sirloin steak": {
-    "kcal": 189.0,
-    "p": 26.8,
-    "c": 0.0,
-    "f": 9.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 604.0
-  },
-  "applebee's chicken tenders from kids' menu": {
-    "kcal": 296.0,
-    "p": 19.2,
-    "c": 18.4,
-    "f": 16.2,
-    "fb": 1.2,
-    "sg": 0.4,
-    "na": 763.0
-  },
-  "applebee's chicken tenders platter": {
-    "kcal": 297.0,
-    "p": 19.6,
-    "c": 18.0,
-    "f": 16.2,
-    "fb": 1.0,
-    "sg": 0.4,
-    "na": 740.0
-  },
-  "applebee's chili": {
-    "kcal": 157.0,
-    "p": 12.6,
-    "c": 4.6,
-    "f": 9.8,
-    "fb": 1.4,
-    "sg": 2.3,
-    "na": 381.0
-  },
-  "applebee's coleslaw": {
-    "kcal": 120.0,
-    "p": 0.8,
-    "c": 13.2,
-    "f": 7.1,
-    "fb": 2.8,
-    "sg": 9.3,
-    "na": 178.0
-  },
-  "applebee's crunchy onion rings": {
-    "kcal": 356.0,
-    "p": 4.6,
-    "c": 40.2,
-    "f": 19.6,
-    "fb": 3.1,
-    "sg": 4.5,
-    "na": 833.0
-  },
-  "applebee's double crunch shrimp": {
-    "kcal": 323.0,
-    "p": 12.3,
-    "c": 26.0,
-    "f": 18.9,
-    "fb": 2.6,
-    "sg": 1.1,
-    "na": 838.0
-  },
-  "applebee's fish hand battered": {
-    "kcal": 202.0,
-    "p": 13.2,
-    "c": 16.6,
-    "f": 9.1,
-    "fb": 0.9,
-    "sg": 0.5,
-    "na": 607.0
-  },
-  "applebee's french fries": {
-    "kcal": 290.0,
-    "p": 3.3,
-    "c": 39.5,
-    "f": 13.2,
-    "fb": 3.9,
-    "sg": 0.0,
-    "na": 618.0
-  },
-  "applebee's mozzarella sticks": {
-    "kcal": 316.0,
-    "p": 14.9,
-    "c": 22.9,
-    "f": 18.4,
-    "fb": 2.1,
-    "sg": 2.8,
-    "na": 838.0
   },
   "apples canned sweetened sliced drained heated": {
     "kcal": 67.0,
@@ -1342,12 +631,12 @@
   },
   "applesauce": {
     "kcal": 42,
-    "protein": 0.2,
-    "fat": 0.1,
-    "carbs": 11.3,
-    "fiber": 1.5,
-    "sugar": 9.7,
-    "sodium": 2
+    "p": 0.2,
+    "f": 0.1,
+    "c": 11.3,
+    "fb": 1.5,
+    "sg": 9.7,
+    "na": 2
   },
   "applesauce canned sweetened with salt": {
     "kcal": 76.0,
@@ -1880,15 +1169,6 @@
     "sg": 53.3,
     "na": 403
   },
-  "ascidians tunughnak alaska native": {
-    "kcal": 20.0,
-    "p": 3.8,
-    "c": 0.0,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 656.0
-  },
   "asiago": {
     "kcal": 408,
     "p": 23.3,
@@ -1916,24 +1196,6 @@
     "sg": 1.1,
     "na": 287.0
   },
-  "asparagus canned no salt added solids and liquids": {
-    "kcal": 15.0,
-    "p": 1.8,
-    "c": 2.5,
-    "f": 0.2,
-    "fb": 1.0,
-    "sg": 1.0,
-    "na": 26.0
-  },
-  "asparagus canned regular pack solids and liquids": {
-    "kcal": 15.0,
-    "p": 1.8,
-    "c": 2.5,
-    "f": 0.2,
-    "fb": 1.0,
-    "sg": 0.0,
-    "na": 284.0
-  },
   "asparagus cooked boiled drained": {
     "kcal": 22.0,
     "p": 2.4,
@@ -1942,33 +1204,6 @@
     "fb": 2.0,
     "sg": 1.3,
     "na": 14.0
-  },
-  "asparagus cooked boiled drained with salt": {
-    "kcal": 22.0,
-    "p": 2.4,
-    "c": 4.1,
-    "f": 0.2,
-    "fb": 2.0,
-    "sg": 1.3,
-    "na": 240.0
-  },
-  "asparagus frozen cooked boiled drained with salt": {
-    "kcal": 18.0,
-    "p": 3.0,
-    "c": 1.9,
-    "f": 0.4,
-    "fb": 1.6,
-    "sg": 0.3,
-    "na": 240.0
-  },
-  "asparagus frozen cooked boiled drained without salt": {
-    "kcal": 18.0,
-    "p": 3.0,
-    "c": 1.9,
-    "f": 0.4,
-    "fb": 1.6,
-    "sg": 0.3,
-    "na": 3.0
   },
   "asparagus raw": {
     "kcal": 20.0,
@@ -2339,33 +1574,6 @@
     "sg": 0.0,
     "na": 27360
   },
-  "balsam-pear bitter gourd leafy tips cooked boiled drained with salt": {
-    "kcal": 32.0,
-    "p": 3.6,
-    "c": 6.2,
-    "f": 0.2,
-    "fb": 1.9,
-    "sg": 1.0,
-    "na": 249.0
-  },
-  "balsam-pear bitter gourd leafy tips cooked boiled drained without salt": {
-    "kcal": 34.0,
-    "p": 3.6,
-    "c": 6.7,
-    "f": 0.2,
-    "fb": 1.9,
-    "sg": 1.0,
-    "na": 13.0
-  },
-  "balsam-pear bitter gourd leafy tips raw": {
-    "kcal": 30.0,
-    "p": 5.3,
-    "c": 3.3,
-    "f": 0.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 11.0
-  },
   "balsam-pear bitter gourd pods cooked boiled drained with salt": {
     "kcal": 19.0,
     "p": 0.8,
@@ -2428,24 +1636,6 @@
     "fb": 1.4,
     "sg": 1.9,
     "na": 7.0
-  },
-  "bamboo shoots cooked boiled drained with salt": {
-    "kcal": 11.0,
-    "p": 1.5,
-    "c": 1.5,
-    "f": 0.2,
-    "fb": 1.0,
-    "sg": 0.0,
-    "na": 240.0
-  },
-  "bamboo shoots cooked boiled drained without salt": {
-    "kcal": 12.0,
-    "p": 1.5,
-    "c": 1.9,
-    "f": 0.2,
-    "fb": 1.0,
-    "sg": 0.0,
-    "na": 4.0
   },
   "bamboo shoots raw": {
     "kcal": 27.0,
@@ -3031,33 +2221,6 @@
     "fb": 24.9,
     "sg": 0.0,
     "na": 11.0
-  },
-  "beans kidney mature seeds sprouted cooked boiled drained with salt": {
-    "kcal": 33.0,
-    "p": 4.8,
-    "c": 4.7,
-    "f": 0.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 243.0
-  },
-  "beans kidney mature seeds sprouted cooked boiled drained without salt": {
-    "kcal": 33.0,
-    "p": 4.8,
-    "c": 4.7,
-    "f": 0.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 7.0
-  },
-  "beans kidney mature seeds sprouted raw": {
-    "kcal": 29.0,
-    "p": 4.2,
-    "c": 4.1,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 6.0
   },
   "beans kidney red mature seeds canned drained solids": {
     "kcal": 124.0,
@@ -3653,29 +2816,11 @@
     "sg": 0.0,
     "na": 12.0
   },
-  "bear black meat alaska native": {
-    "kcal": 155.0,
-    "p": 20.1,
-    "c": 0.0,
-    "f": 8.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "bear meat": {
     "kcal": 155.0,
     "p": 20.1,
     "c": 0.0,
     "f": 8.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "bear polar meat raw alaska native": {
-    "kcal": 130.0,
-    "p": 25.6,
-    "c": 0.0,
-    "f": 3.1,
     "fb": 0.0,
     "sg": 0.0,
     "na": 0.0
@@ -6317,24 +5462,6 @@
     "sg": 0.5,
     "na": 226
   },
-  "beet greens cooked boiled drained with salt": {
-    "kcal": 27.0,
-    "p": 2.6,
-    "c": 5.5,
-    "f": 0.2,
-    "fb": 2.9,
-    "sg": 0.6,
-    "na": 477.0
-  },
-  "beet greens cooked boiled drained without salt": {
-    "kcal": 27.0,
-    "p": 2.6,
-    "c": 5.5,
-    "f": 0.2,
-    "fb": 2.9,
-    "sg": 0.6,
-    "na": 241.0
-  },
   "beet greens raw": {
     "kcal": 22.0,
     "p": 2.2,
@@ -6469,1734 +5596,6 @@
     "fb": 2.0,
     "sg": 39.0,
     "na": 717.0
-  },
-  "beverages abbott eas soy protein powder": {
-    "kcal": 405.0,
-    "p": 47.6,
-    "c": 43.9,
-    "f": 3.6,
-    "fb": 0.0,
-    "sg": 40.5,
-    "na": 452.0
-  },
-  "beverages abbott eas whey protein powder": {
-    "kcal": 385.0,
-    "p": 66.7,
-    "c": 18.0,
-    "f": 5.1,
-    "fb": 0.0,
-    "sg": 5.1,
-    "na": 385.0
-  },
-  "beverages abbott ensure nutritional shake ready-to-drink": {
-    "kcal": 105.0,
-    "p": 3.8,
-    "c": 16.9,
-    "f": 2.5,
-    "fb": 0.0,
-    "sg": 9.7,
-    "na": 84.0
-  },
-  "beverages abbott ensure plus ready-to-drink": {
-    "kcal": 141.0,
-    "p": 5.2,
-    "c": 19.9,
-    "f": 4.5,
-    "fb": 0.0,
-    "sg": 8.3,
-    "na": 95.0
-  },
-  "beverages acai berry drink fortified": {
-    "kcal": 62.0,
-    "p": 0.8,
-    "c": 12.8,
-    "f": 0.8,
-    "fb": 1.2,
-    "sg": 11.1,
-    "na": 13.0
-  },
-  "beverages almond milk chocolate ready-to-drink": {
-    "kcal": 50.0,
-    "p": 0.6,
-    "c": 9.4,
-    "f": 1.2,
-    "fb": 0.4,
-    "sg": 8.8,
-    "na": 71.0
-  },
-  "beverages almond milk sweetened vanilla flavor ready-to-drink": {
-    "kcal": 38.0,
-    "p": 0.4,
-    "c": 6.6,
-    "f": 1.0,
-    "fb": 0.4,
-    "sg": 6.2,
-    "na": 63.0
-  },
-  "beverages almond milk unsweetened shelf stable": {
-    "kcal": 15.0,
-    "p": 0.4,
-    "c": 1.3,
-    "f": 1.0,
-    "fb": 0.2,
-    "sg": 0.8,
-    "na": 72.0
-  },
-  "beverages aloe vera juice drink fortified with vitamin c": {
-    "kcal": 15.0,
-    "p": 0.0,
-    "c": 3.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 3.8,
-    "na": 8.0
-  },
-  "beverages amber hard cider": {
-    "kcal": 56.0,
-    "p": 0.0,
-    "c": 5.9,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 5.9,
-    "na": 4.0
-  },
-  "beverages apple juice drink light fortified with vitamin c": {
-    "kcal": 22.0,
-    "p": 0.0,
-    "c": 5.1,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 4.8,
-    "na": 13.0
-  },
-  "beverages arizona tea ready-to-drink lemon": {
-    "kcal": 39.0,
-    "p": 0.0,
-    "c": 9.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 9.6,
-    "na": 4.0
-  },
-  "beverages carbonated cola fast-food cola": {
-    "kcal": 37.0,
-    "p": 0.1,
-    "c": 9.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 9.0,
-    "na": 4.0
-  },
-  "beverages carbonated cola regular": {
-    "kcal": 42.0,
-    "p": 0.0,
-    "c": 10.4,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 9.9,
-    "na": 3.0
-  },
-  "beverages carbonated cola without caffeine": {
-    "kcal": 41.0,
-    "p": 0.0,
-    "c": 10.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.6,
-    "na": 4.0
-  },
-  "beverages carbonated ginger ale": {
-    "kcal": 34.0,
-    "p": 0.0,
-    "c": 8.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 8.9,
-    "na": 7.0
-  },
-  "beverages carbonated grape soda": {
-    "kcal": 43.0,
-    "p": 0.0,
-    "c": 11.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 15.0
-  },
-  "beverages carbonated lemon-lime soda no caffeine": {
-    "kcal": 41.0,
-    "p": 0.1,
-    "c": 10.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.4,
-    "na": 10.0
-  },
-  "beverages carbonated limeade high caffeine": {
-    "kcal": 17.0,
-    "p": 0.0,
-    "c": 4.1,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 4.0,
-    "na": 40.0
-  },
-  "beverages carbonated orange": {
-    "kcal": 48.0,
-    "p": 0.0,
-    "c": 12.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 12.0
-  },
-  "beverages carbonated pepper-type contains caffeine": {
-    "kcal": 41.0,
-    "p": 0.0,
-    "c": 10.4,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 10.0
-  },
-  "beverages carbonated reduced sugar cola contains caffeine and sweeteners": {
-    "kcal": 20.0,
-    "p": 0.0,
-    "c": 5.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 5.2,
-    "na": 4.0
-  },
-  "beverages carbonated root beer": {
-    "kcal": 41.0,
-    "p": 0.0,
-    "c": 10.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.6,
-    "na": 13.0
-  },
-  "beverages carbonated sprite lemon-lime without caffeine": {
-    "kcal": 40.0,
-    "p": 0.1,
-    "c": 10.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 9.0,
-    "na": 9.0
-  },
-  "beverages carbonated tonic water": {
-    "kcal": 34.0,
-    "p": 0.0,
-    "c": 8.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 8.8,
-    "na": 12.0
-  },
-  "beverages carob-flavor beverage mix powder": {
-    "kcal": 372.0,
-    "p": 1.8,
-    "c": 93.3,
-    "f": 0.2,
-    "fb": 8.0,
-    "sg": 0.0,
-    "na": 103.0
-  },
-  "beverages chocolate drink milk and soy based ready to drink fortified": {
-    "kcal": 101.0,
-    "p": 4.2,
-    "c": 17.3,
-    "f": 1.7,
-    "fb": 1.3,
-    "sg": 8.4,
-    "na": 63.0
-  },
-  "beverages chocolate powder no sugar added": {
-    "kcal": 350.0,
-    "p": 9.1,
-    "c": 68.3,
-    "f": 4.5,
-    "fb": 9.1,
-    "sg": 27.3,
-    "na": 500.0
-  },
-  "beverages chocolate syrup": {
-    "kcal": 279.0,
-    "p": 2.1,
-    "c": 65.1,
-    "f": 1.1,
-    "fb": 2.6,
-    "sg": 49.6,
-    "na": 72.0
-  },
-  "beverages chocolate-flavor beverage mix for milk powder with added nutrients": {
-    "kcal": 400.0,
-    "p": 4.5,
-    "c": 90.3,
-    "f": 2.3,
-    "fb": 4.5,
-    "sg": 81.8,
-    "na": 136.0
-  },
-  "beverages chocolate-flavored drink whey and milk based": {
-    "kcal": 49.0,
-    "p": 0.6,
-    "c": 10.7,
-    "f": 0.4,
-    "fb": 0.6,
-    "sg": 8.7,
-    "na": 91.0
-  },
-  "beverages citrus fruit juice drink frozen concentrate": {
-    "kcal": 162.0,
-    "p": 1.2,
-    "c": 40.2,
-    "f": 0.1,
-    "fb": 0.2,
-    "sg": 28.6,
-    "na": 3.0
-  },
-  "beverages clam and tomato juice canned": {
-    "kcal": 48.0,
-    "p": 0.6,
-    "c": 11.0,
-    "f": 0.2,
-    "fb": 0.4,
-    "sg": 3.3,
-    "na": 362.0
-  },
-  "beverages coca-cola powerade lemon-lime flavored ready-to-drink": {
-    "kcal": 32.0,
-    "p": 0.0,
-    "c": 7.8,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 6.1,
-    "na": 42.0
-  },
-  "beverages cocktail mix non-alcoholic concentrated frozen": {
-    "kcal": 287.0,
-    "p": 0.1,
-    "c": 71.6,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 24.5,
-    "na": 0.0
-  },
-  "beverages cocoa mix nestle hot cocoa mix rich chocolate with marshmallows": {
-    "kcal": 400.0,
-    "p": 2.8,
-    "c": 75.0,
-    "f": 15.0,
-    "fb": 3.7,
-    "sg": 65.0,
-    "na": 800.0
-  },
-  "beverages cocoa mix no sugar added powder": {
-    "kcal": 377.0,
-    "p": 15.5,
-    "c": 71.9,
-    "f": 3.0,
-    "fb": 7.5,
-    "sg": 37.6,
-    "na": 876.0
-  },
-  "beverages cocoa mix powder": {
-    "kcal": 398.0,
-    "p": 6.7,
-    "c": 83.7,
-    "f": 4.0,
-    "fb": 3.7,
-    "sg": 65.6,
-    "na": 504.0
-  },
-  "beverages coconut milk sweetened fortified with calcium vitamins a b12 d2": {
-    "kcal": 31.0,
-    "p": 0.2,
-    "c": 2.9,
-    "f": 2.1,
-    "fb": 0.0,
-    "sg": 2.5,
-    "na": 19.0
-  },
-  "beverages coconut water ready-to-drink unsweetened": {
-    "kcal": 18.0,
-    "p": 0.2,
-    "c": 4.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 3.9,
-    "na": 26.0
-  },
-  "beverages coffee brewed breakfast blend": {
-    "kcal": 2.0,
-    "p": 0.3,
-    "c": 0.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "beverages coffee instant chicory": {
-    "kcal": 3.0,
-    "p": 0.1,
-    "c": 0.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 7.0
-  },
-  "beverages coffee instant decaffeinated powder": {
-    "kcal": 351.0,
-    "p": 11.6,
-    "c": 76.0,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 23.0
-  },
-  "beverages coffee instant mocha sweetened": {
-    "kcal": 460.0,
-    "p": 5.3,
-    "c": 74.0,
-    "f": 15.9,
-    "fb": 1.9,
-    "sg": 58.2,
-    "na": 317.0
-  },
-  "beverages coffee instant regular half the caffeine": {
-    "kcal": 352.0,
-    "p": 14.4,
-    "c": 73.2,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 37.0
-  },
-  "beverages coffee instant regular powder": {
-    "kcal": 353.0,
-    "p": 12.2,
-    "c": 75.4,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 37.0
-  },
-  "beverages coffee instant vanilla sweetened decaffeinated with non dairy creamer": {
-    "kcal": 465.0,
-    "p": 0.0,
-    "c": 86.3,
-    "f": 13.3,
-    "fb": 0.0,
-    "sg": 66.7,
-    "na": 333.0
-  },
-  "beverages coffee instant with chicory": {
-    "kcal": 355.0,
-    "p": 9.3,
-    "c": 78.9,
-    "f": 0.2,
-    "fb": 0.5,
-    "sg": 0.0,
-    "na": 277.0
-  },
-  "beverages coffee instant with whitener reduced calorie": {
-    "kcal": 509.0,
-    "p": 2.0,
-    "c": 59.9,
-    "f": 29.1,
-    "fb": 0.5,
-    "sg": 59.0,
-    "na": 0.0
-  },
-  "beverages coffee ready to drink iced mocha milk based": {
-    "kcal": 60.0,
-    "p": 1.5,
-    "c": 11.4,
-    "f": 1.0,
-    "fb": 0.0,
-    "sg": 9.2,
-    "na": 31.0
-  },
-  "beverages coffee ready to drink milk based sweetened": {
-    "kcal": 71.0,
-    "p": 2.0,
-    "c": 12.6,
-    "f": 1.4,
-    "fb": 0.0,
-    "sg": 10.7,
-    "na": 26.0
-  },
-  "beverages coffee ready to drink vanilla light milk based sweetened": {
-    "kcal": 36.0,
-    "p": 2.1,
-    "c": 4.3,
-    "f": 1.1,
-    "fb": 0.0,
-    "sg": 3.9,
-    "na": 34.0
-  },
-  "beverages coffee substitute cereal grain beverage powder": {
-    "kcal": 360.0,
-    "p": 6.0,
-    "c": 78.4,
-    "f": 2.5,
-    "fb": 23.3,
-    "sg": 4.6,
-    "na": 83.0
-  },
-  "beverages cranberry juice cocktail": {
-    "kcal": 52.0,
-    "p": 0.0,
-    "c": 12.2,
-    "f": 0.3,
-    "fb": 0.0,
-    "sg": 11.4,
-    "na": 2.0
-  },
-  "beverages cranberry-apple juice drink bottled": {
-    "kcal": 63.0,
-    "p": 0.0,
-    "c": 15.8,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 14.5,
-    "na": 2.0
-  },
-  "beverages cranberry-apple juice drink low calorie with vitamin c added": {
-    "kcal": 19.0,
-    "p": 0.1,
-    "c": 4.7,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 4.6,
-    "na": 5.0
-  },
-  "beverages cranberry-apricot juice drink bottled": {
-    "kcal": 64.0,
-    "p": 0.2,
-    "c": 16.2,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 2.0
-  },
-  "beverages cranberry-grape juice drink bottled": {
-    "kcal": 56.0,
-    "p": 0.2,
-    "c": 14.0,
-    "f": 0.1,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "beverages cytosport muscle milk ready-to-drink": {
-    "kcal": 52.0,
-    "p": 5.9,
-    "c": 2.3,
-    "f": 2.2,
-    "fb": 0.2,
-    "sg": 0.8,
-    "na": 95.0
-  },
-  "beverages drink mix quaker oats gatorade orange flavor powder": {
-    "kcal": 388.0,
-    "p": 0.0,
-    "c": 94.1,
-    "f": 1.2,
-    "fb": 0.0,
-    "sg": 80.5,
-    "na": 63.0
-  },
-  "beverages energy drink amp": {
-    "kcal": 46.0,
-    "p": 0.2,
-    "c": 12.1,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 12.1,
-    "na": 27.0
-  },
-  "beverages energy drink amp sugar free": {
-    "kcal": 2.0,
-    "p": 0.0,
-    "c": 1.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 31.0
-  },
-  "beverages energy drink citrus": {
-    "kcal": 45.0,
-    "p": 0.0,
-    "c": 11.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.4,
-    "na": 10.0
-  },
-  "beverages energy drink full throttle": {
-    "kcal": 46.0,
-    "p": 0.2,
-    "c": 12.1,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 12.1,
-    "na": 35.0
-  },
-  "beverages energy drink monster fortified with vitamins c b2 b3 b6 b12": {
-    "kcal": 47.0,
-    "p": 0.5,
-    "c": 11.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.9,
-    "na": 77.0
-  },
-  "beverages energy drink red bull": {
-    "kcal": 43.0,
-    "p": 0.5,
-    "c": 10.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.2,
-    "na": 39.0
-  },
-  "beverages energy drink rockstar": {
-    "kcal": 58.0,
-    "p": 0.3,
-    "c": 12.7,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 12.3,
-    "na": 16.0
-  },
-  "beverages energy drink rockstar sugar free": {
-    "kcal": 4.0,
-    "p": 0.2,
-    "c": 0.7,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 52.0
-  },
-  "beverages energy drink sugar free": {
-    "kcal": 4.0,
-    "p": 0.4,
-    "c": 0.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 42.0
-  },
-  "beverages energy drink vault citrus flavor": {
-    "kcal": 49.0,
-    "p": 0.0,
-    "c": 13.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 13.0,
-    "na": 12.0
-  },
-  "beverages energy drink vault zero sugar-free citrus flavor": {
-    "kcal": 1.0,
-    "p": 0.2,
-    "c": 0.7,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 14.0
-  },
-  "beverages energy drink with carbonated water and high fructose corn syrup": {
-    "kcal": 62.0,
-    "p": 0.4,
-    "c": 15.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 13.8,
-    "na": 48.0
-  },
-  "beverages fruit flavored drink less than 3 juice not fortified with vitamin c": {
-    "kcal": 64.0,
-    "p": 0.0,
-    "c": 16.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 15.8,
-    "na": 36.0
-  },
-  "beverages fruit juice drink greater than 3 juice high vitamin c": {
-    "kcal": 46.0,
-    "p": 0.1,
-    "c": 11.4,
-    "f": 0.1,
-    "fb": 0.1,
-    "sg": 10.7,
-    "na": 8.0
-  },
-  "beverages fruit juice drink reduced sugar with vitamin e added": {
-    "kcal": 39.0,
-    "p": 0.0,
-    "c": 10.0,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 9.0,
-    "na": 2.0
-  },
-  "beverages fruit punch drink frozen concentrate": {
-    "kcal": 162.0,
-    "p": 0.2,
-    "c": 41.4,
-    "f": 0.0,
-    "fb": 0.4,
-    "sg": 0.0,
-    "na": 8.0
-  },
-  "beverages fruit punch drink with added nutrients canned": {
-    "kcal": 47.0,
-    "p": 0.0,
-    "c": 11.9,
-    "f": 0.0,
-    "fb": 0.2,
-    "sg": 11.3,
-    "na": 38.0
-  },
-  "beverages fruit punch drink without added nutrients canned": {
-    "kcal": 48.0,
-    "p": 0.0,
-    "c": 12.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 11.3,
-    "na": 10.0
-  },
-  "beverages fruit punch juice drink frozen concentrate": {
-    "kcal": 175.0,
-    "p": 0.3,
-    "c": 43.1,
-    "f": 0.7,
-    "fb": 0.2,
-    "sg": 0.0,
-    "na": 10.0
-  },
-  "beverages fruit-flavored drink dry powdered mix low calorie with aspartame": {
-    "kcal": 218.0,
-    "p": 0.5,
-    "c": 87.4,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 404.0
-  },
-  "beverages fuze orange mango fortified with vitamins a c e b6": {
-    "kcal": 38.0,
-    "p": 0.7,
-    "c": 9.2,
-    "f": 0.1,
-    "fb": 0.2,
-    "sg": 9.0,
-    "na": 10.0
-  },
-  "beverages grape drink canned": {
-    "kcal": 61.0,
-    "p": 0.0,
-    "c": 15.7,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 13.1,
-    "na": 16.0
-  },
-  "beverages grape juice drink canned": {
-    "kcal": 57.0,
-    "p": 0.0,
-    "c": 14.6,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 14.1,
-    "na": 9.0
-  },
-  "beverages kiwi strawberry juice drink": {
-    "kcal": 47.0,
-    "p": 0.0,
-    "c": 12.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 11.6,
-    "na": 11.0
-  },
-  "beverages lemonade fruit juice drink light fortified with vitamin e and c": {
-    "kcal": 21.0,
-    "p": 0.0,
-    "c": 5.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 5.0,
-    "na": 5.0
-  },
-  "beverages lemonade powder": {
-    "kcal": 376.0,
-    "p": 0.0,
-    "c": 97.6,
-    "f": 1.1,
-    "fb": 0.4,
-    "sg": 94.7,
-    "na": 51.0
-  },
-  "beverages lemonade-flavor drink powder": {
-    "kcal": 380.0,
-    "p": 0.0,
-    "c": 97.9,
-    "f": 1.0,
-    "fb": 0.0,
-    "sg": 97.2,
-    "na": 130.0
-  },
-  "beverages lipton brisk tea black ready-to-drink lemon": {
-    "kcal": 35.0,
-    "p": 0.0,
-    "c": 8.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 8.7,
-    "na": 21.0
-  },
-  "beverages malt liquor beverage": {
-    "kcal": 40.0,
-    "p": 0.3,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "beverages malted drink mix chocolate powder": {
-    "kcal": 411.0,
-    "p": 5.1,
-    "c": 86.9,
-    "f": 4.8,
-    "fb": 4.8,
-    "sg": 66.7,
-    "na": 190.0
-  },
-  "beverages malted drink mix natural powder dairy based": {
-    "kcal": 428.0,
-    "p": 14.3,
-    "c": 71.2,
-    "f": 9.5,
-    "fb": 0.1,
-    "sg": 47.6,
-    "na": 405.0
-  },
-  "beverages meal supplement drink canned peanut flavor": {
-    "kcal": 101.0,
-    "p": 3.5,
-    "c": 14.7,
-    "f": 3.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 54.0
-  },
-  "beverages minute maid lemonada limeade": {
-    "kcal": 50.0,
-    "p": 0.0,
-    "c": 13.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 12.9,
-    "na": 6.0
-  },
-  "beverages mixed vegetable and fruit juice drink with added nutrients": {
-    "kcal": 29.0,
-    "p": 0.0,
-    "c": 7.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 2.1,
-    "na": 21.0
-  },
-  "beverages monster energy drink low carb": {
-    "kcal": 5.0,
-    "p": 0.0,
-    "c": 1.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.4,
-    "na": 75.0
-  },
-  "beverages motts apple juice light fortified with vitamin c": {
-    "kcal": 22.0,
-    "p": 0.0,
-    "c": 5.1,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 4.8,
-    "na": 13.0
-  },
-  "beverages nestea tea black ready-to-drink lemon": {
-    "kcal": 36.0,
-    "p": 0.0,
-    "c": 9.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 9.1,
-    "na": 21.0
-  },
-  "beverages nestle boost plus nutritional drink ready-to-drink": {
-    "kcal": 138.0,
-    "p": 5.4,
-    "c": 17.3,
-    "f": 5.4,
-    "fb": 1.2,
-    "sg": 8.5,
-    "na": 77.0
-  },
-  "beverages nutritional shake mix high protein powder": {
-    "kcal": 392.0,
-    "p": 53.6,
-    "c": 20.4,
-    "f": 10.7,
-    "fb": 0.0,
-    "sg": 3.6,
-    "na": 1210.0
-  },
-  "beverages ocean spray cran cherry": {
-    "kcal": 46.0,
-    "p": 0.2,
-    "c": 12.8,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 12.2,
-    "na": 7.0
-  },
-  "beverages ocean spray cran grape": {
-    "kcal": 54.0,
-    "p": 0.2,
-    "c": 13.2,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 12.6,
-    "na": 19.0
-  },
-  "beverages ocean spray cran lemonade": {
-    "kcal": 45.0,
-    "p": 0.1,
-    "c": 11.1,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 10.4,
-    "na": 52.0
-  },
-  "beverages ocean spray cran pomegranate": {
-    "kcal": 47.0,
-    "p": 0.1,
-    "c": 12.6,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 12.0,
-    "na": 12.0
-  },
-  "beverages ocean spray cran raspberry juice drink": {
-    "kcal": 49.0,
-    "p": 0.3,
-    "c": 12.0,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 11.4,
-    "na": 14.0
-  },
-  "beverages ocean spray cran-energy cranberry energy juice drink": {
-    "kcal": 15.0,
-    "p": 0.0,
-    "c": 3.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 3.8,
-    "na": 21.0
-  },
-  "beverages ocean spray cranberry-apple juice drink bottled": {
-    "kcal": 56.0,
-    "p": 0.3,
-    "c": 13.7,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 13.1,
-    "na": 19.0
-  },
-  "beverages ocean spray diet cran cherry": {
-    "kcal": 4.0,
-    "p": 0.2,
-    "c": 0.7,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 0.2,
-    "na": 8.0
-  },
-  "beverages ocean spray diet cranberry juice": {
-    "kcal": 4.0,
-    "p": 0.1,
-    "c": 0.8,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 0.2,
-    "na": 7.0
-  },
-  "beverages ocean spray light cranberry": {
-    "kcal": 19.0,
-    "p": 0.2,
-    "c": 4.7,
-    "f": 0.0,
-    "fb": 0.7,
-    "sg": 4.0,
-    "na": 15.0
-  },
-  "beverages ocean spray light cranberry and raspberry flavored juice": {
-    "kcal": 26.0,
-    "p": 0.7,
-    "c": 5.8,
-    "f": 0.0,
-    "fb": 0.7,
-    "sg": 5.0,
-    "na": 2.0
-  },
-  "beverages ocean spray light cranberry concord grape": {
-    "kcal": 23.0,
-    "p": 0.4,
-    "c": 5.8,
-    "f": 0.0,
-    "fb": 0.7,
-    "sg": 5.0,
-    "na": 8.0
-  },
-  "beverages ocean spray ruby red cranberry": {
-    "kcal": 45.0,
-    "p": 0.1,
-    "c": 11.6,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 11.0,
-    "na": 11.0
-  },
-  "beverages ocean spray white cranberry peach": {
-    "kcal": 45.0,
-    "p": 0.1,
-    "c": 11.9,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 11.3,
-    "na": 11.0
-  },
-  "beverages ocean spray white cranberry strawberry flavored juice drink": {
-    "kcal": 49.0,
-    "p": 0.2,
-    "c": 12.0,
-    "f": 0.0,
-    "fb": 0.6,
-    "sg": 11.4,
-    "na": 3.0
-  },
-  "beverages orange and apricot juice drink canned": {
-    "kcal": 51.0,
-    "p": 0.3,
-    "c": 12.7,
-    "f": 0.1,
-    "fb": 0.1,
-    "sg": 12.1,
-    "na": 2.0
-  },
-  "beverages orange breakfast drink ready-to-drink with added nutrients": {
-    "kcal": 53.0,
-    "p": 0.0,
-    "c": 13.2,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 8.0,
-    "na": 54.0
-  },
-  "beverages orange drink breakfast type with juice and pulp frozen concentrate": {
-    "kcal": 153.0,
-    "p": 0.4,
-    "c": 39.0,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 38.0,
-    "na": 26.0
-  },
-  "beverages orange drink canned with added vitamin c": {
-    "kcal": 49.0,
-    "p": 0.0,
-    "c": 12.3,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 11.0,
-    "na": 3.0
-  },
-  "beverages orange juice drink": {
-    "kcal": 54.0,
-    "p": 0.2,
-    "c": 13.4,
-    "f": 0.0,
-    "fb": 0.2,
-    "sg": 9.4,
-    "na": 2.0
-  },
-  "beverages orange juice light no pulp": {
-    "kcal": 21.0,
-    "p": 0.2,
-    "c": 5.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 4.2,
-    "na": 4.0
-  },
-  "beverages orange-flavor drink breakfast type low calorie powder": {
-    "kcal": 217.0,
-    "p": 3.6,
-    "c": 85.9,
-    "f": 0.0,
-    "fb": 3.8,
-    "sg": 2.6,
-    "na": 81.0
-  },
-  "beverages orange-flavor drink breakfast type powder": {
-    "kcal": 386.0,
-    "p": 0.0,
-    "c": 98.9,
-    "f": 0.0,
-    "fb": 0.4,
-    "sg": 92.3,
-    "na": 17.0
-  },
-  "beverages orange-flavor drink breakfast type with pulp frozen concentrate": {
-    "kcal": 172.0,
-    "p": 0.1,
-    "c": 42.9,
-    "f": 0.5,
-    "fb": 0.2,
-    "sg": 11.7,
-    "na": 24.0
-  },
-  "beverages ovaltine chocolate malt powder": {
-    "kcal": 372.0,
-    "p": 0.0,
-    "c": 93.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 72.7,
-    "na": 530.0
-  },
-  "beverages ovaltine classic malt powder": {
-    "kcal": 372.0,
-    "p": 0.0,
-    "c": 93.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 63.6,
-    "na": 636.0
-  },
-  "beverages pepsico quaker gatorade g performance o 2 ready-to-drink": {
-    "kcal": 26.0,
-    "p": 0.0,
-    "c": 6.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 5.2,
-    "na": 39.0
-  },
-  "beverages pepsico quaker gatorade g2 low calorie": {
-    "kcal": 8.0,
-    "p": 0.1,
-    "c": 1.9,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.3,
-    "na": 45.0
-  },
-  "beverages pineapple and grapefruit juice drink canned": {
-    "kcal": 47.0,
-    "p": 0.2,
-    "c": 11.6,
-    "f": 0.1,
-    "fb": 0.1,
-    "sg": 11.5,
-    "na": 14.0
-  },
-  "beverages pineapple and orange juice drink canned": {
-    "kcal": 50.0,
-    "p": 1.3,
-    "c": 11.8,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 11.6,
-    "na": 3.0
-  },
-  "beverages propel zero fruit-flavored non-carbonated": {
-    "kcal": 5.0,
-    "p": 0.0,
-    "c": 1.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 33.0
-  },
-  "beverages protein powder soy based": {
-    "kcal": 388.0,
-    "p": 55.6,
-    "c": 28.9,
-    "f": 5.6,
-    "fb": 6.7,
-    "sg": 22.2,
-    "na": 733.0
-  },
-  "beverages protein powder whey based": {
-    "kcal": 352.0,
-    "p": 78.1,
-    "c": 6.2,
-    "f": 1.6,
-    "fb": 3.1,
-    "sg": 0.0,
-    "na": 156.0
-  },
-  "beverages rice milk unsweetened": {
-    "kcal": 47.0,
-    "p": 0.3,
-    "c": 9.2,
-    "f": 1.0,
-    "fb": 0.3,
-    "sg": 5.3,
-    "na": 39.0
-  },
-  "beverages rich chocolate powder": {
-    "kcal": 372.0,
-    "p": 0.0,
-    "c": 93.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 81.8,
-    "na": 636.0
-  },
-  "beverages slimfast meal replacement high protein shake ready-to-drink 3-2-1 plan": {
-    "kcal": 61.0,
-    "p": 6.6,
-    "c": 0.8,
-    "f": 3.4,
-    "fb": 0.4,
-    "sg": 0.6,
-    "na": 72.0
-  },
-  "beverages snapple tea black and green ready to drink lemon diet": {
-    "kcal": 2.0,
-    "p": 0.1,
-    "c": 0.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "beverages snapple tea black and green ready to drink peach diet": {
-    "kcal": 2.0,
-    "p": 0.1,
-    "c": 0.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "beverages tea black ready to drink decaffeinated": {
-    "kcal": 38.0,
-    "p": 0.0,
-    "c": 8.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.9,
-    "na": 8.0
-  },
-  "beverages tea black ready-to-drink lemon diet": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 17.0
-  },
-  "beverages tea black ready-to-drink lemon sweetened": {
-    "kcal": 45.0,
-    "p": 0.0,
-    "c": 10.8,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 9.5,
-    "na": 3.0
-  },
-  "beverages tea black ready-to-drink peach diet": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 5.0
-  },
-  "beverages tea green brewed regular": {
-    "kcal": 1.0,
-    "p": 0.2,
-    "c": 0.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "beverages tea green ready to drink ginseng and honey sweetened": {
-    "kcal": 30.0,
-    "p": 0.0,
-    "c": 7.2,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 6.9,
-    "na": 2.0
-  },
-  "beverages tea green ready-to-drink citrus diet fortified with vitamin c": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 26.0
-  },
-  "beverages tea green ready-to-drink diet": {
-    "kcal": 4.0,
-    "p": 0.0,
-    "c": 0.9,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.9,
-    "na": 6.0
-  },
-  "beverages tea green ready-to-drink sweetened": {
-    "kcal": 27.0,
-    "p": 0.0,
-    "c": 6.2,
-    "f": 0.2,
-    "fb": 0.0,
-    "sg": 5.3,
-    "na": 21.0
-  },
-  "beverages tea herb brewed chamomile": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "beverages tea herb other than chamomile brewed": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "beverages tea instant decaffeinated lemon diet": {
-    "kcal": 338.0,
-    "p": 3.3,
-    "c": 85.4,
-    "f": 0.6,
-    "fb": 0.0,
-    "sg": 1.9,
-    "na": 412.0
-  },
-  "beverages tea instant decaffeinated lemon sweetened": {
-    "kcal": 401.0,
-    "p": 0.1,
-    "c": 98.6,
-    "f": 0.7,
-    "fb": 0.0,
-    "sg": 95.3,
-    "na": 5.0
-  },
-  "beverages tea instant decaffeinated unsweetened": {
-    "kcal": 315.0,
-    "p": 20.2,
-    "c": 58.7,
-    "f": 0.0,
-    "fb": 8.5,
-    "sg": 5.5,
-    "na": 72.0
-  },
-  "beverages tea instant lemon diet": {
-    "kcal": 2.0,
-    "p": 0.0,
-    "c": 0.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 6.0
-  },
-  "beverages tea instant lemon sweetened powder": {
-    "kcal": 401.0,
-    "p": 0.1,
-    "c": 98.6,
-    "f": 0.7,
-    "fb": 0.7,
-    "sg": 95.3,
-    "na": 5.0
-  },
-  "beverages tea instant lemon unsweetened": {
-    "kcal": 345.0,
-    "p": 7.4,
-    "c": 78.5,
-    "f": 0.2,
-    "fb": 5.0,
-    "sg": 4.5,
-    "na": 55.0
-  },
-  "beverages tea instant lemon with added ascorbic acid": {
-    "kcal": 385.0,
-    "p": 0.6,
-    "c": 97.6,
-    "f": 0.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 5.0
-  },
-  "beverages tea instant sweetened with sodium saccharin lemon-flavored powder": {
-    "kcal": 338.0,
-    "p": 3.3,
-    "c": 85.4,
-    "f": 0.6,
-    "fb": 0.0,
-    "sg": 1.9,
-    "na": 412.0
-  },
-  "beverages tea instant unsweetened powder": {
-    "kcal": 315.0,
-    "p": 20.2,
-    "c": 58.7,
-    "f": 0.0,
-    "fb": 8.5,
-    "sg": 5.5,
-    "na": 72.0
-  },
-  "beverages tea oolong brewed": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 3.0
-  },
-  "beverages tea ready-to-drink lemon diet": {
-    "kcal": 2.0,
-    "p": 0.0,
-    "c": 0.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 1.0
-  },
-  "beverages the coca-cola company hi-c flashin' fruit punch": {
-    "kcal": 45.0,
-    "p": 0.0,
-    "c": 12.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 12.5,
-    "na": 8.0
-  },
-  "beverages the coca-cola company minute maid lemonade": {
-    "kcal": 46.0,
-    "p": 0.0,
-    "c": 12.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 11.7,
-    "na": 6.0
-  },
-  "beverages tropical punch ready-to-drink": {
-    "kcal": 10.0,
-    "p": 0.0,
-    "c": 2.5,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 2.5,
-    "na": 13.0
-  },
-  "beverages unilever slimfast meal replacement regular ready-to-drink 3-2-1 plan": {
-    "kcal": 57.0,
-    "p": 3.3,
-    "c": 7.7,
-    "f": 1.9,
-    "fb": 1.6,
-    "sg": 6.0,
-    "na": 68.0
-  },
-  "beverages unilever slimfast shake mix high protein whey powder 3-2-1 plan": {
-    "kcal": 433.0,
-    "p": 27.9,
-    "c": 50.0,
-    "f": 13.5,
-    "fb": 18.2,
-    "sg": 20.6,
-    "na": 495.0
-  },
-  "beverages unilever slimfast shake mix powder 3-2-1 plan": {
-    "kcal": 448.0,
-    "p": 8.1,
-    "c": 73.9,
-    "f": 13.3,
-    "fb": 18.1,
-    "sg": 38.0,
-    "na": 472.0
-  },
-  "beverages v8 splash juice drinks berry blend": {
-    "kcal": 29.0,
-    "p": 0.0,
-    "c": 7.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.4,
-    "na": 21.0
-  },
-  "beverages v8 splash juice drinks diet berry blend": {
-    "kcal": 4.0,
-    "p": 0.0,
-    "c": 1.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.4,
-    "na": 14.0
-  },
-  "beverages v8 splash juice drinks diet fruit medley": {
-    "kcal": 4.0,
-    "p": 0.0,
-    "c": 1.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.8,
-    "na": 13.0
-  },
-  "beverages v8 splash juice drinks diet strawberry kiwi": {
-    "kcal": 4.0,
-    "p": 0.0,
-    "c": 1.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.8,
-    "na": 13.0
-  },
-  "beverages v8 splash juice drinks diet tropical blend": {
-    "kcal": 4.0,
-    "p": 0.0,
-    "c": 1.3,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.4,
-    "na": 15.0
-  },
-  "beverages v8 splash juice drinks fruit medley": {
-    "kcal": 33.0,
-    "p": 0.0,
-    "c": 7.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.8,
-    "na": 21.0
-  },
-  "beverages v8 splash juice drinks guava passion fruit": {
-    "kcal": 33.0,
-    "p": 0.0,
-    "c": 7.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.8,
-    "na": 14.0
-  },
-  "beverages v8 splash juice drinks mango peach": {
-    "kcal": 33.0,
-    "p": 0.0,
-    "c": 8.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 8.2,
-    "na": 16.0
-  },
-  "beverages v8 splash juice drinks orange pineapple": {
-    "kcal": 29.0,
-    "p": 0.0,
-    "c": 7.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.4,
-    "na": 21.0
-  },
-  "beverages v8 splash juice drinks orchard blend": {
-    "kcal": 33.0,
-    "p": 0.0,
-    "c": 7.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.8,
-    "na": 21.0
-  },
-  "beverages v8 splash juice drinks strawberry banana": {
-    "kcal": 29.0,
-    "p": 0.0,
-    "c": 7.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.4,
-    "na": 21.0
-  },
-  "beverages v8 splash juice drinks strawberry kiwi": {
-    "kcal": 29.0,
-    "p": 0.0,
-    "c": 7.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.4,
-    "na": 21.0
-  },
-  "beverages v8 splash juice drinks tropical blend": {
-    "kcal": 29.0,
-    "p": 0.0,
-    "c": 7.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.4,
-    "na": 21.0
-  },
-  "beverages v8 splash smoothies peach mango": {
-    "kcal": 37.0,
-    "p": 1.2,
-    "c": 7.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.3,
-    "na": 29.0
-  },
-  "beverages v8 splash smoothies strawberry banana": {
-    "kcal": 37.0,
-    "p": 1.2,
-    "c": 8.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 7.3,
-    "na": 29.0
-  },
-  "beverages v8 splash smoothies tropical colada": {
-    "kcal": 41.0,
-    "p": 1.2,
-    "c": 8.5,
-    "f": 0.0,
-    "fb": 0.4,
-    "sg": 7.3,
-    "na": 20.0
-  },
-  "beverages v8 v- fusion juices acai berry": {
-    "kcal": 45.0,
-    "p": 0.0,
-    "c": 11.0,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.6,
-    "na": 28.0
-  },
-  "beverages v8 v-fusion juices peach mango": {
-    "kcal": 49.0,
-    "p": 0.4,
-    "c": 11.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.6,
-    "na": 28.0
-  },
-  "beverages v8 v-fusion juices strawberry banana": {
-    "kcal": 49.0,
-    "p": 0.4,
-    "c": 11.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.2,
-    "na": 28.0
-  },
-  "beverages v8 v-fusion juices tropical": {
-    "kcal": 49.0,
-    "p": 0.4,
-    "c": 11.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.2,
-    "na": 33.0
-  },
-  "beverages vegetable and fruit juice blend 100 juice with added vitamins a c e": {
-    "kcal": 46.0,
-    "p": 0.3,
-    "c": 11.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 10.4,
-    "na": 29.0
-  },
-  "beverages water bottled yumberry pomegranate with anti-oxidants zero calories": {
-    "kcal": 5.0,
-    "p": 0.0,
-    "c": 1.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 10.0
-  },
-  "beverages whey protein powder isolate": {
-    "kcal": 359.0,
-    "p": 58.1,
-    "c": 29.1,
-    "f": 1.2,
-    "fb": 0.0,
-    "sg": 1.2,
-    "na": 372.0
-  },
-  "beverages whiskey sour mix bottled": {
-    "kcal": 87.0,
-    "p": 0.1,
-    "c": 21.4,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 21.4,
-    "na": 102.0
-  },
-  "beverages whiskey sour mix powder": {
-    "kcal": 383.0,
-    "p": 0.6,
-    "c": 97.3,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 97.3,
-    "na": 274.0
-  },
-  "beverages wine non-alcoholic": {
-    "kcal": 6.0,
-    "p": 0.5,
-    "c": 1.1,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 1.1,
-    "na": 7.0
-  },
-  "beverages yellow green colored citrus soft drink with caffeine": {
-    "kcal": 49.0,
-    "p": 0.0,
-    "c": 12.8,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 12.9,
-    "na": 18.0
   },
   "biryani masala": {
     "kcal": 61,
@@ -8450,15 +5849,6 @@
     "sg": 4.9,
     "na": 1.0
   },
-  "blackberries wild raw alaska native": {
-    "kcal": 52.0,
-    "p": 0.8,
-    "c": 9.8,
-    "f": 1.1,
-    "fb": 3.2,
-    "sg": 3.6,
-    "na": 6.0
-  },
   "blackberry": {
     "kcal": 43,
     "p": 1.4,
@@ -8576,15 +5966,6 @@
     "sg": 19.3,
     "na": 1.0
   },
-  "blueberries wild frozen alaska native": {
-    "kcal": 44.0,
-    "p": 0.7,
-    "c": 10.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "blueberries wild frozen includes foods for usda's food distribution program": {
     "kcal": 57.0,
     "p": 0.0,
@@ -8593,15 +5974,6 @@
     "fb": 4.4,
     "sg": 0.0,
     "na": 3.0
-  },
-  "blueberries wild raw alaska native": {
-    "kcal": 61.0,
-    "p": 1.2,
-    "c": 12.3,
-    "f": 0.8,
-    "fb": 2.6,
-    "sg": 6.5,
-    "na": 6.0
   },
   "blueberry": {
     "kcal": 64,
@@ -8821,12 +6193,12 @@
   },
   "bran": {
     "kcal": 216,
-    "protein": 15.6,
-    "fat": 4.3,
-    "carbs": 64.5,
-    "fiber": 42.8,
-    "sugar": 0.9,
-    "sodium": 2
+    "p": 15.6,
+    "f": 4.3,
+    "c": 64.5,
+    "fb": 42.8,
+    "sg": 0.9,
+    "na": 2
   },
   "brandy": {
     "kcal": 231,
@@ -10204,24 +7576,6 @@
     "fb": 0,
     "sg": 0,
     "na": 16.1
-  },
-  "cabbage chinese pak-choi cooked boiled drained with salt": {
-    "kcal": 12.0,
-    "p": 1.6,
-    "c": 1.8,
-    "f": 0.2,
-    "fb": 1.0,
-    "sg": 0.8,
-    "na": 270.0
-  },
-  "cabbage chinese pak-choi cooked boiled drained without salt": {
-    "kcal": 12.0,
-    "p": 1.6,
-    "c": 1.8,
-    "f": 0.2,
-    "fb": 1.0,
-    "sg": 0.8,
-    "na": 34.0
   },
   "cabbage chinese pak-choi raw": {
     "kcal": 13.0,
@@ -11995,78 +9349,6 @@
     "fb": 1.6,
     "sg": 0.0,
     "na": 170.0
-  },
-  "caribou bone marrow raw alaska native": {
-    "kcal": 786.0,
-    "p": 6.7,
-    "c": 0.0,
-    "f": 84.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "caribou eye raw alaska native": {
-    "kcal": 326.0,
-    "p": 10.8,
-    "c": 0.0,
-    "f": 31.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "caribou hind quarter meat cooked alaska native": {
-    "kcal": 159.0,
-    "p": 28.8,
-    "c": 0.0,
-    "f": 4.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 45.0
-  },
-  "caribou hind quarter meat raw alaska native": {
-    "kcal": 122.0,
-    "p": 22.6,
-    "c": 0.0,
-    "f": 3.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 52.0
-  },
-  "caribou liver raw alaska native": {
-    "kcal": 122.0,
-    "p": 15.0,
-    "c": 6.8,
-    "f": 3.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "caribou rump meat half dried alaska native": {
-    "kcal": 255.0,
-    "p": 52.1,
-    "c": 0.0,
-    "f": 5.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 390.0
-  },
-  "caribou shoulder meat dried alaska native": {
-    "kcal": 271.0,
-    "p": 59.4,
-    "c": 0.0,
-    "f": 3.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 950.0
-  },
-  "caribou tongue raw alaska native": {
-    "kcal": 260.0,
-    "p": 13.7,
-    "c": 0.0,
-    "f": 22.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "carissa natal-plum raw": {
     "kcal": 62.0,
@@ -13921,15 +11203,6 @@
     "fb": 10.2,
     "sg": 21.4,
     "na": 11.0
-  },
-  "cereals ready-to-eat sun country kretschmer toasted wheat bran": {
-    "kcal": 200.0,
-    "p": 17.6,
-    "c": 59.5,
-    "f": 5.2,
-    "fb": 41.3,
-    "sg": 0.0,
-    "na": 6.0
   },
   "cereals ready-to-eat sun country kretschmer wheat germ regular": {
     "kcal": 366.0,
@@ -17486,15 +14759,6 @@
     "sg": 4,
     "na": 520
   },
-  "chiton leathery gumboots alaska native": {
-    "kcal": 83.0,
-    "p": 17.1,
-    "c": 0.0,
-    "f": 1.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "chive": {
     "kcal": 30,
     "p": 3.3,
@@ -17506,12 +14770,12 @@
   },
   "chives": {
     "kcal": 30,
-    "protein": 3.3,
-    "fat": 0.7,
-    "carbs": 4.4,
-    "fiber": 2.5,
-    "sugar": 1.9,
-    "sodium": 3
+    "p": 3.3,
+    "f": 0.7,
+    "c": 4.4,
+    "fb": 2.5,
+    "sg": 1.9,
+    "na": 3
   },
   "chives freeze-dried": {
     "kcal": 311.0,
@@ -17749,12 +15013,12 @@
   },
   "chuck roast": {
     "kcal": 267,
-    "protein": 28.5,
-    "fat": 16.3,
-    "carbs": 0.0,
-    "fiber": 0.0,
-    "sugar": 0.0,
-    "sodium": 63
+    "p": 28.5,
+    "f": 16.3,
+    "c": 0.0,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 63
   },
   "cilantro": {
     "kcal": 23,
@@ -17864,23 +15128,14 @@
     "sg": 30.6,
     "na": 375.0
   },
-  "cloudberries raw alaska native": {
-    "kcal": 51.0,
-    "p": 2.4,
-    "c": 8.6,
-    "f": 0.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "clove": {
     "kcal": 323,
-    "protein": 5.9,
-    "fat": 13.0,
-    "carbs": 65.5,
-    "fiber": 33.9,
-    "sugar": 2.4,
-    "sodium": 277
+    "p": 5.9,
+    "f": 13.0,
+    "c": 65.5,
+    "fb": 33.9,
+    "sg": 2.4,
+    "na": 277
   },
   "cloves": {
     "kcal": 545,
@@ -17890,15 +15145,6 @@
     "fb": 23.1,
     "sg": 0,
     "na": 36.7
-  },
-  "cockles raw alaska native": {
-    "kcal": 79.0,
-    "p": 13.5,
-    "c": 4.7,
-    "f": 0.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "cocoa dry powder hi-fat or breakfast processed with alkali": {
     "kcal": 479.0,
@@ -17926,15 +15172,6 @@
     "fb": 20.0,
     "sg": 0.0,
     "na": 0.0
-  },
-  "cocoa dry powder unsweetened processed with alkali": {
-    "kcal": 220.0,
-    "p": 18.1,
-    "c": 58.3,
-    "f": 13.1,
-    "fb": 29.8,
-    "sg": 1.8,
-    "na": 19.0
   },
   "cocoa mix nestle rich chocolate hot cocoa mix": {
     "kcal": 400.0,
@@ -19529,24 +16766,6 @@
     "sg": 6.9,
     "na": 16.0
   },
-  "cowpeas leafy tips cooked boiled drained with salt": {
-    "kcal": 22.0,
-    "p": 4.7,
-    "c": 2.8,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 242.0
-  },
-  "cowpeas leafy tips cooked boiled drained without salt": {
-    "kcal": 22.0,
-    "p": 4.7,
-    "c": 2.8,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 6.0
-  },
   "cowpeas leafy tips raw": {
     "kcal": 29.0,
     "p": 4.1,
@@ -19621,12 +16840,12 @@
   },
   "cracker": {
     "kcal": 421,
-    "protein": 9.5,
-    "fat": 9.5,
-    "carbs": 71.5,
-    "fiber": 2.4,
-    "sugar": 1.7,
-    "sodium": 757
+    "p": 9.5,
+    "f": 9.5,
+    "c": 71.5,
+    "fb": 2.4,
+    "sg": 1.7,
+    "na": 757
   },
   "cracker barrel chicken tenderloin platter fried": {
     "kcal": 293.0,
@@ -20186,15 +17405,6 @@
     "sg": 4.3,
     "na": 2.0
   },
-  "cranberries wild bush raw alaska native": {
-    "kcal": 55.0,
-    "p": 1.1,
-    "c": 12.3,
-    "f": 0.2,
-    "fb": 6.7,
-    "sg": 0.0,
-    "na": 26.0
-  },
   "cranberry": {
     "kcal": 46,
     "p": 0.4,
@@ -20248,15 +17458,6 @@
     "fb": 0.1,
     "sg": 12.1,
     "na": 2.0
-  },
-  "cranberry low bush or lingenberry raw alaska native": {
-    "kcal": 55.0,
-    "p": 0.4,
-    "c": 12.2,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "cranberry sauce canned sweetened": {
     "kcal": 159.0,
@@ -20485,12 +17686,12 @@
   },
   "creme de cacao": {
     "kcal": 275,
-    "protein": 0.0,
-    "fat": 0.0,
-    "carbs": 41.0,
-    "fiber": 0.0,
-    "sugar": 40.0,
-    "sodium": 5
+    "p": 0.0,
+    "f": 0.0,
+    "c": 41.0,
+    "fb": 0.0,
+    "sg": 40.0,
+    "na": 5
   },
   "cremini mushroom": {
     "kcal": 40,
@@ -21176,15 +18377,6 @@
     "sg": 0.0,
     "na": 14.0
   },
-  "deer venison sitka raw alaska native": {
-    "kcal": 116.0,
-    "p": 21.5,
-    "c": 0.0,
-    "f": 2.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "delicata squash": {
     "kcal": 49,
     "p": 1.25,
@@ -21193,114 +18385,6 @@
     "fb": 2.64,
     "sg": 0,
     "na": 0
-  },
-  "denny's chicken nuggets star shaped from kid's menu": {
-    "kcal": 377.0,
-    "p": 16.3,
-    "c": 13.6,
-    "f": 28.6,
-    "fb": 0.8,
-    "sg": 0.0,
-    "na": 644.0
-  },
-  "denny's chicken strips": {
-    "kcal": 295.0,
-    "p": 19.2,
-    "c": 22.0,
-    "f": 14.5,
-    "fb": 1.1,
-    "sg": 0.3,
-    "na": 798.0
-  },
-  "denny's coleslaw": {
-    "kcal": 183.0,
-    "p": 1.0,
-    "c": 10.9,
-    "f": 15.0,
-    "fb": 1.3,
-    "sg": 8.2,
-    "na": 376.0
-  },
-  "denny's fish fillet battered or breaded fried": {
-    "kcal": 234.0,
-    "p": 13.8,
-    "c": 17.4,
-    "f": 12.2,
-    "fb": 1.0,
-    "sg": 0.4,
-    "na": 516.0
-  },
-  "denny's french fries": {
-    "kcal": 282.0,
-    "p": 3.4,
-    "c": 35.2,
-    "f": 14.1,
-    "fb": 3.5,
-    "sg": 0.8,
-    "na": 44.0
-  },
-  "denny's golden fried shrimp": {
-    "kcal": 319.0,
-    "p": 13.9,
-    "c": 20.9,
-    "f": 20.0,
-    "fb": 1.5,
-    "sg": 0.8,
-    "na": 1400.0
-  },
-  "denny's hash browns": {
-    "kcal": 197.0,
-    "p": 2.5,
-    "c": 26.6,
-    "f": 9.0,
-    "fb": 2.7,
-    "sg": 1.4,
-    "na": 468.0
-  },
-  "denny's macaroni  cheese from kid's menu": {
-    "kcal": 150.0,
-    "p": 5.2,
-    "c": 21.2,
-    "f": 4.9,
-    "fb": 1.2,
-    "sg": 4.2,
-    "na": 300.0
-  },
-  "denny's mozzarella cheese sticks": {
-    "kcal": 324.0,
-    "p": 13.6,
-    "c": 27.2,
-    "f": 17.9,
-    "fb": 1.6,
-    "sg": 2.8,
-    "na": 1010.0
-  },
-  "denny's onion rings": {
-    "kcal": 385.0,
-    "p": 5.3,
-    "c": 41.0,
-    "f": 22.2,
-    "fb": 2.4,
-    "sg": 4.8,
-    "na": 780.0
-  },
-  "denny's spaghetti and meatballs": {
-    "kcal": 170.0,
-    "p": 7.8,
-    "c": 15.5,
-    "f": 8.5,
-    "fb": 1.5,
-    "sg": 2.0,
-    "na": 351.0
-  },
-  "denny's top sirloin steak": {
-    "kcal": 182.0,
-    "p": 28.9,
-    "c": 0.1,
-    "f": 7.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 349.0
   },
   "dessert topping powdered": {
     "kcal": 577.0,
@@ -21553,96 +18637,6 @@
     "fb": 4,
     "sg": 5,
     "na": 4000
-  },
-  "domino's 14 cheese pizza classic hand-tossed crust": {
-    "kcal": 257.0,
-    "p": 10.8,
-    "c": 33.2,
-    "f": 9.0,
-    "fb": 2.2,
-    "sg": 4.0,
-    "na": 523.0
-  },
-  "domino's 14 cheese pizza crunchy thin crust": {
-    "kcal": 298.0,
-    "p": 12.3,
-    "c": 28.2,
-    "f": 15.1,
-    "fb": 2.5,
-    "sg": 4.1,
-    "na": 628.0
-  },
-  "domino's 14 cheese pizza ultimate deep dish crust": {
-    "kcal": 265.0,
-    "p": 10.8,
-    "c": 33.5,
-    "f": 9.8,
-    "fb": 2.4,
-    "sg": 4.2,
-    "na": 615.0
-  },
-  "domino's 14 extravaganzza feast pizza classic hand-tossed crust": {
-    "kcal": 244.0,
-    "p": 10.3,
-    "c": 25.7,
-    "f": 11.1,
-    "fb": 2.0,
-    "sg": 3.3,
-    "na": 456.0
-  },
-  "domino's 14 pepperoni pizza classic hand-tossed crust": {
-    "kcal": 273.0,
-    "p": 11.2,
-    "c": 31.9,
-    "f": 11.2,
-    "fb": 2.1,
-    "sg": 3.7,
-    "na": 611.0
-  },
-  "domino's 14 pepperoni pizza crunchy thin crust": {
-    "kcal": 328.0,
-    "p": 13.9,
-    "c": 25.4,
-    "f": 19.0,
-    "fb": 2.6,
-    "sg": 3.6,
-    "na": 783.0
-  },
-  "domino's 14 pepperoni pizza ultimate deep dish crust": {
-    "kcal": 283.0,
-    "p": 11.5,
-    "c": 31.9,
-    "f": 12.1,
-    "fb": 2.4,
-    "sg": 3.9,
-    "na": 693.0
-  },
-  "domino's 14 sausage pizza classic hand-tossed crust": {
-    "kcal": 273.0,
-    "p": 11.1,
-    "c": 31.8,
-    "f": 11.2,
-    "fb": 2.4,
-    "sg": 3.9,
-    "na": 594.0
-  },
-  "domino's 14 sausage pizza crunchy thin crust": {
-    "kcal": 319.0,
-    "p": 12.8,
-    "c": 25.3,
-    "f": 18.5,
-    "fb": 2.6,
-    "sg": 3.4,
-    "na": 725.0
-  },
-  "domino's 14 sausage pizza ultimate deep dish crust": {
-    "kcal": 277.0,
-    "p": 11.0,
-    "c": 31.2,
-    "f": 12.0,
-    "fb": 2.6,
-    "sg": 3.8,
-    "na": 677.0
   },
   "dosa batter": {
     "kcal": 156,
@@ -22050,15 +19044,6 @@
     "na": 88
   },
   "duck meat": {
-    "kcal": 84.0,
-    "p": 20.2,
-    "c": 0.0,
-    "f": 0.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "duck scoter white-winged meat alaska native": {
     "kcal": 84.0,
     "p": 20.2,
     "c": 0.0,
@@ -22978,12 +19963,12 @@
   },
   "fiddlehead fern": {
     "kcal": 34,
-    "protein": 4.6,
-    "fat": 0.4,
-    "carbs": 5.7,
-    "fiber": 0.0,
-    "sugar": 0.0,
-    "sodium": 1
+    "p": 4.6,
+    "f": 0.4,
+    "c": 5.7,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 1
   },
   "fiddlehead ferns raw": {
     "kcal": 34.0,
@@ -23075,15 +20060,6 @@
     "sg": 0.0,
     "na": 34.0
   },
-  "fireweed young leaves raw alaska native": {
-    "kcal": 44.0,
-    "p": 3.0,
-    "c": 6.3,
-    "f": 0.8,
-    "fb": 6.0,
-    "sg": 0.0,
-    "na": 50.0
-  },
   "fish": {
     "kcal": 105,
     "p": 22,
@@ -23146,15 +20122,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 69.0
-  },
-  "fish blackfish whole alaska native": {
-    "kcal": 82.0,
-    "p": 15.5,
-    "c": 0.0,
-    "f": 1.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "fish bluefish cooked dry heat": {
     "kcal": 159.0,
@@ -23417,15 +20384,6 @@
     "sg": 0.0,
     "na": 31.0
   },
-  "fish devilfish meat alaska native": {
-    "kcal": 97.0,
-    "p": 11.7,
-    "c": 0.0,
-    "f": 5.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "fish drum freshwater cooked dry heat": {
     "kcal": 153.0,
     "p": 22.5,
@@ -23561,15 +20519,6 @@
     "sg": 0.0,
     "na": 68.0
   },
-  "fish halibut cooked with skin alaska native": {
-    "kcal": 113.0,
-    "p": 22.1,
-    "c": 0.0,
-    "f": 2.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 86.0
-  },
   "fish halibut greenland cooked dry heat": {
     "kcal": 239.0,
     "p": 18.4,
@@ -23587,15 +20536,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 80.0
-  },
-  "fish halibut raw with skin alaska native": {
-    "kcal": 116.0,
-    "p": 20.5,
-    "c": 1.8,
-    "f": 2.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 79.0
   },
   "fish herring atlantic cooked dry heat": {
     "kcal": 203.0,
@@ -23633,33 +20573,6 @@
     "sg": 0.0,
     "na": 90.0
   },
-  "fish herring eggs on giant kelp pacific alaska native": {
-    "kcal": 63.0,
-    "p": 11.3,
-    "c": 2.6,
-    "f": 0.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 61.0
-  },
-  "fish herring eggs pacific dry alaska native": {
-    "kcal": 312.0,
-    "p": 60.4,
-    "c": 2.8,
-    "f": 6.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish herring eggs pacific plain alaska native": {
-    "kcal": 74.0,
-    "p": 9.6,
-    "c": 4.5,
-    "f": 1.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 61.0
-  },
   "fish herring pacific cooked dry heat": {
     "kcal": 250.0,
     "p": 21.0,
@@ -23668,15 +20581,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 95.0
-  },
-  "fish herring pacific flesh air-dried packed in oil alaska native": {
-    "kcal": 489.0,
-    "p": 44.5,
-    "c": 0.0,
-    "f": 34.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "fish herring pacific raw": {
     "kcal": 195.0,
@@ -23713,24 +20617,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 76.0
-  },
-  "fish lingcod liver alaska native": {
-    "kcal": 424.0,
-    "p": 5.6,
-    "c": 6.0,
-    "f": 42.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish lingcod meat raw alaska native": {
-    "kcal": 79.0,
-    "p": 17.9,
-    "c": 0.0,
-    "f": 0.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 59.0
   },
   "fish lingcod raw": {
     "kcal": 85.0,
@@ -24001,15 +20887,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 49.0
-  },
-  "fish pike northern liver alaska native": {
-    "kcal": 156.0,
-    "p": 16.6,
-    "c": 4.3,
-    "f": 8.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "fish pike northern raw": {
     "kcal": 88.0,
@@ -24317,15 +21194,6 @@
     "sg": 0.0,
     "na": 64.0
   },
-  "fish salmon chum dried alaska native": {
-    "kcal": 378.0,
-    "p": 62.1,
-    "c": 0.0,
-    "f": 14.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 190.0
-  },
   "fish salmon chum raw": {
     "kcal": 120.0,
     "p": 20.1,
@@ -24334,15 +21202,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 50.0
-  },
-  "fish salmon chum raw alaska native": {
-    "kcal": 116.0,
-    "p": 20.7,
-    "c": 0.0,
-    "f": 3.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 59.0
   },
   "fish salmon coho farmed cooked dry heat": {
     "kcal": 178.0,
@@ -24361,15 +21220,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 47.0
-  },
-  "fish salmon coho silver raw alaska native": {
-    "kcal": 140.0,
-    "p": 22.6,
-    "c": 0.0,
-    "f": 5.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 58.0
   },
   "fish salmon coho wild cooked dry heat": {
     "kcal": 139.0,
@@ -24397,60 +21247,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 46.0
-  },
-  "fish salmon king chinook kippered canned alaska native": {
-    "kcal": 266.0,
-    "p": 30.7,
-    "c": 0.0,
-    "f": 15.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish salmon king chinook liver alaska native": {
-    "kcal": 156.0,
-    "p": 16.6,
-    "c": 4.3,
-    "f": 8.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish salmon king chinook raw alaska native": {
-    "kcal": 187.0,
-    "p": 20.2,
-    "c": 0.0,
-    "f": 11.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 48.0
-  },
-  "fish salmon king chinook smoked and canned alaska native": {
-    "kcal": 150.0,
-    "p": 23.2,
-    "c": 0.0,
-    "f": 5.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish salmon king chinook smoked brined alaska native": {
-    "kcal": 430.0,
-    "p": 39.9,
-    "c": 0.0,
-    "f": 30.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 693.0
-  },
-  "fish salmon king with skin kippered alaska native": {
-    "kcal": 209.0,
-    "p": 23.2,
-    "c": 0.0,
-    "f": 13.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 870.0
   },
   "fish salmon pink canned drained solids": {
     "kcal": 138.0,
@@ -24506,33 +21302,6 @@
     "sg": 0.0,
     "na": 75.0
   },
-  "fish salmon red canned bones removed alaska native": {
-    "kcal": 161.0,
-    "p": 27.3,
-    "c": 0.0,
-    "f": 5.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 390.0
-  },
-  "fish salmon red sockeye canned smoked alaska native": {
-    "kcal": 206.0,
-    "p": 35.2,
-    "c": 0.0,
-    "f": 7.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 600.0
-  },
-  "fish salmon red sockeye kippered alaska native": {
-    "kcal": 141.0,
-    "p": 24.5,
-    "c": 0.0,
-    "f": 4.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 460.0
-  },
   "fish salmon sockeye canned drained solids": {
     "kcal": 167.0,
     "p": 23.6,
@@ -24568,24 +21337,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 78.0
-  },
-  "fish salmon sockeye red raw alaska native": {
-    "kcal": 153.0,
-    "p": 21.9,
-    "c": 0.0,
-    "f": 7.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 60.0
-  },
-  "fish salmon tipnuk fermented alaska native": {
-    "kcal": 159.0,
-    "p": 15.9,
-    "c": 0.0,
-    "f": 10.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "fish sardine atlantic canned in oil drained solids with bone": {
     "kcal": 208.0,
@@ -24703,15 +21454,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 79.0
-  },
-  "fish sheefish raw alaska native": {
-    "kcal": 115.0,
-    "p": 22.2,
-    "c": 0.0,
-    "f": 2.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 52.0
   },
   "fish sheepshead cooked dry heat": {
     "kcal": 126.0,
@@ -25127,42 +21869,6 @@
     "sg": 0.0,
     "na": 150.0
   },
-  "fish whitefish broad head eyes cheeks and soft bones alaska native": {
-    "kcal": 107.0,
-    "p": 18.6,
-    "c": 0.0,
-    "f": 3.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish whitefish broad liver alaska native": {
-    "kcal": 104.0,
-    "p": 11.0,
-    "c": 5.1,
-    "f": 4.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "fish whitefish dried alaska native": {
-    "kcal": 371.0,
-    "p": 62.4,
-    "c": 0.0,
-    "f": 13.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 200.0
-  },
-  "fish whitefish eggs alaska native": {
-    "kcal": 104.0,
-    "p": 14.7,
-    "c": 4.9,
-    "f": 2.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 160.0
-  },
   "fish whitefish mixed species cooked dry heat": {
     "kcal": 172.0,
     "p": 24.5,
@@ -25177,15 +21883,6 @@
     "p": 19.1,
     "c": 0.0,
     "f": 5.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 51.0
-  },
-  "fish whitefish mixed species raw alaska native": {
-    "kcal": 131.0,
-    "p": 18.9,
-    "c": 0.0,
-    "f": 6.1,
     "fb": 0.0,
     "sg": 0.0,
     "na": 51.0
@@ -25318,12 +22015,12 @@
   },
   "flour tortilla": {
     "kcal": 306,
-    "protein": 7.5,
-    "fat": 7.5,
-    "carbs": 53.2,
-    "fiber": 3.1,
-    "sugar": 2.5,
-    "sodium": 571
+    "p": 7.5,
+    "f": 7.5,
+    "c": 53.2,
+    "fb": 3.1,
+    "sg": 2.5,
+    "na": 571
   },
   "fluid replacement electrolyte solution include pedialyte": {
     "kcal": 10.0,
@@ -25783,15 +22480,6 @@
     "fb": 1.5,
     "sg": 5.1,
     "na": 96.0
-  },
-  "frozen novelties sugar free creamsicle pops": {
-    "kcal": 49.0,
-    "p": 1.4,
-    "c": 12.0,
-    "f": 2.3,
-    "fb": 7.5,
-    "sg": 0.4,
-    "na": 6.0
   },
   "frozen yogurts chocolate": {
     "kcal": 131.0,
@@ -26711,15 +23399,6 @@
     "sg": 86.0,
     "na": 466.0
   },
-  "gelatin desserts dry mix reduced calorie with aspartame": {
-    "kcal": 198.0,
-    "p": 15.7,
-    "c": 80.2,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 862.0
-  },
   "gelatin desserts dry mix reduced calorie with aspartame no added sodium": {
     "kcal": 345.0,
     "p": 55.3,
@@ -27163,12 +23842,12 @@
   },
   "granola": {
     "kcal": 471,
-    "protein": 10.5,
-    "fat": 20.4,
-    "carbs": 65.0,
-    "fiber": 7.7,
-    "sugar": 27.7,
-    "sodium": 24
+    "p": 10.5,
+    "f": 20.4,
+    "c": 65.0,
+    "fb": 7.7,
+    "sg": 27.7,
+    "na": 24
   },
   "granola bar soft milk chocolate coated peanut butter": {
     "kcal": 536.0,
@@ -28153,12 +24832,12 @@
   },
   "hazelnut": {
     "kcal": 646,
-    "protein": 15.0,
-    "fat": 61.5,
-    "carbs": 16.7,
-    "fiber": 9.7,
-    "sugar": 4.3,
-    "sodium": 1
+    "p": 15.0,
+    "f": 61.5,
+    "c": 16.7,
+    "fb": 9.7,
+    "sg": 4.3,
+    "na": 1
   },
   "hazelnuts": {
     "kcal": 642,
@@ -28387,12 +25066,12 @@
   },
   "horseradish": {
     "kcal": 48,
-    "protein": 1.2,
-    "fat": 0.5,
-    "carbs": 11.3,
-    "fiber": 3.3,
-    "sugar": 7.6,
-    "sodium": 420
+    "p": 1.2,
+    "f": 0.5,
+    "c": 11.3,
+    "fb": 3.3,
+    "sg": 7.6,
+    "na": 420
   },
   "hot dog": {
     "kcal": 290,
@@ -28484,15 +25163,6 @@
     "sg": 0,
     "na": 10
   },
-  "huckleberries raw alaska native": {
-    "kcal": 37.0,
-    "p": 0.4,
-    "c": 8.7,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 10.0
-  },
   "hummus": {
     "kcal": 229,
     "p": 7.35,
@@ -28567,12 +25237,12 @@
   },
   "ice cream": {
     "kcal": 207,
-    "protein_g": 3.5,
-    "fat_g": 11.0,
-    "carbs_g": 23.6,
-    "fiber_g": 0.7,
-    "source": "USDA SR Legacy",
-    "notes": "Vanilla ice cream per 100g"
+    "p": 3.5,
+    "f": 11.0,
+    "c": 23.6,
+    "fb": 0.7,
+    "sg": 0.0,
+    "na": 0.0
   },
   "ice cream bar covered with chocolate and nuts": {
     "kcal": 303.0,
@@ -29077,15 +25747,6 @@
     "fb": 0.3,
     "sg": 43.4,
     "na": 40.0
-  },
-  "jams and preserves no sugar with sodium saccharin any flavor": {
-    "kcal": 132.0,
-    "p": 0.3,
-    "c": 53.4,
-    "f": 0.3,
-    "fb": 2.5,
-    "sg": 37.8,
-    "na": 0.0
   },
   "jams preserves marmalade reduced sugar": {
     "kcal": 151.0,
@@ -31193,33 +27854,6 @@
     "sg": 8.8,
     "na": 557.0
   },
-  "leavening agents baking powder double-acting sodium aluminum sulfate": {
-    "kcal": 53.0,
-    "p": 0.0,
-    "c": 27.7,
-    "f": 0.0,
-    "fb": 0.2,
-    "sg": 0.0,
-    "na": 10600.0
-  },
-  "leavening agents baking powder double-acting straight phosphate": {
-    "kcal": 51.0,
-    "p": 0.1,
-    "c": 24.1,
-    "f": 0.0,
-    "fb": 0.2,
-    "sg": 0.0,
-    "na": 7890.0
-  },
-  "leavening agents baking powder low-sodium": {
-    "kcal": 97.0,
-    "p": 0.1,
-    "c": 46.9,
-    "f": 0.4,
-    "fb": 2.2,
-    "sg": 0.0,
-    "na": 90.0
-  },
   "leavening agents cream of tartar": {
     "kcal": 258.0,
     "p": 0.0,
@@ -31336,24 +27970,6 @@
     "fb": 0.0,
     "sg": 1.4,
     "na": 29.0
-  },
-  "lemon juice from concentrate bottled real lemon": {
-    "kcal": 17.0,
-    "p": 0.5,
-    "c": 5.7,
-    "f": 0.1,
-    "fb": 0.7,
-    "sg": 1.6,
-    "na": 26.0
-  },
-  "lemon juice from concentrate canned or bottled": {
-    "kcal": 17.0,
-    "p": 0.5,
-    "c": 5.6,
-    "f": 0.1,
-    "fb": 0.7,
-    "sg": 1.5,
-    "na": 24.0
   },
   "lemon juice raw": {
     "kcal": 22.0,
@@ -31724,15 +28340,6 @@
     "sg": 1.7,
     "na": 1
   },
-  "lime juice canned or bottled unsweetened": {
-    "kcal": 21.0,
-    "p": 0.2,
-    "c": 6.7,
-    "f": 0.2,
-    "fb": 0.4,
-    "sg": 1.4,
-    "na": 16.0
-  },
   "lime juice raw": {
     "kcal": 25.0,
     "p": 0.4,
@@ -31771,12 +28378,12 @@
   },
   "liquid smoke": {
     "kcal": 5,
-    "protein": 0.0,
-    "fat": 0.0,
-    "carbs": 1.3,
-    "fiber": 0.0,
-    "sugar": 0.0,
-    "sodium": 230
+    "p": 0.0,
+    "f": 0.0,
+    "c": 1.3,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 230
   },
   "liquid sweetener": {
     "kcal": 279.0,
@@ -32140,12 +28747,12 @@
   },
   "macadamia": {
     "kcal": 718,
-    "protein": 7.9,
-    "fat": 76.1,
-    "carbs": 13.4,
-    "fiber": 8.6,
-    "sugar": 4.6,
-    "sodium": 4
+    "p": 7.9,
+    "f": 76.1,
+    "c": 13.4,
+    "fb": 8.6,
+    "sg": 4.6,
+    "na": 4
   },
   "macadamia nuts": {
     "kcal": 712,
@@ -32815,12 +29422,12 @@
   },
   "marjoram": {
     "kcal": 271,
-    "protein": 12.7,
-    "fat": 7.0,
-    "carbs": 60.6,
-    "fiber": 40.3,
-    "sugar": 4.1,
-    "sodium": 77
+    "p": 12.7,
+    "f": 7.0,
+    "c": 60.6,
+    "fb": 40.3,
+    "sg": 4.1,
+    "na": 77
   },
   "marmalade orange": {
     "kcal": 246.0,
@@ -32893,15 +29500,6 @@
     "fb": 7.04,
     "sg": 0,
     "na": 2.73
-  },
-  "mashu roots raw alaska native": {
-    "kcal": 135.0,
-    "p": 5.8,
-    "c": 22.6,
-    "f": 2.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "massaman paste": {
     "kcal": 165,
@@ -34055,24 +30653,6 @@
     "sg": 0,
     "na": 0
   },
-  "moose liver braised alaska native": {
-    "kcal": 155.0,
-    "p": 24.4,
-    "c": 3.4,
-    "f": 4.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 70.0
-  },
-  "moose meat raw alaska native": {
-    "kcal": 103.0,
-    "p": 22.3,
-    "c": 0.0,
-    "f": 1.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 65.0
-  },
   "mori-nu tofu silken extra firm": {
     "kcal": 55.0,
     "p": 7.4,
@@ -34207,24 +30787,6 @@
     "fb": 2.5,
     "sg": 0.3,
     "na": 13.0
-  },
-  "mouse nuts roots alaska native": {
-    "kcal": 81.0,
-    "p": 3.9,
-    "c": 16.1,
-    "f": 0.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "mouse nuts seedlings alaska native": {
-    "kcal": 104.0,
-    "p": 7.3,
-    "c": 16.3,
-    "f": 1.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "mozzarella": {
     "kcal": 298,
@@ -34514,33 +31076,6 @@
     "sg": 2.0,
     "na": 5500
   },
-  "mushroom white exposed to ultraviolet light raw": {
-    "kcal": 22.0,
-    "p": 3.1,
-    "c": 3.3,
-    "f": 0.3,
-    "fb": 1.0,
-    "sg": 2.0,
-    "na": 5.0
-  },
-  "mushrooms brown italian or crimini exposed to ultraviolet light raw": {
-    "kcal": 22.0,
-    "p": 2.5,
-    "c": 4.3,
-    "f": 0.1,
-    "fb": 0.6,
-    "sg": 1.7,
-    "na": 6.0
-  },
-  "mushrooms brown italian or crimini raw": {
-    "kcal": 22.0,
-    "p": 2.5,
-    "c": 4.3,
-    "f": 0.1,
-    "fb": 0.6,
-    "sg": 1.7,
-    "na": 6.0
-  },
   "mushrooms canned drained solids": {
     "kcal": 25.0,
     "p": 1.9,
@@ -34766,24 +31301,6 @@
     "sg": 0,
     "na": 2.46
   },
-  "mustard greens cooked boiled drained with salt": {
-    "kcal": 26.0,
-    "p": 2.6,
-    "c": 4.5,
-    "f": 0.5,
-    "fb": 2.0,
-    "sg": 1.4,
-    "na": 252.0
-  },
-  "mustard greens cooked boiled drained without salt": {
-    "kcal": 26.0,
-    "p": 2.6,
-    "c": 4.5,
-    "f": 0.5,
-    "fb": 2.0,
-    "sg": 1.4,
-    "na": 9.0
-  },
   "mustard greens frozen cooked boiled drained with salt": {
     "kcal": 19.0,
     "p": 2.3,
@@ -34999,24 +31516,6 @@
     "fb": 2.3,
     "sg": 1.5,
     "na": 27.0
-  },
-  "new zealand spinach cooked boiled drained with salt": {
-    "kcal": 12.0,
-    "p": 1.3,
-    "c": 2.1,
-    "f": 0.2,
-    "fb": 1.4,
-    "sg": 0.2,
-    "na": 343.0
-  },
-  "new zealand spinach cooked boiled drained without salt": {
-    "kcal": 12.0,
-    "p": 1.3,
-    "c": 2.1,
-    "f": 0.2,
-    "fb": 1.4,
-    "sg": 0.2,
-    "na": 107.0
   },
   "new zealand spinach raw": {
     "kcal": 14.0,
@@ -36073,12 +32572,12 @@
   },
   "oatmeal": {
     "kcal": 71,
-    "protein": 2.5,
-    "fat": 1.5,
-    "carbs": 12.0,
-    "fiber": 1.7,
-    "sugar": 0.0,
-    "sodium": 49
+    "p": 2.5,
+    "f": 1.5,
+    "c": 12.0,
+    "fb": 1.7,
+    "sg": 0.0,
+    "na": 49
   },
   "oatmeal cookies": {
     "kcal": 398.0,
@@ -36115,15 +32614,6 @@
     "fb": 0,
     "sg": 0,
     "na": 230
-  },
-  "octopus alaska native": {
-    "kcal": 56.0,
-    "p": 12.3,
-    "c": 0.0,
-    "f": 0.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "ogbono seeds": {
     "kcal": 547,
@@ -36172,24 +32662,6 @@
   },
   "oil babassu": {
     "kcal": 884.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 100.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "oil bearded seal oogruk alaska native": {
-    "kcal": 899.0,
-    "p": 0.6,
-    "c": 0.0,
-    "f": 99.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "oil beluga whale alaska native": {
-    "kcal": 900.0,
     "p": 0.0,
     "c": 0.0,
     "f": 100.0,
@@ -36620,15 +33092,6 @@
     "sg": 0.0,
     "na": 0.0
   },
-  "oil spotted seal alaska native": {
-    "kcal": 894.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 99.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "oil sunflower high oleic 70 and over": {
     "kcal": 884.0,
     "p": 0.0,
@@ -36719,24 +33182,6 @@
     "sg": 0.0,
     "na": 0.0
   },
-  "oil walrus alaska native": {
-    "kcal": 900.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 100.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "oil whale bowhead alaska native": {
-    "kcal": 900.0,
-    "p": 0.0,
-    "c": 0.0,
-    "f": 100.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "oil wheat germ": {
     "kcal": 884.0,
     "p": 0.0,
@@ -36817,51 +33262,6 @@
     "fb": 0,
     "sg": 0,
     "na": 252
-  },
-  "olive garden cheese ravioli with marinara sauce": {
-    "kcal": 159.0,
-    "p": 7.4,
-    "c": 19.6,
-    "f": 5.6,
-    "fb": 1.1,
-    "sg": 4.8,
-    "na": 269.0
-  },
-  "olive garden chicken parmigiana without pasta": {
-    "kcal": 211.0,
-    "p": 15.3,
-    "c": 12.3,
-    "f": 11.2,
-    "fb": 0.9,
-    "sg": 2.7,
-    "na": 625.0
-  },
-  "olive garden lasagna classico": {
-    "kcal": 184.0,
-    "p": 11.3,
-    "c": 10.3,
-    "f": 10.8,
-    "fb": 1.6,
-    "sg": 3.5,
-    "na": 450.0
-  },
-  "olive garden spaghetti with meat sauce": {
-    "kcal": 121.0,
-    "p": 5.8,
-    "c": 17.2,
-    "f": 3.3,
-    "fb": 1.7,
-    "sg": 1.7,
-    "na": 209.0
-  },
-  "olive garden spaghetti with pomodoro sauce": {
-    "kcal": 102.0,
-    "p": 4.3,
-    "c": 17.1,
-    "f": 1.9,
-    "fb": 1.7,
-    "sg": 1.8,
-    "na": 183.0
   },
   "olive loaf pork": {
     "kcal": 235.0,
@@ -37115,15 +33515,6 @@
     "sg": 3.9,
     "na": 15.0
   },
-  "oopah tunicate whole animal alaska native": {
-    "kcal": 67.0,
-    "p": 11.7,
-    "c": 0.0,
-    "f": 2.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "open pit barbecue sauce": {
     "kcal": 132.0,
     "p": 0.4,
@@ -37252,12 +33643,12 @@
   },
   "orange peel": {
     "kcal": 97,
-    "protein": 1.5,
-    "fat": 0.2,
-    "carbs": 25.0,
-    "fiber": 10.6,
-    "sugar": 4.5,
-    "sodium": 3
+    "p": 1.5,
+    "f": 0.2,
+    "c": 25.0,
+    "fb": 10.6,
+    "sg": 4.5,
+    "na": 3
   },
   "orange peel raw": {
     "kcal": 97.0,
@@ -37592,15 +33983,6 @@
     "sg": 0.4,
     "na": 883.0
   },
-  "owl horned flesh raw alaska native": {
-    "kcal": 136.0,
-    "p": 22.7,
-    "c": 0.0,
-    "f": 5.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "ox kidney": {
     "kcal": 93.0,
     "p": 18.1,
@@ -37693,12 +34075,12 @@
   },
   "pancake": {
     "kcal": 227,
-    "protein": 6.0,
-    "fat": 5.5,
-    "carbs": 38.5,
-    "fiber": 1.5,
-    "sugar": 8.3,
-    "sodium": 641
+    "p": 6.0,
+    "f": 5.5,
+    "c": 38.5,
+    "fb": 1.5,
+    "sg": 8.3,
+    "na": 641
   },
   "pancake mix": {
     "kcal": 349.0,
@@ -37861,42 +34243,6 @@
     "fb": 2.5,
     "sg": 3.0,
     "na": 620
-  },
-  "papa john's 14 cheese pizza original crust": {
-    "kcal": 260.0,
-    "p": 11.5,
-    "c": 32.7,
-    "f": 9.2,
-    "fb": 1.9,
-    "sg": 5.3,
-    "na": 578.0
-  },
-  "papa john's 14 cheese pizza thin crust": {
-    "kcal": 295.0,
-    "p": 12.3,
-    "c": 26.3,
-    "f": 15.7,
-    "fb": 2.3,
-    "sg": 3.9,
-    "na": 528.0
-  },
-  "papa john's 14 pepperoni pizza original crust": {
-    "kcal": 275.0,
-    "p": 12.0,
-    "c": 30.0,
-    "f": 11.9,
-    "fb": 1.2,
-    "sg": 4.8,
-    "na": 671.0
-  },
-  "papa john's 14 the works pizza original crust": {
-    "kcal": 240.0,
-    "p": 10.3,
-    "c": 26.7,
-    "f": 10.2,
-    "fb": 2.5,
-    "sg": 4.8,
-    "na": 570.0
   },
   "papad": {
     "kcal": 371.0,
@@ -39268,12 +35614,12 @@
   },
   "pecan": {
     "kcal": 691,
-    "protein_g": 9.2,
-    "fat_g": 72.0,
-    "carbs_g": 13.9,
-    "fiber_g": 9.6,
-    "source": "USDA SR Legacy",
-    "notes": "Pecans per 100g"
+    "p": 9.2,
+    "f": 72.0,
+    "c": 13.9,
+    "fb": 9.6,
+    "sg": 0.0,
+    "na": 0.0
   },
   "pecans": {
     "kcal": 750,
@@ -40474,12 +36820,12 @@
   },
   "pistachio": {
     "kcal": 572,
-    "protein": 21.4,
-    "fat": 45.8,
-    "carbs": 27.5,
-    "fiber": 10.3,
-    "sugar": 7.7,
-    "sodium": 6
+    "p": 21.4,
+    "f": 45.8,
+    "c": 27.5,
+    "fb": 10.3,
+    "sg": 7.7,
+    "na": 6
   },
   "pistachios": {
     "kcal": 598,
@@ -40787,24 +37133,6 @@
     "sg": 0.4,
     "na": 12.0
   },
-  "pokeberry shoots poke cooked boiled drained with salt": {
-    "kcal": 20.0,
-    "p": 2.3,
-    "c": 3.1,
-    "f": 0.4,
-    "fb": 1.5,
-    "sg": 1.6,
-    "na": 254.0
-  },
-  "pokeberry shoots poke cooked boiled drained without salt": {
-    "kcal": 20.0,
-    "p": 2.3,
-    "c": 3.1,
-    "f": 0.4,
-    "fb": 1.5,
-    "sg": 1.6,
-    "na": 18.0
-  },
   "pokeberry shoots poke raw": {
     "kcal": 23.0,
     "p": 2.6,
@@ -40888,12 +37216,12 @@
   },
   "popcorn": {
     "kcal": 387,
-    "protein": 12.9,
-    "fat": 4.5,
-    "carbs": 77.8,
-    "fiber": 14.5,
-    "sugar": 0.9,
-    "sodium": 8
+    "p": 12.9,
+    "f": 4.5,
+    "c": 77.8,
+    "fb": 14.5,
+    "sg": 0.9,
+    "na": 8
   },
   "popcorn microwave low fat and sodium": {
     "kcal": 429.0,
@@ -40922,123 +37250,6 @@
     "sg": 64.7,
     "na": 286.0
   },
-  "popeyes biscuit": {
-    "kcal": 401.0,
-    "p": 6.0,
-    "c": 41.0,
-    "f": 23.7,
-    "fb": 3.8,
-    "sg": 3.5,
-    "na": 745.0
-  },
-  "popeyes coleslaw": {
-    "kcal": 161.0,
-    "p": 1.0,
-    "c": 14.1,
-    "f": 11.2,
-    "fb": 1.7,
-    "sg": 10.8,
-    "na": 218.0
-  },
-  "popeyes fried chicken mild breast meat and skin with breading": {
-    "kcal": 274.0,
-    "p": 21.7,
-    "c": 9.8,
-    "f": 16.5,
-    "fb": 0.4,
-    "sg": 0.0,
-    "na": 540.0
-  },
-  "popeyes fried chicken mild breast meat only skin and breading removed": {
-    "kcal": 157.0,
-    "p": 29.0,
-    "c": 0.0,
-    "f": 4.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 526.0
-  },
-  "popeyes fried chicken mild drumstick meat and skin with breading": {
-    "kcal": 293.0,
-    "p": 20.4,
-    "c": 9.8,
-    "f": 19.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 588.0
-  },
-  "popeyes fried chicken mild drumstick meat only skin and breading removed": {
-    "kcal": 170.0,
-    "p": 26.5,
-    "c": 0.0,
-    "f": 7.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 478.0
-  },
-  "popeyes fried chicken mild skin and breading": {
-    "kcal": 433.0,
-    "p": 14.0,
-    "c": 21.5,
-    "f": 32.3,
-    "fb": 1.0,
-    "sg": 0.0,
-    "na": 769.0
-  },
-  "popeyes fried chicken mild thigh meat and skin with breading": {
-    "kcal": 310.0,
-    "p": 19.1,
-    "c": 11.2,
-    "f": 21.0,
-    "fb": 0.5,
-    "sg": 0.0,
-    "na": 685.0
-  },
-  "popeyes fried chicken mild thigh meat only skin and breading removed": {
-    "kcal": 188.0,
-    "p": 24.3,
-    "c": 0.8,
-    "f": 9.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 601.0
-  },
-  "popeyes fried chicken mild wing meat and skin with breading": {
-    "kcal": 338.0,
-    "p": 20.4,
-    "c": 13.5,
-    "f": 22.5,
-    "fb": 0.6,
-    "sg": 0.0,
-    "na": 788.0
-  },
-  "popeyes fried chicken mild wing meat only skin and breading removed": {
-    "kcal": 212.0,
-    "p": 28.9,
-    "c": 2.9,
-    "f": 9.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 814.0
-  },
-  "popeyes mild chicken strips analyzed 2006": {
-    "kcal": 271.0,
-    "p": 19.2,
-    "c": 19.3,
-    "f": 13.0,
-    "fb": 0.8,
-    "sg": 0.0,
-    "na": 922.0
-  },
-  "popeyes spicy chicken strips analyzed 2006": {
-    "kcal": 253.0,
-    "p": 19.6,
-    "c": 18.5,
-    "f": 11.2,
-    "fb": 1.2,
-    "sg": 0.0,
-    "na": 997.0
-  },
   "popovers dry mix enriched": {
     "kcal": 371.0,
     "p": 10.4,
@@ -41059,12 +37270,12 @@
   },
   "poppy seed": {
     "kcal": 525,
-    "protein": 17.9,
-    "fat": 41.6,
-    "carbs": 28.1,
-    "fiber": 19.5,
-    "sugar": 2.9,
-    "sodium": 26
+    "p": 17.9,
+    "f": 41.6,
+    "c": 28.1,
+    "fb": 19.5,
+    "sg": 2.9,
+    "na": 26
   },
   "poppy seeds": {
     "kcal": 554,
@@ -43696,12 +39907,12 @@
   },
   "potato chips": {
     "kcal": 536,
-    "protein_g": 7.0,
-    "fat_g": 34.6,
-    "carbs_g": 52.9,
-    "fiber_g": 4.4,
-    "source": "USDA SR Legacy",
-    "notes": "Potato chips per 100g"
+    "p": 7.0,
+    "f": 34.6,
+    "c": 52.9,
+    "fb": 4.4,
+    "sg": 0.0,
+    "na": 0.0
   },
   "potato chips without salt reduced fat": {
     "kcal": 487.0,
@@ -44263,12 +40474,12 @@
   },
   "pretzel": {
     "kcal": 380,
-    "protein": 9.2,
-    "fat": 3.5,
-    "carbs": 79.1,
-    "fiber": 2.9,
-    "sugar": 2.3,
-    "sodium": 1029
+    "p": 9.2,
+    "f": 3.5,
+    "c": 79.1,
+    "fb": 2.9,
+    "sg": 2.3,
+    "na": 1029
   },
   "pretzels soft": {
     "kcal": 338.0,
@@ -44335,12 +40546,12 @@
   },
   "protein powder": {
     "kcal": 352,
-    "protein": 78.1,
-    "fat": 4.0,
-    "carbs": 9.0,
-    "fiber": 0.0,
-    "sugar": 7.0,
-    "sodium": 280
+    "p": 78.1,
+    "f": 4.0,
+    "c": 9.0,
+    "fb": 0.0,
+    "sg": 7.0,
+    "na": 280
   },
   "protein supplement milk based muscle milk light powder": {
     "kcal": 396.0,
@@ -44371,12 +40582,12 @@
   },
   "prune": {
     "kcal": 240,
-    "protein": 2.2,
-    "fat": 0.4,
-    "carbs": 63.9,
-    "fiber": 7.1,
-    "sugar": 38.1,
-    "sodium": 2
+    "p": 2.2,
+    "f": 0.4,
+    "c": 63.9,
+    "fb": 7.1,
+    "sg": 38.1,
+    "na": 2
   },
   "prune juice canned": {
     "kcal": 71.0,
@@ -45100,12 +41311,12 @@
   },
   "raisins": {
     "kcal": 299,
-    "protein": 3.1,
-    "fat": 0.5,
-    "carbs": 79.2,
-    "fiber": 3.7,
-    "sugar": 59.2,
-    "sodium": 11
+    "p": 3.1,
+    "f": 0.5,
+    "c": 79.2,
+    "fb": 3.7,
+    "sg": 59.2,
+    "na": 11
   },
   "raisins dark seedless includes foods for usda's food distribution program": {
     "kcal": 299.0,
@@ -45592,15 +41803,6 @@
     "fb": 1.8,
     "sg": 1.1,
     "na": 4.0
-  },
-  "rhubarb wild leaves alaska native": {
-    "kcal": 61.0,
-    "p": 4.2,
-    "c": 9.9,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "ribeye steak": {
     "kcal": 255,
@@ -47069,15 +43271,6 @@
     "sg": 0.0,
     "na": 167.0
   },
-  "salmon red sockeye filets with skin smoked alaska native": {
-    "kcal": 345.0,
-    "p": 60.6,
-    "c": 0.0,
-    "f": 11.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 51.0
-  },
   "salmon sockeye canned drained solids without skin and bones": {
     "kcal": 158.0,
     "p": 26.3,
@@ -47095,15 +43288,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 433.0
-  },
-  "salmonberries raw alaska native": {
-    "kcal": 47.0,
-    "p": 0.8,
-    "c": 10.0,
-    "f": 0.3,
-    "fb": 1.9,
-    "sg": 3.7,
-    "na": 14.0
   },
   "salsa": {
     "kcal": 36,
@@ -48086,132 +44270,6 @@
     "sg": 0,
     "na": 109
   },
-  "sea cucumber yane alaska native": {
-    "kcal": 56.0,
-    "p": 13.0,
-    "c": 0.0,
-    "f": 0.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "sea lion steller fat alaska native": {
-    "kcal": 850.0,
-    "p": 0.9,
-    "c": 0.0,
-    "f": 94.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "sea lion steller heart alaska native": {
-    "kcal": 102.0,
-    "p": 17.0,
-    "c": 1.0,
-    "f": 3.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 115.0
-  },
-  "sea lion steller kidney alaska native": {
-    "kcal": 93.0,
-    "p": 18.1,
-    "c": 1.4,
-    "f": 1.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 231.0
-  },
-  "sea lion steller liver alaska native": {
-    "kcal": 137.0,
-    "p": 22.9,
-    "c": 0.0,
-    "f": 5.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 88.0
-  },
-  "sea lion steller meat alaska native": {
-    "kcal": 120.0,
-    "p": 25.8,
-    "c": 0.0,
-    "f": 1.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 62.0
-  },
-  "sea lion steller meat with fat alaska native": {
-    "kcal": 242.0,
-    "p": 22.1,
-    "c": 5.5,
-    "f": 14.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 80.0
-  },
-  "seal bearded oogruk meat dried alaska native": {
-    "kcal": 351.0,
-    "p": 82.6,
-    "c": 0.0,
-    "f": 2.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "seal bearded oogruk meat dried in oil alaska native": {
-    "kcal": 367.0,
-    "p": 35.3,
-    "c": 0.0,
-    "f": 25.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 120.0
-  },
-  "seal bearded oogruk meat low quadrant raw alaska native": {
-    "kcal": 186.0,
-    "p": 23.6,
-    "c": 0.0,
-    "f": 10.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 57.0
-  },
-  "seal bearded oogruk meat partially dried alaska native": {
-    "kcal": 270.0,
-    "p": 62.4,
-    "c": 0.0,
-    "f": 2.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 130.0
-  },
-  "seal bearded oogruk meat raw alaska native": {
-    "kcal": 110.0,
-    "p": 26.7,
-    "c": 0.0,
-    "f": 0.4,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "seal ringed liver alaska native": {
-    "kcal": 116.0,
-    "p": 18.6,
-    "c": 2.9,
-    "f": 3.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "seal ringed meat alaska native": {
-    "kcal": 142.0,
-    "p": 28.4,
-    "c": 0.0,
-    "f": 3.2,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 110.0
-  },
   "seasoning mix dry chili original": {
     "kcal": 335.0,
     "p": 10.8,
@@ -48232,12 +44290,12 @@
   },
   "seaweed": {
     "kcal": 35,
-    "protein": 5.8,
-    "fat": 0.3,
-    "carbs": 5.1,
-    "fiber": 0.3,
-    "sugar": 0.5,
-    "sodium": 48
+    "p": 5.8,
+    "f": 0.3,
+    "c": 5.1,
+    "fb": 0.3,
+    "sg": 0.5,
+    "na": 48
   },
   "seaweed agar dried": {
     "kcal": 306.0,
@@ -48790,12 +44848,12 @@
   },
   "semolina": {
     "kcal": 360,
-    "protein": 12.7,
-    "fat": 1.1,
-    "carbs": 72.8,
-    "fiber": 3.9,
-    "sugar": 0.0,
-    "sodium": 1
+    "p": 12.7,
+    "f": 1.1,
+    "c": 72.8,
+    "fb": 3.9,
+    "sg": 0.0,
+    "na": 1
   },
   "semolina enriched": {
     "kcal": 360.0,
@@ -49579,15 +45637,6 @@
     "fb": 1.5,
     "sg": 4.4,
     "na": 145.0
-  },
-  "smelt dried alaska native": {
-    "kcal": 386.0,
-    "p": 56.2,
-    "c": 0.0,
-    "f": 17.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 420.0
   },
   "smoked paprika": {
     "kcal": 282,
@@ -51803,15 +47852,6 @@
     "sg": 4.7,
     "na": 48.0
   },
-  "sourdock young leaves alaska native": {
-    "kcal": 42.0,
-    "p": 2.3,
-    "c": 6.5,
-    "f": 0.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "sourdough bread": {
     "kcal": 259,
     "p": 8.8,
@@ -52613,15 +48653,6 @@
     "sg": 0.6,
     "na": 20.0
   },
-  "spices pepper red or cayenne": {
-    "kcal": 318.0,
-    "p": 12.0,
-    "c": 56.6,
-    "f": 17.3,
-    "fb": 27.2,
-    "sg": 10.3,
-    "na": 30.0
-  },
   "spices pepper white": {
     "kcal": 296.0,
     "p": 10.4,
@@ -52739,15 +48770,6 @@
     "sg": 0.3,
     "na": 75.0
   },
-  "spinach canned regular pack drained solids": {
-    "kcal": 23.0,
-    "p": 2.8,
-    "c": 3.4,
-    "f": 0.5,
-    "fb": 2.4,
-    "sg": 0.4,
-    "na": 322.0
-  },
   "spinach canned regular pack solids and liquids": {
     "kcal": 19.0,
     "p": 2.1,
@@ -52756,42 +48778,6 @@
     "fb": 1.6,
     "sg": 0.3,
     "na": 319.0
-  },
-  "spinach cooked boiled drained with salt": {
-    "kcal": 23.0,
-    "p": 3.0,
-    "c": 3.8,
-    "f": 0.3,
-    "fb": 2.4,
-    "sg": 0.4,
-    "na": 306.0
-  },
-  "spinach cooked boiled drained without salt": {
-    "kcal": 23.0,
-    "p": 3.0,
-    "c": 3.8,
-    "f": 0.3,
-    "fb": 2.4,
-    "sg": 0.4,
-    "na": 70.0
-  },
-  "spinach frozen chopped or leaf cooked boiled drained with salt": {
-    "kcal": 34.0,
-    "p": 4.0,
-    "c": 4.8,
-    "f": 0.9,
-    "fb": 3.7,
-    "sg": 0.5,
-    "na": 322.0
-  },
-  "spinach frozen chopped or leaf cooked boiled drained without salt": {
-    "kcal": 34.0,
-    "p": 4.0,
-    "c": 4.8,
-    "f": 0.9,
-    "fb": 3.7,
-    "sg": 0.5,
-    "na": 97.0
   },
   "spinach raw": {
     "kcal": 23.0,
@@ -52928,15 +48914,6 @@
     "sg": 2.6,
     "na": 1.0
   },
-  "squash summer all varieties raw": {
-    "kcal": 16.0,
-    "p": 1.2,
-    "c": 3.4,
-    "f": 0.2,
-    "fb": 1.1,
-    "sg": 2.2,
-    "na": 2.0
-  },
   "squash summer crookneck and straightneck canned drained solid without salt": {
     "kcal": 13.0,
     "p": 0.6,
@@ -53008,24 +48985,6 @@
     "fb": 1.2,
     "sg": 2.4,
     "na": 1.0
-  },
-  "squash summer zucchini includes skin cooked boiled drained with salt": {
-    "kcal": 15.0,
-    "p": 1.1,
-    "c": 2.7,
-    "f": 0.4,
-    "fb": 1.0,
-    "sg": 1.7,
-    "na": 239.0
-  },
-  "squash summer zucchini includes skin cooked boiled drained without salt": {
-    "kcal": 15.0,
-    "p": 1.1,
-    "c": 2.7,
-    "f": 0.4,
-    "fb": 1.0,
-    "sg": 1.7,
-    "na": 3.0
   },
   "squash summer zucchini includes skin frozen cooked boiled drained with salt": {
     "kcal": 14.0,
@@ -53261,15 +49220,6 @@
     "sg": 0,
     "na": 272
   },
-  "squirrel ground meat alaska native": {
-    "kcal": 111.0,
-    "p": 19.3,
-    "c": 0.0,
-    "f": 3.8,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "sriracha": {
     "kcal": 93,
     "p": 1.1,
@@ -53324,15 +49274,6 @@
     "sg": 0,
     "na": 0.31
   },
-  "steelhead trout boiled canned alaska native": {
-    "kcal": 159.0,
-    "p": 21.1,
-    "c": 0.0,
-    "f": 8.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 118.0
-  },
   "steelhead trout dried flesh shoshone bannock": {
     "kcal": 382.0,
     "p": 77.3,
@@ -53360,15 +49301,6 @@
     "sg": 0.1,
     "na": 45.0
   },
-  "stew moose alaska native": {
-    "kcal": 55.0,
-    "p": 6.6,
-    "c": 6.0,
-    "f": 0.5,
-    "fb": 0.5,
-    "sg": 0.0,
-    "na": 222.0
-  },
   "stew mutton corn squash navajo": {
     "kcal": 103.0,
     "p": 8.6,
@@ -53395,15 +49327,6 @@
     "fb": 2.3,
     "sg": 0.5,
     "na": 104.0
-  },
-  "stewsoup caribou alaska native": {
-    "kcal": 41.0,
-    "p": 3.8,
-    "c": 4.8,
-    "f": 0.7,
-    "fb": 0.1,
-    "sg": 0.0,
-    "na": 72.0
   },
   "sticky rice": {
     "kcal": 130,
@@ -53882,15 +49805,6 @@
     "sg": 0.0,
     "na": 6.0
   },
-  "sweet potatoes french fried frozen as packaged salt added in processing": {
-    "kcal": 182.0,
-    "p": 2.2,
-    "c": 35.6,
-    "f": 8.9,
-    "fb": 5.7,
-    "sg": 12.9,
-    "na": 146.0
-  },
   "sweet relish": {
     "kcal": 130.0,
     "p": 0.4,
@@ -54124,15 +50038,6 @@
     "fb": 0.0,
     "sg": 28.6,
     "na": 100.0
-  },
-  "syrups chocolate hershey's sugar free genuine chocolate flavored lite syrup": {
-    "kcal": 43.0,
-    "p": 2.9,
-    "c": 14.2,
-    "f": 2.0,
-    "fb": 2.9,
-    "sg": 0.3,
-    "na": 343.0
   },
   "syrups corn dark": {
     "kcal": 286.0,
@@ -54557,15 +50462,6 @@
     "sg": 0.0,
     "na": 238.0
   },
-  "taro leaves cooked steamed without salt": {
-    "kcal": 24.0,
-    "p": 2.7,
-    "c": 4.0,
-    "f": 0.4,
-    "fb": 2.0,
-    "sg": 0.0,
-    "na": 2.0
-  },
   "taro leaves raw": {
     "kcal": 42.0,
     "p": 5.0,
@@ -54691,15 +50587,6 @@
     "fb": 0.0,
     "sg": 0.0,
     "na": 27.0
-  },
-  "tea tundra herb and laborador combination alaska native": {
-    "kcal": 1.0,
-    "p": 0.0,
-    "c": 0.2,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 132.0
   },
   "teff": {
     "kcal": 367,
@@ -55054,12 +50941,12 @@
   },
   "tomato juice": {
     "kcal": 17,
-    "protein": 0.9,
-    "fat": 0.1,
-    "carbs": 4.2,
-    "fiber": 0.5,
-    "sugar": 3.6,
-    "sodium": 269
+    "p": 0.9,
+    "f": 0.1,
+    "c": 4.2,
+    "fb": 0.5,
+    "sg": 3.6,
+    "na": 269
   },
   "tomato juice canned with salt added": {
     "kcal": 17.0,
@@ -56771,15 +52658,6 @@
     "sg": 0.4,
     "na": 29.0
   },
-  "turnip greens canned solids and liquids": {
-    "kcal": 14.0,
-    "p": 1.4,
-    "c": 2.4,
-    "f": 0.3,
-    "fb": 1.7,
-    "sg": 0.0,
-    "na": 277.0
-  },
   "turnip greens cooked boiled drained with salt": {
     "kcal": 20.0,
     "p": 1.1,
@@ -56797,24 +52675,6 @@
     "fb": 3.5,
     "sg": 0.5,
     "na": 29.0
-  },
-  "turnip greens frozen cooked boiled drained with salt": {
-    "kcal": 29.0,
-    "p": 3.4,
-    "c": 5.0,
-    "f": 0.4,
-    "fb": 3.4,
-    "sg": 0.8,
-    "na": 251.0
-  },
-  "turnip greens frozen cooked boiled drained without salt": {
-    "kcal": 29.0,
-    "p": 3.4,
-    "c": 5.0,
-    "f": 0.4,
-    "fb": 3.4,
-    "sg": 0.8,
-    "na": 15.0
   },
   "turnip greens raw": {
     "kcal": 32.0,
@@ -58670,42 +54530,6 @@
     "sg": 0,
     "na": 0
   },
-  "walrus liver raw alaska native": {
-    "kcal": 125.0,
-    "p": 21.0,
-    "c": 3.5,
-    "f": 3.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "walrus meat and subcutaneous fat raw alaska native": {
-    "kcal": 282.0,
-    "p": 16.3,
-    "c": 0.0,
-    "f": 24.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "walrus meat dried alaska native": {
-    "kcal": 251.0,
-    "p": 57.0,
-    "c": 0.0,
-    "f": 2.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "walrus meat raw alaska native": {
-    "kcal": 199.0,
-    "p": 19.2,
-    "c": 0.0,
-    "f": 13.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
   "wasa": {
     "kcal": 367,
     "p": 10.0,
@@ -58750,24 +54574,6 @@
     "fb": 3,
     "sg": 4.8,
     "na": 14
-  },
-  "water convolvulus cooked boiled drained with salt": {
-    "kcal": 20.0,
-    "p": 2.1,
-    "c": 3.7,
-    "f": 0.2,
-    "fb": 1.9,
-    "sg": 0.0,
-    "na": 358.0
-  },
-  "water convolvulus cooked boiled drained without salt": {
-    "kcal": 20.0,
-    "p": 2.1,
-    "c": 3.7,
-    "f": 0.2,
-    "fb": 1.9,
-    "sg": 0.0,
-    "na": 122.0
   },
   "water convolvulusraw": {
     "kcal": 19.0,
@@ -58894,69 +54700,6 @@
     "fb": 0.0,
     "sg": 3.1,
     "na": 566.0
-  },
-  "whale beluga eyes alaska native": {
-    "kcal": 291.0,
-    "p": 19.6,
-    "c": 0.0,
-    "f": 23.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "whale beluga flipper raw alaska native": {
-    "kcal": 271.0,
-    "p": 19.0,
-    "c": 0.0,
-    "f": 21.7,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "whale beluga liver raw alaska native": {
-    "kcal": 117.0,
-    "p": 18.4,
-    "c": 2.0,
-    "f": 3.9,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "whale beluga meat dried alaska native": {
-    "kcal": 327.0,
-    "p": 69.9,
-    "c": 0.0,
-    "f": 5.3,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 220.0
-  },
-  "whale beluga meat raw alaska native": {
-    "kcal": 111.0,
-    "p": 26.5,
-    "c": 0.0,
-    "f": 0.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 78.0
-  },
-  "whale bowhead skin and subcutaneous fat muktuk alaska native": {
-    "kcal": 465.0,
-    "p": 12.6,
-    "c": 0.0,
-    "f": 46.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "whale bowhead subcutaneous fat blubber alaska native": {
-    "kcal": 870.0,
-    "p": 0.4,
-    "c": 0.0,
-    "f": 96.5,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "wheat biscuits": {
     "kcal": 407.0,
@@ -59551,24 +55294,6 @@
     "fb": 6.2,
     "sg": 2.5,
     "na": 7.0
-  },
-  "willow leaves in oil alaska native": {
-    "kcal": 592.0,
-    "p": 2.6,
-    "c": 8.1,
-    "f": 61.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "willow young leaves chopped alaska native": {
-    "kcal": 122.0,
-    "p": 6.1,
-    "c": 20.7,
-    "f": 1.6,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   },
   "winged bean immature seeds cooked boiled drained with salt": {
     "kcal": 37.0,
@@ -60424,203 +56149,5 @@
     "fb": 2.5,
     "sg": 12.5,
     "na": 227.0
-  },
-  "¼ 2 onions": {
-    "kcal": 40.0,
-    "p": 1.1,
-    "c": 9.3,
-    "f": 0.1,
-    "fb": 1.7,
-    "sg": 4.2,
-    "na": 4.0
-  },
-  "¼ cup mascarpone": {
-    "kcal": 515.0,
-    "p": 10.2,
-    "c": 55.4,
-    "f": 30.5,
-    "fb": 3.6,
-    "sg": 47.2,
-    "na": 357.0
-  },
-  "¼ cup pernod": {
-    "kcal": 515.0,
-    "p": 10.2,
-    "c": 55.4,
-    "f": 30.5,
-    "fb": 3.6,
-    "sg": 47.2,
-    "na": 357.0
-  },
-  "¼ cup whole-milk greek": {
-    "kcal": 106.0,
-    "p": 7.3,
-    "c": 12.3,
-    "f": 3.0,
-    "fb": 0.0,
-    "sg": 12.0,
-    "na": 37.0
-  },
-  "¼ oz cointreau": {
-    "kcal": 189.0,
-    "p": 26.8,
-    "c": 0.0,
-    "f": 9.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 604.0
-  },
-  "¼ tsp pepper": {
-    "kcal": 27.0,
-    "p": 1.7,
-    "c": 5.3,
-    "f": 0.5,
-    "fb": 3.4,
-    "sg": 1.9,
-    "na": 13.0
-  },
-  "½ cup hot": {
-    "kcal": 515.0,
-    "p": 10.2,
-    "c": 55.4,
-    "f": 30.5,
-    "fb": 3.6,
-    "sg": 47.2,
-    "na": 357.0
-  },
-  "½ cup or wild blueberries": {
-    "kcal": 44.0,
-    "p": 0.7,
-    "c": 10.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
-  },
-  "½ cup peperoncini": {
-    "kcal": 515.0,
-    "p": 10.2,
-    "c": 55.4,
-    "f": 30.5,
-    "fb": 3.6,
-    "sg": 47.2,
-    "na": 357.0
-  },
-  "½ cup store-bought coleslaw mix": {
-    "kcal": 120.0,
-    "p": 0.8,
-    "c": 13.2,
-    "f": 7.1,
-    "fb": 2.8,
-    "sg": 9.3,
-    "na": 178.0
-  },
-  "½ cup whole-milk greek": {
-    "kcal": 106.0,
-    "p": 7.3,
-    "c": 12.3,
-    "f": 3.0,
-    "fb": 0.0,
-    "sg": 12.0,
-    "na": 37.0
-  },
-  "½ lb": {
-    "kcal": 268.0,
-    "p": 13.7,
-    "c": 17.7,
-    "f": 15.8,
-    "fb": 1.1,
-    "sg": 4.5,
-    "na": 473.0
-  },
-  "½ lb fingerling potatoes": {
-    "kcal": 268.0,
-    "p": 13.7,
-    "c": 17.7,
-    "f": 15.8,
-    "fb": 1.1,
-    "sg": 4.5,
-    "na": 473.0
-  },
-  "½ oz italicus or st-germain": {
-    "kcal": 189.0,
-    "p": 26.8,
-    "c": 0.0,
-    "f": 9.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 604.0
-  },
-  "½ tsp pepper": {
-    "kcal": 27.0,
-    "p": 1.7,
-    "c": 5.3,
-    "f": 0.5,
-    "fb": 3.4,
-    "sg": 1.9,
-    "na": 13.0
-  },
-  "½–1 serrano chile": {
-    "kcal": 32.0,
-    "p": 1.7,
-    "c": 6.7,
-    "f": 0.4,
-    "fb": 3.7,
-    "sg": 3.8,
-    "na": 10.0
-  },
-  "½–3 lb": {
-    "kcal": 608.0,
-    "p": 24.5,
-    "c": 17.0,
-    "f": 54.2,
-    "fb": 6.1,
-    "sg": 3.1,
-    "na": 356.0
-  },
-  "¾ cup whole-milk greek": {
-    "kcal": 106.0,
-    "p": 7.3,
-    "c": 12.3,
-    "f": 3.0,
-    "fb": 0.0,
-    "sg": 12.0,
-    "na": 37.0
-  },
-  "¾ oz cointreau": {
-    "kcal": 189.0,
-    "p": 26.8,
-    "c": 0.0,
-    "f": 9.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 604.0
-  },
-  "¾ oz simple syrup": {
-    "kcal": 341.0,
-    "p": 0.0,
-    "c": 85.1,
-    "f": 0.0,
-    "fb": 0.1,
-    "sg": 53.0,
-    "na": 0.0
-  },
-  "¾ oz triple sec": {
-    "kcal": 189.0,
-    "p": 26.8,
-    "c": 0.0,
-    "f": 9.1,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 604.0
-  },
-  "–3 eggs": {
-    "kcal": 55.0,
-    "p": 10.7,
-    "c": 2.4,
-    "f": 0.0,
-    "fb": 0.0,
-    "sg": 0.0,
-    "na": 0.0
   }
 }
