@@ -90,6 +90,16 @@ def apply_proposals(proposals_path: Path, db_path: Path,
     synonyms_added = 0
     skipped_existing = 0
 
+    # Load protected keys from enricher so autotune honours the same set
+    try:
+        import importlib.util, sys as _sys
+        _spec = importlib.util.spec_from_file_location("enricher", ENRICHER_SCRIPT)
+        _enricher = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_enricher)
+        _PROTECTED = _enricher._PROTECTED_KEYS
+    except Exception:
+        _PROTECTED = set()
+
     for p in all_proposals:
         ptype = p.get("type")
         conf = p.get("confidence", 0)
@@ -97,6 +107,10 @@ def apply_proposals(proposals_path: Path, db_path: Path,
         if ptype == "new_entry":
             key = p["key"]
             if key in db:
+                skipped_existing += 1
+                continue
+            if key in _PROTECTED:
+                print(f"  SKIP protected key: {key}")
                 skipped_existing += 1
                 continue
             nutrition = p["nutrition"]
@@ -115,6 +129,11 @@ def apply_proposals(proposals_path: Path, db_path: Path,
                 continue
             if canonical not in db:
                 continue  # canonical must exist in DB
+            # Prevent synonym chains: canonical must be a direct DB key, not itself a synonym
+            if canonical in synonyms:
+                print(f"  SKIP chain synonym: {alias} → {canonical} (target is also a synonym)")
+                skipped_existing += 1
+                continue
             if not dry_run:
                 synonyms[alias] = canonical
             synonyms_added += 1

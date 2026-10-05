@@ -300,6 +300,80 @@ def find_existing_key(query: str, db: dict, threshold: float = CONFIDENCE_THRESH
     return None
 
 
+# ── Protected keys — manually audited, bot must never overwrite ──────────────
+# Add any key here whose nutrition was hand-verified or hand-corrected.
+# The enricher will skip synonym proposals that target a protected key
+# (it already skips new_entry proposals for keys already in DB).
+_PROTECTED_KEYS: set[str] = {
+    # Fixed manually — had bogus USDA values
+    "leek",
+    "bone broth",
+    # Verified correct
+    "corned beef",
+    "cinnamon sugar",
+    "cranberry sauce",
+    "beef brisket",
+    "dried currants",
+    # Core staples — don't let the bot re-add with USDA verbose names
+    "chicken breast",
+    "chicken thigh",
+    "beef",
+    "pork",
+    "salmon",
+    "shrimp",
+    "egg",
+    "butter",
+    "olive oil",
+    "garlic",
+    "onion",
+    "tomato",
+    "flour",
+    "sugar",
+    "salt",
+    "milk",
+    "cream",
+    "cheese",
+    "rice",
+    "pasta",
+}
+
+
+# ── Nutrition sanity check ────────────────────────────────────────────────────
+
+def _is_sane_nutrition(nutrition: dict, key: str) -> bool:
+    """
+    Reject nutrition entries that are clearly wrong based on simple heuristics.
+    Catches USDA mismatches like leek matching a near-zero-calorie entry.
+    """
+    kcal = nutrition.get("kcal", 0)
+    p    = nutrition.get("p", 0)
+    c    = nutrition.get("c", 0)
+    f    = nutrition.get("f", 0)
+
+    # Total macros must be non-zero (water is skipped before reaching here)
+    if kcal <= 0:
+        return False
+
+    # Calderini check: kcal should roughly match 4p + 4c + 9f
+    macro_kcal = 4 * p + 4 * c + 9 * f
+    if macro_kcal > 10 and kcal > 10:
+        ratio = kcal / macro_kcal
+        if ratio < 0.5 or ratio > 2.0:
+            # Too far off — likely a unit mismatch or wrong food
+            return False
+
+    # Vegetables shouldn't have kcal < 10 per 100g (water is already SKIP)
+    # Anything under 10 kcal with no fat/protein is suspicious
+    if kcal < 10 and p < 1 and f < 0.5 and c < 2:
+        return False
+
+    # Protein can't exceed kcal/4 by more than 20% (physical limit)
+    if p > 0 and kcal > 0 and (4 * p) > kcal * 1.2:
+        return False
+
+    return True
+
+
 # ── Key validation ────────────────────────────────────────────────────────────
 
 # Equipment and non-food terms that should never be DB keys
@@ -345,7 +419,8 @@ def enrich_gap(cleaned_name: str, examples: list[str], db: dict, synonyms: dict,
     existing = find_existing_key(query, db, threshold=0.90)
     if existing:
         existing_key, conf = existing
-        if existing_key != query:  # avoid self-referential synonyms
+        # Skip self-referential and skip if target is itself a synonym (chain prevention)
+        if existing_key != query and existing_key not in synonyms:
             return {
                 "type": "synonym",
                 "alias": cleaned_name,
@@ -359,31 +434,37 @@ def enrich_gap(cleaned_name: str, examples: list[str], db: dict, synonyms: dict,
     if match:
         entry, conf = match
         nutrition = {k: entry[k] for k in ("kcal", "p", "c", "f", "fb", "sg", "na")}
-        return {
-            "type": "new_entry",
-            "key": cleaned_name,
-            "nutrition": nutrition,
-            "confidence": round(conf, 3),
-            "source": f"usda_sr:{entry['name']}",
-        }
+        if not _is_sane_nutrition(nutrition, cleaned_name):
+            pass  # fall through to next source
+        else:
+            return {
+                "type": "new_entry",
+                "key": cleaned_name,
+                "nutrition": nutrition,
+                "confidence": round(conf, 3),
+                "source": f"usda_sr:{entry['name']}",
+            }
 
     # Try GroceryDB
     match = fuzzy_match(query, grocery_corpus)
     if match:
         entry, conf = match
         nutrition = {k: entry[k] for k in ("kcal", "p", "c", "f", "fb", "sg", "na")}
-        return {
-            "type": "new_entry",
-            "key": cleaned_name,
-            "nutrition": nutrition,
-            "confidence": round(conf, 3),
-            "source": f"grocerydb:{entry['name']}",
-        }
+        if not _is_sane_nutrition(nutrition, cleaned_name):
+            pass  # fall through to API
+        else:
+            return {
+                "type": "new_entry",
+                "key": cleaned_name,
+                "nutrition": nutrition,
+                "confidence": round(conf, 3),
+                "source": f"grocerydb:{entry['name']}",
+            }
 
     # Fallback: USDA FDC API
     if api_key:
         nutrition = query_fdc_api(query, api_key)
-        if nutrition and nutrition.get("kcal", 0) > 0:
+        if nutrition and _is_sane_nutrition(nutrition, cleaned_name):
             return {
                 "type": "new_entry",
                 "key": cleaned_name,
