@@ -27891,13 +27891,13 @@
     "na": 1370.0
   },
   "leek": {
-    "kcal": 6,
-    "p": 1.47,
-    "c": 0,
-    "f": 0,
-    "fb": 3,
-    "sg": 0,
-    "na": 17.7
+    "kcal": 61,
+    "p": 1.5,
+    "c": 14.15,
+    "f": 0.3,
+    "fb": 1.8,
+    "sg": 3.9,
+    "na": 20.0
   },
   "leeks bulb and lower leaf-portion cooked boiled drained with salt": {
     "kcal": 31.0,
@@ -56158,5 +56158,32 @@
     "fb": 1.2,
     "sg": 93.0,
     "na": 1.0
+  },
+  "cranberry sauce": {
+    "kcal": 151,
+    "p": 0.2,
+    "c": 38.6,
+    "f": 0.1,
+    "fb": 1.4,
+    "sg": 35.8,
+    "na": 40.0
+  },
+  "beef brisket": {
+    "kcal": 246,
+    "p": 21.1,
+    "c": 0.0,
+    "f": 17.2,
+    "fb": 0.0,
+    "sg": 0.0,
+    "na": 73.0
+  },
+  "dried currants": {
+    "kcal": 283,
+    "p": 2.5,
+    "c": 72.0,
+    "f": 0.4,
+    "fb": 6.8,
+    "sg": 59.6,
+    "na": 9.0
   }
 }
