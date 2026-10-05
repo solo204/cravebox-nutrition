@@ -32,6 +32,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -299,6 +300,37 @@ def find_existing_key(query: str, db: dict, threshold: float = CONFIDENCE_THRESH
     return None
 
 
+# ── Key validation ────────────────────────────────────────────────────────────
+
+# Equipment and non-food terms that should never be DB keys
+_EQUIPMENT_WORDS = {
+    'thermometer', 'mill', 'blender', 'processor', 'mixer', 'grinder',
+    'strainer', 'colander', 'skillet', 'saucepan', 'stockpot', 'wok',
+    'spatula', 'whisk', 'tongs', 'ladle', 'peeler', 'zester', 'mandoline',
+    'brush', 'mallet', 'twine', 'cheesecloth', 'foil', 'parchment',
+}
+_INVALID_KEY_RE = re.compile(
+    r'^\d'                          # starts with digit (quantity fragment)
+    r'|^(a|an|the)\s'              # starts with article
+    r'|\bor\b'                     # "X or Y" alternative ingredients
+    r'|[*†‡#@]'                    # stray special characters
+    r'|\bfilled\s+with\b'          # "a spray bottle filled with"
+    r'|\band\s+\w+-fry\b'          # "food mill and deep-fry ..."
+    , re.I
+)
+
+def _is_valid_key(name: str) -> bool:
+    """Return False for keys that are quantity fragments, equipment, or malformed phrases."""
+    if _INVALID_KEY_RE.search(name):
+        return False
+    words = set(name.lower().split())
+    if words & _EQUIPMENT_WORDS:
+        return False
+    if len(name.split()) > 6:   # too long to be a useful ingredient key
+        return False
+    return True
+
+
 # ── Proposal generation ───────────────────────────────────────────────────────
 
 def enrich_gap(cleaned_name: str, examples: list[str], db: dict, synonyms: dict,
@@ -408,7 +440,7 @@ def main():
 
     for gap in gaps:
         cleaned_name = gap["cleaned_name"]
-        if not cleaned_name or len(cleaned_name) < 2:
+        if not cleaned_name or len(cleaned_name) < 2 or not _is_valid_key(cleaned_name):
             skipped += 1
             continue
 
