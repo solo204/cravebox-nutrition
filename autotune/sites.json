@@ -60,6 +60,54 @@
       "url": "https://www.skinnytaste.com",
       "sitemap": "https://www.skinnytaste.com/sitemap.xml",
       "enabled": true
+    },
+    {
+      "name": "Natasha's Kitchen",
+      "url": "https://natashaskitchen.com",
+      "sitemap": "https://natashaskitchen.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Cooking Classy",
+      "url": "https://www.cookingclassy.com",
+      "sitemap": "https://www.cookingclassy.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Cafe Delites",
+      "url": "https://cafedelites.com",
+      "sitemap": "https://cafedelites.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "RecipeTin Eats",
+      "url": "https://www.recipetineats.com",
+      "sitemap": "https://www.recipetineats.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Damn Delicious",
+      "url": "https://damndelicious.net",
+      "sitemap": "https://damndelicious.net/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Half Baked Harvest",
+      "url": "https://www.halfbakedharvest.com",
+      "sitemap": "https://www.halfbakedharvest.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "The Kitchn",
+      "url": "https://www.thekitchn.com",
+      "sitemap": "https://www.thekitchn.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Love and Lemons",
+      "url": "https://www.loveandlemons.com",
+      "sitemap": "https://www.loveandlemons.com/sitemap.xml",
+      "enabled": true
     }
   ],
   "crawler": {
