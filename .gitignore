@@ -18,6 +18,10 @@ autotune/data/nutrient.csv
 autotune/data/grocerydb.csv
 autotune/data/.usda_cache_key
 
+# RecipeNLG dataset (~900 MB — never commit, download via download_recipenlg.py)
+autotune/data/recipenlg_gathered.parquet
+autotune/data/full_dataset.csv
+
 # OS
 .DS_Store
 Thumbs.db
