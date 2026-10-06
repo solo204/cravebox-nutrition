@@ -343,13 +343,17 @@ def load_from_dataset(dataset_path: str, max_rows: int) -> list[str]:
     Load ingredient strings from a local open recipe dataset.
 
     Supports:
-      - RecipeNLG CSV  (columns: 'NER' — JSON list of canonical ingredient names,
-                                 'ingredients' — raw ingredient strings)
-      - Generic JSON   (list of objects with 'ingredients' or 'recipeIngredient' key)
-      - Plain text     (one ingredient per line)
+      - RecipeNLG CSV/TSV  (columns: 'NER'/'ner' — canonical names; 'source' — filters to Gathered)
+      - RecipeNLG Parquet  (HuggingFace export; requires pandas + pyarrow)
+      - Generic JSON       (list of objects with 'ingredients' or 'recipeIngredient' key)
+      - Plain text         (one ingredient per line)
+
+    Prefers NER canonical names (e.g. "brown sugar") over raw strings ("1 c. brown sugar")
+    for cleaner NutritionParser lookup keys. Filters source=0 (Gathered) rows automatically.
 
     RecipeNLG download: https://recipenlg.cs.put.poznan.pl/
-    (~2.2M recipes, ~2GB CSV)
+    HuggingFace: huggingface-cli download --repo-type dataset recipe_nlg
+    (~2.2M total recipes; 1.6M Gathered subset; official CSV ~2GB)
     """
     path = Path(dataset_path)
     if not path.exists():
@@ -361,34 +365,89 @@ def load_from_dataset(dataset_path: str, max_rows: int) -> list[str]:
 
     print(f"  [dataset] Loading {path.name} (max {max_rows:,} rows) ...")
 
-    if suffix == ".csv":
+    if suffix in (".csv", ".tsv"):
+        sep = "\t" if suffix == ".tsv" else ","
         with open(path, encoding="utf-8", errors="replace", newline="") as f:
-            reader = csv.DictReader(f)
-            fieldnames = reader.fieldnames or []
+            reader = csv.DictReader(f, delimiter=sep)
+            fieldnames = [c for c in (reader.fieldnames or [])]
+            fieldnames_lower = [c.lower() for c in fieldnames]
 
-            # RecipeNLG format: 'ingredients' = raw strings (list as JSON string)
-            # 'NER' = canonical names (list as JSON string)
-            use_raw = "ingredients" in fieldnames
-            use_ner = "NER" in fieldnames
+            # RecipeNLG official CSV uses 'NER' (uppercase); HuggingFace export uses 'ner' (lowercase)
+            # Prefer NER canonical names (e.g. "brown sugar") over raw strings
+            # ("1 c. firmly packed brown sugar") — cleaner lookup keys for NutritionParser.
+            def _col(name: str) -> str | None:
+                """Return the actual column name regardless of case, or None."""
+                for orig, low in zip(fieldnames, fieldnames_lower):
+                    if low == name.lower():
+                        return orig
+                return None
 
-            if not use_raw and not use_ner:
+            ner_col = _col("ner")
+            raw_col = _col("ingredients")
+            src_col = _col("source")  # 0=Gathered (high-quality), 1=Recipes1M
+
+            if not ner_col and not raw_col:
                 print(f"  [dataset] WARNING: no 'ingredients' or 'NER' column found.")
                 print(f"  [dataset] Available columns: {fieldnames}")
                 return []
+
+            if ner_col:
+                print(f"  [dataset] Using NER canonical names column '{ner_col}' (cleaner keys)")
+            else:
+                print(f"  [dataset] Using raw ingredients column '{raw_col}'")
+
+            gathered_only = src_col is not None
+            skipped_source = 0
 
             for i, row in enumerate(tqdm(reader, desc="  Reading dataset", total=max_rows)):
                 if i >= max_rows:
                     break
 
-                # Prefer raw ingredient strings (e.g. "2 cups flour") over NER
-                if use_raw:
-                    raw_list = _parse_list_field(row.get("ingredients", "[]"))
+                # Filter to source=0 (Gathered) when column present — skips Recipes1M
+                if src_col and row.get(src_col, "0") not in ("0", "Gathered", "gathered"):
+                    skipped_source += 1
+                    continue
+
+                # Prefer NER canonical names (best DB keys); fall back to raw strings
+                if ner_col:
+                    ner_list = _parse_list_field(row.get(ner_col, "[]"))
+                    ingredients.extend(str(s).strip().lower() for s in ner_list if s)
+                elif raw_col:
+                    raw_list = _parse_list_field(row.get(raw_col, "[]"))
                     ingredients.extend(str(s).strip() for s in raw_list if s)
 
-                # Also pull NER canonical names as fallback
-                if use_ner and not use_raw:
-                    ner_list = _parse_list_field(row.get("NER", "[]"))
-                    ingredients.extend(str(s).strip() for s in ner_list if s)
+            if gathered_only and skipped_source:
+                print(f"  [dataset] Skipped {skipped_source:,} Recipes1M rows (source≠0)")
+
+    elif suffix == ".parquet":
+        try:
+            import pandas as pd  # type: ignore
+        except ImportError:
+            print("  [dataset] ERROR: 'pandas' not installed. Run: pip install pandas pyarrow")
+            return []
+        df = pd.read_parquet(path)
+        # Normalize column names to lowercase for matching
+        col_map = {c.lower(): c for c in df.columns}
+        ner_col  = col_map.get("ner")
+        raw_col  = col_map.get("ingredients")
+        src_col  = col_map.get("source")
+
+        if src_col:
+            df = df[df[src_col].isin([0, "Gathered", "gathered"])]
+            print(f"  [dataset] Filtered to {len(df):,} Gathered rows")
+
+        use_col = ner_col or raw_col
+        if not use_col:
+            print(f"  [dataset] WARNING: no 'ingredients' or 'ner' column. Available: {list(df.columns)}")
+            return []
+
+        print(f"  [dataset] Using column '{use_col}'")
+        for val in tqdm(df[use_col].iloc[:max_rows], desc="  Reading dataset"):
+            if isinstance(val, list):
+                items = val
+            else:
+                items = _parse_list_field(str(val))
+            ingredients.extend(str(s).strip().lower() for s in items if s)
 
     elif suffix == ".json":
         with open(path, encoding="utf-8") as f:
@@ -404,7 +463,7 @@ def load_from_dataset(dataset_path: str, max_rows: int) -> list[str]:
                             ingredients.extend(str(s).strip() for s in val if s)
                             break
 
-    elif suffix in (".txt", ".tsv"):
+    elif suffix == ".txt":
         with open(path, encoding="utf-8", errors="replace") as f:
             for i, line in enumerate(f):
                 if i >= max_rows:
@@ -414,7 +473,7 @@ def load_from_dataset(dataset_path: str, max_rows: int) -> list[str]:
                     ingredients.append(line)
 
     else:
-        print(f"  [dataset] Unsupported format: {suffix}. Use .csv, .json, or .txt")
+        print(f"  [dataset] Unsupported format: {suffix}. Use .csv, .tsv, .parquet, .json, or .txt")
         return []
 
     print(f"  [dataset] Loaded {len(ingredients):,} raw ingredient strings from dataset")
@@ -427,25 +486,29 @@ def main():
     parser = argparse.ArgumentParser(description="CraveBox recipe ingredient crawler")
     parser.add_argument("--sites", help="Comma-separated site URLs to crawl (adds to sites.json)")
     parser.add_argument("--urls", help="Comma-separated specific recipe page URLs to scrape directly")
-    parser.add_argument("--dataset", help="Path to a local open recipe dataset (RecipeNLG CSV, JSON, or TXT)")
+    parser.add_argument("--dataset", help="Path to a local open recipe dataset (RecipeNLG CSV/TSV/Parquet, JSON, or TXT)")
+    parser.add_argument("--no-sites", action="store_true",
+                        help="Skip loading sites.json and do not crawl any websites (dataset-only mode)")
     parser.add_argument("--max-per-site", type=int, help="Override max recipes per site")
     parser.add_argument("--max-dataset-rows", type=int, default=DEFAULT_MAX_DATASET_ROWS,
                         help=f"Max rows to read from dataset (default: {DEFAULT_MAX_DATASET_ROWS:,})")
     parser.add_argument("--out", default=str(OUT_FILE), help="Output JSON path")
     args = parser.parse_args()
 
-    # Load sites.json
+    # Load sites.json (skipped when --no-sites is set)
     config: dict = {}
     sites: list[dict] = []
-    if SITES_FILE.exists():
+    if args.no_sites:
+        print("  --no-sites: skipping sites.json and live crawl (dataset-only mode)")
+    elif SITES_FILE.exists():
         data = json.loads(SITES_FILE.read_text(encoding="utf-8"))
         sites = [s for s in data.get("sites", []) if s.get("enabled", True)]
         config = data.get("crawler", {})
     else:
         print(f"  WARNING: {SITES_FILE} not found — using CLI args only")
 
-    # Inject extra sites from --sites
-    if args.sites:
+    # Inject extra sites from --sites (--no-sites takes precedence)
+    if args.sites and not args.no_sites:
         for raw_url in args.sites.split(","):
             raw_url = raw_url.strip()
             if raw_url:

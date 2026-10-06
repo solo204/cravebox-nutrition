@@ -18,12 +18,16 @@ on:
         description: 'Specific recipe URLs to scrape (comma-separated)'
         required: false
         default: ''
+      use_recipenlg:
+        description: 'Download RecipeNLG from HuggingFace and use as dataset (skips live crawl)'
+        required: false
+        default: 'false'
       dataset:
-        description: 'Path to local open recipe dataset file (RecipeNLG CSV etc.) relative to repo root'
+        description: 'Path to local dataset file relative to repo root (leave blank when use_recipenlg=true)'
         required: false
         default: ''
       max_dataset_rows:
-        description: 'Max rows to read from dataset (default: 500000)'
+        description: 'Max rows to read from dataset (default: 1600000 for RecipeNLG Gathered)'
         required: false
         default: '500000'
       skip_crawl:
@@ -60,6 +64,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r autotune/requirements.txt
 
+      - name: Download RecipeNLG from HuggingFace
+        if: github.event.inputs.use_recipenlg == 'true'
+        run: |
+          pip install datasets pyarrow pandas -q
+          python autotune/download_recipenlg.py
+          echo "RECIPENLG_PATH=autotune/data/recipenlg_gathered.parquet" >> "$GITHUB_ENV"
+          echo "RECIPENLG_ROWS=1600000" >> "$GITHUB_ENV"
+
       - name: Check USDA data files
         run: |
           if [ -f autotune/data/food_nutrient.csv ]; then
@@ -79,7 +91,12 @@ jobs:
           [ "${{ github.event.inputs.dry_run }}"   = "true" ] && ARGS="$ARGS --dry-run"
           [ -n "${{ github.event.inputs.sites }}"  ] && ARGS="$ARGS --sites '${{ github.event.inputs.sites }}'"
           [ -n "${{ github.event.inputs.urls }}"   ] && ARGS="$ARGS --urls '${{ github.event.inputs.urls }}'"
-          [ -n "${{ github.event.inputs.dataset }}" ] && ARGS="$ARGS --dataset ${{ github.event.inputs.dataset }} --max-dataset-rows ${{ github.event.inputs.max_dataset_rows || '500000' }}"
+          # RecipeNLG (downloaded above) takes precedence over manual dataset input
+          if [ -n "${RECIPENLG_PATH}" ]; then
+            ARGS="$ARGS --dataset ${RECIPENLG_PATH} --max-dataset-rows ${RECIPENLG_ROWS} --no-sites"
+          elif [ -n "${{ github.event.inputs.dataset }}" ]; then
+            ARGS="$ARGS --dataset ${{ github.event.inputs.dataset }} --max-dataset-rows ${{ github.event.inputs.max_dataset_rows || '500000' }}"
+          fi
           python autotune/autotune.py $ARGS
 
       - name: Check for changes
@@ -89,16 +106,26 @@ jobs:
             && echo "changed=false" >> "$GITHUB_OUTPUT" \
             || echo "changed=true"  >> "$GITHUB_OUTPUT"
 
-      - name: Commit and push updated data files
+      - name: Commit and open PR for review
         if: steps.changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name  "CraveBox Autotune Bot"
           git config user.email "autotune@cravebox.app"
           VERSION=$(python -c "import json; d=json.load(open('data/nutrition_version.json')); print(d['version'])")
           ENTRIES=$(python -c "import json; d=json.load(open('data/nutrition_db.json')); print(len(d))")
+          BRANCH="autotune/v${VERSION}"
+          git checkout -b "$BRANCH"
           git add data/
           git commit -m "autotune: v${VERSION} — ${ENTRIES} DB entries [skip ci]"
-          git push
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "autotune: v${VERSION} — ${ENTRIES} DB entries" \
+            --body "$(python autotune/print_summary.py 2>&1 || echo 'See run artifacts for details.')" \
+            --base main \
+            --head "$BRANCH" \
+            --label "autotune" || echo "PR already exists or label missing — branch pushed, create PR manually."
 
       - name: Upload run artifacts
         if: always()

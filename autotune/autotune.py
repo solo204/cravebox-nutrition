@@ -311,14 +311,16 @@ def bump_version(db_path: Path, synonyms_path: Path, version_path: Path, dry_run
     else:
         new_version = "1.0.0"
 
-    db_content = db_path.read_text(encoding="utf-8")
-    db = json.loads(db_content)
-    db_sha256 = hashlib.sha256(db_content.encode()).hexdigest()
+    db_bytes = db_path.read_bytes()
+    db = json.loads(db_bytes)
+    # Hash raw bytes so the stored SHA matches what any tool reading the file will see,
+    # regardless of platform line-ending normalisation (avoids \r\n vs \n mismatch on Windows).
+    db_sha256 = hashlib.sha256(db_bytes).hexdigest()
 
     synonyms_sha256 = ""
     if synonyms_path.exists():
-        syn_content = synonyms_path.read_text(encoding="utf-8")
-        synonyms_sha256 = hashlib.sha256(syn_content.encode()).hexdigest()
+        syn_bytes = synonyms_path.read_bytes()
+        synonyms_sha256 = hashlib.sha256(syn_bytes).hexdigest()
 
     manifest = {
         "version": new_version,
@@ -368,6 +370,8 @@ def main():
                         help="Path to local open recipe dataset file (RecipeNLG CSV etc.)")
     parser.add_argument("--max-dataset-rows", type=int, default=500000,
                         help="Max rows to read from dataset (default: 500000)")
+    parser.add_argument("--no-sites", action="store_true",
+                        help="Pass --no-sites to crawler: skip sites.json, read dataset only")
     parser.add_argument("--apply-synonym-proposals", action="store_true",
                         help="Merge synonym_proposals.json into synonyms.json (after human review)")
     args = parser.parse_args()
@@ -398,6 +402,8 @@ def main():
         if args.dataset:
             crawler_args += ["--dataset", args.dataset,
                              "--max-dataset-rows", str(args.max_dataset_rows)]
+        if args.no_sites:
+            crawler_args += ["--no-sites"]
         run_step("1/5  Crawler", crawler_args)
 
     crawled = json.loads(CRAWLED_FILE.read_text(encoding="utf-8"))

@@ -314,6 +314,8 @@ _PROTECTED_KEYS: set[str] = {
     "cranberry sauce",
     "beef brisket",
     "dried currants",
+    # Known USDA ratio quirk: carb value includes non-metabolizable chemical components
+    "baking powder",
     # Core staples — don't let the bot re-add with USDA verbose names
     "chicken breast",
     "chicken thigh",
@@ -354,9 +356,22 @@ def _is_sane_nutrition(nutrition: dict, key: str) -> bool:
     if kcal <= 0:
         return False
 
-    # Calderini check: kcal should roughly match 4p + 4c + 9f
+    # Calderini check: kcal should roughly match 4p + 4c + 9f.
+    # Exception: alcoholic beverages — ethanol (7 kcal/g) is NOT tracked in p/c/f,
+    # so wines/beer/spirits legitimately have kcal >> 4p+4c+9f.
+    _ALCOHOL_KEYS = {'wine', 'beer', 'ale', 'lager', 'stout', 'porter', 'cider',
+                     'mead', 'sake', 'vodka', 'whiskey', 'whisky', 'rum', 'gin',
+                     'tequila', 'brandy', 'bourbon', 'scotch', 'sherry', 'port',
+                     'vermouth', 'liqueur', 'schnapps', 'champagne', 'prosecco',
+                     'merlot', 'cabernet', 'chardonnay', 'riesling', 'sauvignon',
+                     'zinfandel', 'pinot', 'gewurztraminer', 'claret', 'chianti',
+                     'burgundy', 'shaoxing', 'extract', 'vanilla', 'alcohol',
+                     'spirit', 'spirits', 'liquor', 'pina', 'colada', 'mojito'}
+    key_words = set(key.lower().split())
+    is_alcoholic = bool(key_words & _ALCOHOL_KEYS)
+
     macro_kcal = 4 * p + 4 * c + 9 * f
-    if macro_kcal > 10 and kcal > 10:
+    if macro_kcal > 10 and kcal > 10 and not is_alcoholic:
         ratio = kcal / macro_kcal
         if ratio < 0.5 or ratio > 2.0:
             # Too far off — likely a unit mismatch or wrong food
@@ -376,13 +391,45 @@ def _is_sane_nutrition(nutrition: dict, key: str) -> bool:
 
 # ── Key validation ────────────────────────────────────────────────────────────
 
-# Equipment and non-food terms that should never be DB keys
-_EQUIPMENT_WORDS = {
+# Equipment, non-food, and hazardous terms that must never become DB keys.
+# A gap key containing ANY of these words is silently skipped.
+_NON_FOOD_WORDS: frozenset[str] = frozenset({
+    # Kitchen equipment / tools
     'thermometer', 'mill', 'blender', 'processor', 'mixer', 'grinder',
     'strainer', 'colander', 'skillet', 'saucepan', 'stockpot', 'wok',
     'spatula', 'whisk', 'tongs', 'ladle', 'peeler', 'zester', 'mandoline',
     'brush', 'mallet', 'twine', 'cheesecloth', 'foil', 'parchment',
-}
+    'skewer', 'skewers', 'toothpick', 'toothpicks',
+    'bag', 'bags', 'wrap', 'sheet', 'sheets', 'tray', 'trays', 'rack', 'racks',
+    'pan', 'pans', 'pot', 'pots', 'lid', 'lids', 'tin', 'tins',
+    'mold', 'molds', 'mould', 'moulds', 'cutter', 'cutters', 'press',
+    'jar', 'jars', 'container', 'containers', 'bottle', 'bottles',
+    'plank', 'planks', 'grate', 'grates', 'thermometer', 'timer',
+    'string', 'ribbon', 'tape', 'twine', 'cord', 'rope',
+    'cloth', 'fabric', 'cheesecloth', 'towel', 'towels',
+    'cotton', 'gauze',
+    # Non-food household / craft supplies
+    'bleach', 'soap', 'detergent', 'cleaner', 'disinfectant',
+    'glitter', 'confetti', 'balloon', 'balloons', 'candle', 'candles',
+    'flower', 'flowers', 'pot', 'pots', 'vase', 'vases',
+    'decoration', 'decorations', 'ornament', 'ornaments',
+    'sticker', 'stickers', 'label', 'labels',
+    'charcoal', 'coal', 'wood', 'chips', 'pellets',
+    # Non-food ingestibles / hazardous
+    'bleach', 'ammonia', 'alum',
+    # Pet / non-human food
+    'kibble', 'petfood', 'dogfood', 'catfood', 'dog', 'cat', 'pet',
+    # Craft / party supplies
+    'lollipop', 'lollipops', 'straw', 'straws', 'confetti', 'streamer', 'streamers',
+    # Cosmetic / non-food oils and supplements
+    'essential', 'aloe', 'vera', 'cosmetic', 'fragrance',
+    # Cooking methods / actions (not ingredients)
+    'boiling', 'baking', 'frying', 'grilling', 'roasting', 'sautéing',
+    'sauteing', 'steaming', 'poaching', 'blanching', 'marinating',
+    # Vague/non-nutritional
+    'flavoring', 'flavourings', 'essence', 'coloring', 'colouring',
+    'thickener', 'stabilizer', 'emulsifier',
+})
 _INVALID_KEY_RE = re.compile(
     r'^\d'                          # starts with digit (quantity fragment)
     r'|^(a|an|the)\s'              # starts with article
@@ -390,17 +437,30 @@ _INVALID_KEY_RE = re.compile(
     r'|[*†‡#@]'                    # stray special characters
     r'|\bfilled\s+with\b'          # "a spray bottle filled with"
     r'|\band\s+\w+-fry\b'          # "food mill and deep-fry ..."
+    r"|^'[a-z]"                    # starts with possessive ('s, 'n, etc.)
+    r'|^\('                        # starts with open paren — truncated fragment
     , re.I
 )
+# Single-word non-ingredient tokens that slip through as gaps
+_ARTIFACT_KEYS: frozenset[str] = frozenset({
+    'pre', 'so', 'of', 'or', 'and', 'the', 'a', 'an',
+    'very', 'well', 'some', 'any', 'each', 'per',
+    'oj', 'tbsp', 'tsp', 'pkg', 'pkg.', 'pkt', 'sm', 'lg', 'med',
+    'reduced-fat', 'low-fat', 'fat-free', 'nonfat', 'whole', 'leftover',
+})
 
 def _is_valid_key(name: str) -> bool:
-    """Return False for keys that are quantity fragments, equipment, or malformed phrases."""
+    """Return False for keys that are quantity fragments, equipment, non-food, or malformed phrases."""
+    if len(name) < 3:                        # too short — quantity fragment or artifact
+        return False
+    if name.lower() in _ARTIFACT_KEYS:       # single-token non-ingredient
+        return False
     if _INVALID_KEY_RE.search(name):
         return False
     words = set(name.lower().split())
-    if words & _EQUIPMENT_WORDS:
+    if words & _NON_FOOD_WORDS:
         return False
-    if len(name.split()) > 6:   # too long to be a useful ingredient key
+    if len(name.split()) > 6:               # too long to be a useful ingredient key
         return False
     return True
 
