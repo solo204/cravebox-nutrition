@@ -154,6 +154,72 @@ def apply_proposals(proposals_path: Path, db_path: Path,
     }
 
 
+# ── Real-user ingredients from backend ───────────────────────────────────────
+
+def fetch_render_ingredients(crawled_path: Path, dry_run: bool) -> dict:
+    """
+    Fetch raw ingredient strings logged by the backend during real user extractions,
+    inject them into crawled_ingredients.json so the parser sim + enricher handle them.
+    Clears the backend file after successful processing.
+    """
+    backend_url = os.environ.get("BACKEND_URL", "https://cravebox-backend.onrender.com")
+    ingredients_url = f"{backend_url}/ingredients"
+
+    print(f"  Fetching real-user ingredients from {ingredients_url}...")
+    try:
+        with urlopen(Request(ingredients_url), timeout=15) as resp:
+            raw = resp.read().decode("utf-8").strip()
+    except URLError as e:
+        print(f"  WARNING: Could not reach backend — skipping real-user ingredients: {e}")
+        return {"fetched": 0, "injected": 0}
+
+    if not raw:
+        print("  No ingredients on backend — nothing to inject.")
+        return {"fetched": 0, "injected": 0}
+
+    # Parse JSONL
+    fetched = []
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            item = json.loads(line).get("ingredient", "").strip().lower()
+            if item:
+                fetched.append(item)
+        except Exception:
+            continue
+
+    print(f"  Fetched {len(fetched)} ingredient strings from backend.")
+
+    # Load existing crawled list and deduplicate
+    existing = set()
+    crawled = []
+    if crawled_path.exists():
+        crawled = json.loads(crawled_path.read_text(encoding="utf-8"))
+        existing = set(i.strip().lower() for i in crawled if isinstance(i, str))
+
+    new_items = [i for i in fetched if i not in existing]
+    print(f"  Injecting {len(new_items)} new ingredients into crawled_ingredients.json "
+          f"({len(fetched) - len(new_items)} already present).")
+
+    if not dry_run and new_items:
+        crawled.extend(new_items)
+        crawled_path.write_text(json.dumps(crawled, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    # Clear backend file after processing
+    if not dry_run:
+        try:
+            req = Request(ingredients_url, method="DELETE")
+            with urlopen(req, timeout=10):
+                pass
+            print("  Backend ingredients cleared.")
+        except Exception as e:
+            print(f"  WARNING: Could not clear backend ingredients: {e}")
+
+    return {"fetched": len(fetched), "injected": len(new_items)}
+
+
 # ── Synonym candidates from backend ──────────────────────────────────────────
 
 def apply_synonym_candidates(db_path: Path, synonyms_path: Path,
@@ -387,6 +453,13 @@ def main():
         "started_at": datetime.now(timezone.utc).isoformat(),
         "dry_run": args.dry_run,
     }
+
+    # ── Step 0: Inject real-user ingredients from backend ─────────────────────
+    print(f"\n{'='*60}")
+    print(f"  STEP: 0/5  Real-user ingredients (backend → crawled_ingredients.json)")
+    print(f"{'='*60}")
+    render_result = fetch_render_ingredients(CRAWLED_FILE, dry_run=args.dry_run)
+    summary["render_ingredients"] = render_result
 
     # ── Step 1: Crawl ──────────────────────────────────────────────────────────
     if args.skip_crawl:
