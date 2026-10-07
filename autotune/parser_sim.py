@@ -28,6 +28,14 @@ import sys
 from pathlib import Path
 from collections import Counter, defaultdict
 
+# ── ingredient-parser-nlp (optional, graceful fallback to regex if missing) ───
+try:
+    from ingredient_parser import parse_ingredient as _nlp_parse
+    _NLP_AVAILABLE = True
+except ImportError:
+    _NLP_AVAILABLE = False
+    print("  INFO: ingredient-parser-nlp not installed — using regex name extraction only.")
+
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = Path(__file__).parent
 REPO_ROOT  = SCRIPT_DIR.parent        # cravebox-nutrition/
@@ -149,6 +157,26 @@ def build_index(db: dict) -> dict[str, list[str]]:
     return idx
 
 
+def nlp_extract_name(raw: str) -> str | None:
+    """
+    Use ingredient-parser-nlp CRF model to extract the ingredient NAME field.
+    Returns the name string (lowercased), or None if unavailable/failed.
+    Falls back gracefully if the library isn't installed or parsing fails.
+    """
+    if not _NLP_AVAILABLE:
+        return None
+    try:
+        result = _nlp_parse(raw)
+        name = result.name
+        if name and hasattr(name, 'text') and name.text:
+            return name.text.lower().strip()
+        if isinstance(name, list) and name:
+            return ' '.join(n.text for n in name if hasattr(n, 'text')).lower().strip()
+    except Exception:
+        pass
+    return None
+
+
 def resolve(name: str, db: dict, synonyms: dict, modifiers: set,
             db_index: dict) -> tuple[str, str, str]:
     """
@@ -162,7 +190,17 @@ def resolve(name: str, db: dict, synonyms: dict, modifiers: set,
     if not raw or _should_skip(raw):
         return 'SKIP', '', 'skip'
 
-    cleaned = clean_name(raw, modifiers)
+    # Stage 0: NLP name extraction (ingredient-parser-nlp CRF, 95.86% accuracy)
+    # Handles fractions, ranges, complex modifiers better than regex.
+    # Falls back to regex clean_name() if NLP unavailable or returns empty.
+    nlp_name = nlp_extract_name(raw)
+    if nlp_name:
+        # Strip any remaining modifiers from NLP output
+        tokens = _MULTI_SPACE_RE.split(nlp_name.strip())
+        cleaned = ' '.join(t for t in tokens if t and t not in modifiers).strip()
+    else:
+        cleaned = clean_name(raw, modifiers)
+
     if not cleaned:
         return 'SKIP', '', 'empty_after_clean'
 

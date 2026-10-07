@@ -1,3 +1,4 @@
+ingredient-parser-nlp>=2.1.0  # NLP-based ingredient name extraction (CRF model, 95.86% accuracy)
 curl_cffi>=0.7.0
 requests>=2.31.0
 beautifulsoup4>=4.12.0

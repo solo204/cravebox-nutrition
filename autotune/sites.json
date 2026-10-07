@@ -108,6 +108,170 @@
       "url": "https://www.loveandlemons.com",
       "sitemap": "https://www.loveandlemons.com/sitemap.xml",
       "enabled": true
+    },
+
+    {"_comment": "── Filipino ──────────────────────────────────────────────────────"},
+    {
+      "name": "Panlasang Pinoy",
+      "url": "https://panlasangpinoy.com",
+      "sitemap": "https://panlasangpinoy.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Kawaling Pinoy",
+      "url": "https://www.kawalingpinoy.com",
+      "sitemap": "https://www.kawalingpinoy.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Pinoy Recipe",
+      "url": "https://pinoyrecipe.net",
+      "sitemap": "https://pinoyrecipe.net/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Japanese ──────────────────────────────────────────────────────"},
+    {
+      "name": "Just One Cookbook",
+      "url": "https://www.justonecookbook.com",
+      "sitemap": "https://www.justonecookbook.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "No Recipes",
+      "url": "https://norecipes.com",
+      "sitemap": "https://norecipes.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Korean ────────────────────────────────────────────────────────"},
+    {
+      "name": "Maangchi",
+      "url": "https://www.maangchi.com",
+      "sitemap": "https://www.maangchi.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "My Korean Kitchen",
+      "url": "https://mykoreankitchen.com",
+      "sitemap": "https://mykoreankitchen.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Chinese ───────────────────────────────────────────────────────"},
+    {
+      "name": "The Woks of Life",
+      "url": "https://thewoksoflife.com",
+      "sitemap": "https://thewoksoflife.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Omnivore's Cookbook",
+      "url": "https://omnivorescookbook.com",
+      "sitemap": "https://omnivorescookbook.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Thai ──────────────────────────────────────────────────────────"},
+    {
+      "name": "Hot Thai Kitchen",
+      "url": "https://hot-thai-kitchen.com",
+      "sitemap": "https://hot-thai-kitchen.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Temple of Thai",
+      "url": "https://www.templeofthai.com",
+      "sitemap": "https://www.templeofthai.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Vietnamese ────────────────────────────────────────────────────"},
+    {
+      "name": "Viet World Kitchen",
+      "url": "https://www.vietworldkitchen.com",
+      "sitemap": "https://www.vietworldkitchen.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Wok and Kin",
+      "url": "https://www.wokandkin.com",
+      "sitemap": "https://www.wokandkin.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Indian ────────────────────────────────────────────────────────"},
+    {
+      "name": "Swasthi's Recipes",
+      "url": "https://www.indianhealthyrecipes.com",
+      "sitemap": "https://www.indianhealthyrecipes.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Dassana's Veg Recipes",
+      "url": "https://www.vegrecipesofindia.com",
+      "sitemap": "https://www.vegrecipesofindia.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Spice Up the Curry",
+      "url": "https://www.spiceupthecurry.com",
+      "sitemap": "https://www.spiceupthecurry.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Latin / Mexican ───────────────────────────────────────────────"},
+    {
+      "name": "Mexico in My Kitchen",
+      "url": "https://www.mexicoinmykitchen.com",
+      "sitemap": "https://www.mexicoinmykitchen.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Isabel Eats",
+      "url": "https://www.isabeleats.com",
+      "sitemap": "https://www.isabeleats.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Brazilian Kitchen Abroad",
+      "url": "https://www.braziliankitchenabroad.com",
+      "sitemap": "https://www.braziliankitchenabroad.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── Mediterranean / Middle Eastern ────────────────────────────────"},
+    {
+      "name": "The Mediterranean Dish",
+      "url": "https://www.themediterraneandish.com",
+      "sitemap": "https://www.themediterraneandish.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Feasting at Home",
+      "url": "https://www.feastingathome.com",
+      "sitemap": "https://www.feastingathome.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Maureen Abood",
+      "url": "https://maureenabood.com",
+      "sitemap": "https://maureenabood.com/sitemap.xml",
+      "enabled": true
+    },
+
+    {"_comment": "── African ───────────────────────────────────────────────────────"},
+    {
+      "name": "My Diaspora Kitchen",
+      "url": "https://www.mydiasporakitchen.com",
+      "sitemap": "https://www.mydiasporakitchen.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Immaculate Bites",
+      "url": "https://www.africanbites.com",
+      "sitemap": "https://www.africanbites.com/sitemap.xml",
+      "enabled": true
     }
   ],
   "crawler": {
