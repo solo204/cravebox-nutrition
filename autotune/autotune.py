@@ -30,6 +30,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -69,6 +70,34 @@ def run_step(label: str, cmd: list, check: bool = True) -> int:
     print(f"{'='*60}")
     result = subprocess.run([sys.executable] + cmd, check=check)
     return result.returncode
+
+
+# ── Junk-key filter ───────────────────────────────────────────────────────────
+
+_JUNK_RE = re.compile(
+    r"""
+    ^ [\+\-] \d              # starts with +/- then a digit  (-3 tsp beetroot powder)
+    | ^ [¼-¾¼½¾] \s  # starts with fraction + space  (½ cup hot)
+    | ^ \d+ \s* (oz|lb|g|gr|kg|ml|pc|pcs|tsp|tbsp|cup|quart|pound) \b  # digit + unit-prefixed
+    | ^ (gr|pc|pcs) \s+ \w   # bare unit prefix  (gr potatoes, pc chilies)
+    | [)(]                   # stray parenthesis
+    | \b(for\s+brushing|instead\s+of|all\s+of\s+the|of\s+the\s+\w+ing|
+         pressed\s+through|when\s+you|i\s+have\s+made|you’ve|wash\s+egg)\b
+    """,
+    re.VERBOSE | re.IGNORECASE,
+)
+
+def is_junk_key(key: str) -> bool:
+    """Return True if a proposed DB key looks like a parse artifact or sentence fragment."""
+    if _JUNK_RE.search(key):
+        return True
+    # Too long to be a real ingredient name
+    if len(key) > 60:
+        return True
+    # Starts with a curly/smart quote
+    if key and key[0] in ('"', '"', ''', '''):
+        return True
+    return False
 
 
 # ── Apply proposals ───────────────────────────────────────────────────────────
@@ -111,6 +140,10 @@ def apply_proposals(proposals_path: Path, db_path: Path,
                 continue
             if key in _PROTECTED:
                 print(f"  SKIP protected key: {key}")
+                skipped_existing += 1
+                continue
+            if is_junk_key(key):
+                print(f"  SKIP junk key: {key!r}")
                 skipped_existing += 1
                 continue
             nutrition = p["nutrition"]
