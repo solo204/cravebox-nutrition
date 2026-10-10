@@ -1,5 +1,6 @@
 ingredient-parser-nlp>=2.1.0  # NLP-based ingredient name extraction (CRF model, 95.86% accuracy)
 curl_cffi>=0.7.0
+scrapling>=0.4.8              # optional: required only for --stealth mode (JS-rendered sites)
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0

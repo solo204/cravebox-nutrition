@@ -51,6 +51,16 @@ except ImportError:
     import requests as std_requests
     _USE_CFFI = False
 
+# Scrapling StealthyFetcher — Playwright-based, handles JS-rendered sites.
+# Only imported when --stealth is used.
+try:
+    from scrapling import StealthyFetcher as _StealthyFetcher
+    _USE_SCRAPLING = True
+except ImportError:
+    _USE_SCRAPLING = False
+
+_STEALTH_MODE = False  # set to True by --stealth flag
+
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = Path(__file__).parent
 SITES_FILE = SCRIPT_DIR / "sites.json"
@@ -91,9 +101,15 @@ def make_session():
     """
     Returns a session that impersonates Chrome at the TLS level (curl_cffi)
     or falls back to a requests.Session with realistic headers.
+    In --stealth mode returns None (StealthyFetcher is used per-request instead).
     """
+    if _STEALTH_MODE:
+        if not _USE_SCRAPLING:
+            print("  [crawler] ERROR: --stealth requires scrapling. Run: pip install scrapling && playwright install chromium")
+            sys.exit(1)
+        print("  [crawler] Using Scrapling StealthyFetcher (Playwright, JS-rendered pages) ✓")
+        return None  # stealth fetches are done per-request
     if _USE_CFFI:
-        # curl_cffi impersonates Chrome's TLS fingerprint — passes Cloudflare
         session = cffi_requests.Session(impersonate="chrome120")
         session.headers.update(CHROME_HEADERS)
         print("  [crawler] Using curl_cffi (Chrome TLS impersonation) ✓")
@@ -106,14 +122,22 @@ def make_session():
 
 
 def safe_get(session, url: str, timeout: int = DEFAULT_TIMEOUT):
+    if _STEALTH_MODE:
+        try:
+            fetcher = _StealthyFetcher()
+            page = fetcher.fetch(url, timeout=timeout * 1000)  # ms
+            # Return a simple wrapper with .text and .content attributes
+            class _Resp:
+                def __init__(self, html): self.text = html; self.content = html.encode()
+                def raise_for_status(self): pass
+            return _Resp(page.html_content)
+        except Exception as e:
+            return None
     try:
-        if _USE_CFFI:
-            r = session.get(url, timeout=timeout, allow_redirects=True)
-        else:
-            r = session.get(url, timeout=timeout, allow_redirects=True)
+        r = session.get(url, timeout=timeout, allow_redirects=True)
         r.raise_for_status()
         return r
-    except Exception as e:
+    except Exception:
         return None
 
 
@@ -236,18 +260,106 @@ def extract_ingredients_from_url(session, url: str, timeout: int) -> list[str]:
             if isinstance(obj, dict) and obj.get("@type") in ("Recipe", "recipe"):
                 raw = obj.get("recipeIngredient", [])
                 if isinstance(raw, list):
-                    ingredients.extend(str(i).strip() for i in raw if i)
+                    for item in raw:
+                        s = str(item).strip()
+                        if not s:
+                            continue
+                        # WP Recipe Maker and similar plugins sometimes concatenate
+                        # multiple ingredients into one JSON-LD string. Split them.
+                        if len(s) > 120:
+                            parts = _split_concatenated_ingredients(s)
+                            ingredients.extend(parts)
+                        else:
+                            ingredients.append(s)
 
     if ingredients:
         return ingredients
 
-    # 2. Microdata fallback
+    # 2. CSS class fallback — WP Recipe Maker, Tasty Recipes, WPRM, etc.
+    css_hits = soup.select(
+        "li.wprm-recipe-ingredient, "
+        "li.tasty-recipes-ingredient, "
+        "li.recipe-ingredient, "
+        "[class*='recipe-ingredient']:not(ul):not(ol), "
+        ".ingredients li"
+    )
+    for el in css_hits:
+        text = el.get_text(" ", strip=True)
+        if text and 3 < len(text) < 300:
+            ingredients.append(text)
+
+    if ingredients:
+        return ingredients
+
+    # 3. Microdata fallback
     for span in soup.find_all(attrs={"itemprop": "recipeIngredient"}):
         text = span.get_text(strip=True)
         if text:
             ingredients.append(text)
 
+    if ingredients:
+        return ingredients
+
+    # 4. Heading-proximity fallback: <ul>/<ol> after an "Ingredients" heading
+    _ING_HEADING = re.compile(r'ingredient', re.I)
+    for heading in soup.find_all(["h2", "h3", "h4"]):
+        if _ING_HEADING.search(heading.get_text()):
+            for sib in heading.next_siblings:
+                if getattr(sib, "name", None) in ("ul", "ol"):
+                    for li in sib.find_all("li"):
+                        text = li.get_text(" ", strip=True)
+                        if text and 3 < len(text) < 300:
+                            ingredients.append(text)
+                    break
+
     return ingredients
+
+
+# Pattern that signals the START of a new ingredient line (digit/fraction + optional unit)
+_INGREDIENT_START = re.compile(
+    r'(?<=[^\d])(?=(?:\d[\d\s./]*|[¼½¾⅓⅔⅛⅜⅝⅞]))'
+    r'|(?<=\))(?=[A-Z])'  # ends paren, next is capital
+)
+
+def _split_concatenated_ingredients(text: str) -> list[str]:
+    """Split a blob of concatenated ingredient strings into individual lines.
+
+    WP Recipe Maker (and similar) sometimes returns all ingredients in one
+    JSON-LD string without newline separators. We detect boundaries where a
+    new ingredient starts (a digit or Unicode fraction following a non-digit)
+    and split there.
+    """
+    # First try: newlines already present
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+    if len(lines) > 1:
+        return [l for l in lines if 3 < len(l) < 300]
+
+    # Second try: split on pattern where a quantity starts after a non-digit
+    # e.g. "...3 large onions¼ tsp salt..." → split before "¼"
+    FRACTIONS = "¼½¾⅓⅔⅛⅜⅝⅞"
+    parts = []
+    current = []
+    i = 0
+    chars = list(text)
+    while i < len(chars):
+        ch = chars[i]
+        # Detect start of new ingredient: fraction character, or digit preceded
+        # by a letter/paren (no space boundary)
+        if ch in FRACTIONS and current:
+            parts.append("".join(current).strip())
+            current = [ch]
+        elif ch.isdigit() and i > 0 and chars[i - 1].isalpha():
+            # e.g. "mushrooms10½ oz" → split before "10"
+            parts.append("".join(current).strip())
+            current = [ch]
+        else:
+            current.append(ch)
+        i += 1
+    if current:
+        parts.append("".join(current).strip())
+
+    result = [p for p in parts if 3 < len(p) < 300]
+    return result if len(result) > 1 else [text]
 
 
 def _flatten_jsonld(obj) -> list:
@@ -271,6 +383,8 @@ def crawl_site(site: dict, config: dict, session) -> list[str]:
     sitemap = site.get("sitemap", "")
     max_per = config.get("max_recipes_per_site", DEFAULT_MAX_PER_SITE)
     delay = config.get("request_delay_seconds", DEFAULT_DELAY)
+    if _STEALTH_MODE:
+        delay = max(delay, 4.0)  # StealthyFetcher is slower; give it breathing room
     timeout = config.get("request_timeout_seconds", DEFAULT_TIMEOUT)
 
     print(f"\n  [{name}] Finding recipe URLs ...")
@@ -489,11 +603,22 @@ def main():
     parser.add_argument("--dataset", help="Path to a local open recipe dataset (RecipeNLG CSV/TSV/Parquet, JSON, or TXT)")
     parser.add_argument("--no-sites", action="store_true",
                         help="Skip loading sites.json and do not crawl any websites (dataset-only mode)")
+    parser.add_argument("--stealth", action="store_true",
+                        help="Use Scrapling StealthyFetcher (Playwright) for JS-rendered / Cloudflare-protected sites. Requires: pip install scrapling && playwright install chromium")
     parser.add_argument("--max-per-site", type=int, help="Override max recipes per site")
     parser.add_argument("--max-dataset-rows", type=int, default=DEFAULT_MAX_DATASET_ROWS,
                         help=f"Max rows to read from dataset (default: {DEFAULT_MAX_DATASET_ROWS:,})")
     parser.add_argument("--out", default=str(OUT_FILE), help="Output JSON path")
     args = parser.parse_args()
+
+    # Enable stealth mode if requested
+    if args.stealth:
+        global _STEALTH_MODE
+        if not _USE_SCRAPLING:
+            print("  ERROR: --stealth requires scrapling. Run: pip install scrapling && playwright install chromium")
+            return
+        _STEALTH_MODE = True
+        print("  [stealth] StealthyFetcher (Playwright) enabled — JS-rendered sites supported.")
 
     # Load sites.json (skipped when --no-sites is set)
     config: dict = {}
