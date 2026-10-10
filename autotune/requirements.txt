@@ -1,4 +1,5 @@
 ingredient-parser-nlp>=2.1.0  # NLP-based ingredient name extraction (CRF model, 95.86% accuracy)
+recipe-scrapers>=15.0.0       # 400+ site-specific recipe parsers; primary extraction layer
 curl_cffi>=0.7.0
 scrapling>=0.4.8              # optional: required only for --stealth mode (JS-rendered sites)
 requests>=2.31.0

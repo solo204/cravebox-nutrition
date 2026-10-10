@@ -30,6 +30,8 @@ Output:
 
 import argparse
 import csv
+import gzip
+import io
 import json
 import re
 import sys
@@ -58,6 +60,13 @@ try:
     _USE_SCRAPLING = True
 except ImportError:
     _USE_SCRAPLING = False
+
+# recipe-scrapers — 400+ site-specific parsers; used as primary extractor.
+try:
+    from recipe_scrapers import scrape_html as _scrape_html
+    _USE_RECIPE_SCRAPERS = True
+except ImportError:
+    _USE_RECIPE_SCRAPERS = False
 
 _STEALTH_MODE = False  # set to True by --stealth flag
 
@@ -161,8 +170,12 @@ def get_recipe_urls_from_sitemap(session, sitemap_url: str,
             continue
 
         try:
-            root = ET.fromstring(r.content)
-        except ET.ParseError:
+            content = r.content
+            # Many WordPress sites (Yoast SEO) serve gzip-compressed sitemaps
+            if content[:2] == b'\x1f\x8b':
+                content = gzip.decompress(content)
+            root = ET.fromstring(content)
+        except (ET.ParseError, gzip.BadGzipFile, OSError):
             continue
 
         ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
@@ -174,7 +187,7 @@ def get_recipe_urls_from_sitemap(session, sitemap_url: str,
                     queue.append(loc.text.strip())
         elif tag == "urlset":
             for loc in root.findall(".//sm:loc", ns):
-                if loc.text and _looks_like_recipe_url(loc.text.strip()):
+                if loc.text and _looks_like_recipe_url(loc.text.strip(), from_sitemap=True):
                     urls.append(loc.text.strip())
                     if len(urls) >= max_urls:
                         break
@@ -226,31 +239,59 @@ def get_recipe_urls_by_crawling(session, base_url: str,
     return found
 
 
-def _looks_like_recipe_url(url: str) -> bool:
+def _looks_like_recipe_url(url: str, from_sitemap: bool = False) -> bool:
+    """Return True if the URL looks like a recipe page.
+
+    When the URL comes from a recipe site's own sitemap we relax the check —
+    the sitemap is already filtered to content pages, so any slug-style path
+    (at least one hyphen, not a known non-content prefix) is fair game.
+    """
     path = urlparse(url).path.lower()
-    recipe_signals = ["/recipe", "/recipes/", "/food/", "/dish/", "/cook/"]
     skip_signals = ["/sitemap", "/category/", "/tag/", "/author/", "/page/",
-                    "/search", "/login", "/account", ".xml", ".json",
-                    ".jpg", ".png", ".gif", ".webp"]
+                    "/search", "/login", "/account", "/wp-content/",
+                    ".xml", ".json", ".jpg", ".png", ".gif", ".webp", ".pdf"]
     if any(s in path for s in skip_signals):
         return False
+    if from_sitemap:
+        # Trust the sitemap — accept any non-trivial slug path
+        parts = [p for p in path.strip("/").split("/") if p]
+        return bool(parts) and "-" in path
+    recipe_signals = ["/recipe", "/recipes/", "/food/", "/dish/", "/cook/"]
     return any(s in path for s in recipe_signals) or (
         len(path.strip("/").split("/")) >= 2 and "-" in path
     )
 
 
-# ── Schema.org extraction ──────────────────────────────────────────────────────
+# ── Extraction ────────────────────────────────────────────────────────────────
 
 def extract_ingredients_from_url(session, url: str, timeout: int) -> list[str]:
-    """Fetch a recipe page and extract Schema.org recipeIngredient values."""
+    """Fetch a recipe page and extract ingredients.
+
+    Extraction order:
+      1. recipe-scrapers  — 400+ site-specific parsers (best accuracy)
+      2. JSON-LD          — Schema.org recipeIngredient
+      3. CSS classes      — WP Recipe Maker, Tasty Recipes, WPRM
+      4. Microdata        — itemprop=recipeIngredient
+      5. Heading proximity— <ul>/<ol> after an Ingredients heading
+    """
     r = safe_get(session, url, timeout)
     if not r:
         return []
 
+    # 1. recipe-scrapers (site-specific parsers — most reliable)
+    if _USE_RECIPE_SCRAPERS:
+        try:
+            scraper = _scrape_html(r.text, org_url=url)
+            ings = scraper.ingredients()
+            if ings:
+                return [i.strip() for i in ings if i.strip()]
+        except Exception:
+            pass  # fall through to generic extractors
+
     soup = BeautifulSoup(r.text, "lxml")
     ingredients: list[str] = []
 
-    # 1. JSON-LD
+    # 2. JSON-LD
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             data = json.loads(script.string or "")
@@ -275,7 +316,7 @@ def extract_ingredients_from_url(session, url: str, timeout: int) -> list[str]:
     if ingredients:
         return ingredients
 
-    # 2. CSS class fallback — WP Recipe Maker, Tasty Recipes, WPRM, etc.
+    # 3. CSS class fallback — WP Recipe Maker, Tasty Recipes, WPRM, etc.
     css_hits = soup.select(
         "li.wprm-recipe-ingredient, "
         "li.tasty-recipes-ingredient, "
@@ -291,7 +332,7 @@ def extract_ingredients_from_url(session, url: str, timeout: int) -> list[str]:
     if ingredients:
         return ingredients
 
-    # 3. Microdata fallback
+    # 4. Microdata fallback
     for span in soup.find_all(attrs={"itemprop": "recipeIngredient"}):
         text = span.get_text(strip=True)
         if text:
@@ -300,7 +341,7 @@ def extract_ingredients_from_url(session, url: str, timeout: int) -> list[str]:
     if ingredients:
         return ingredients
 
-    # 4. Heading-proximity fallback: <ul>/<ol> after an "Ingredients" heading
+    # 5. Heading-proximity fallback: <ul>/<ol> after an "Ingredients" heading
     _ING_HEADING = re.compile(r'ingredient', re.I)
     for heading in soup.find_all(["h2", "h3", "h4"]):
         if _ING_HEADING.search(heading.get_text()):
