@@ -240,6 +240,40 @@
       "enabled": true
     },
 
+    {"_comment": "── French ────────────────────────────────────────────────────────"},
+    {
+      "name": "Pardon Your French",
+      "url": "https://www.pardonyourfrench.com",
+      "sitemap": "https://www.pardonyourfrench.com/post-sitemap.xml",
+      "enabled": true,
+      "stealth": true,
+      "notes": "Cloudflare-protected WP site. Use --stealth + --urls with pyf_recipe_urls.txt"
+    },
+    {
+      "name": "French Cooking Academy",
+      "url": "https://www.frenchcookingacademy.com",
+      "sitemap": "https://www.frenchcookingacademy.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "David Lebovitz",
+      "url": "https://www.davidlebovitz.com",
+      "sitemap": "https://www.davidlebovitz.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Perfectly Provence",
+      "url": "https://perfectlyprovence.co",
+      "sitemap": "https://perfectlyprovence.co/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Love French Food",
+      "url": "https://www.lovefrenchfood.com",
+      "sitemap": "https://www.lovefrenchfood.com/sitemap.xml",
+      "enabled": true
+    },
+
     {"_comment": "── Mediterranean / Middle Eastern ────────────────────────────────"},
     {
       "name": "The Mediterranean Dish",
@@ -258,6 +292,60 @@
       "url": "https://maureenabood.com",
       "sitemap": "https://maureenabood.com/sitemap.xml",
       "enabled": true
+    },
+    {
+      "name": "Feel Good Foodie",
+      "url": "https://feelgoodfoodie.net",
+      "sitemap": "https://feelgoodfoodie.net/sitemap.xml",
+      "enabled": true,
+      "notes": "Lebanese-American. Large site, great for mezze / Levantine ingredients."
+    },
+    {
+      "name": "Cleo Buttera",
+      "url": "https://cleobuttera.com",
+      "sitemap": "https://cleobuttera.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Egyptian. Excellent for North African / Gulf pastry ingredients."
+    },
+    {
+      "name": "Amira's Pantry",
+      "url": "https://amiraspantry.com",
+      "sitemap": "https://amiraspantry.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Egyptian-American. Strong coverage of Gulf staples (fenugreek, dried limes, etc.)"
+    },
+    {
+      "name": "The Matbakh",
+      "url": "https://thematbakh.com",
+      "sitemap": "https://thematbakh.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Middle Eastern / Gulf. Covers Saudi, Emirati, Kuwaiti dishes."
+    },
+    {
+      "name": "Hadia's Lebanese Cuisine",
+      "url": "https://hadiaslebanesecuisine.com",
+      "sitemap": "https://hadiaslebanesecuisine.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Simply Lebanese",
+      "url": "https://www.simplyleb.com",
+      "sitemap": "https://www.simplyleb.com/sitemap.xml",
+      "enabled": true
+    },
+    {
+      "name": "Zaatar and Zaytoun",
+      "url": "https://zaatarandzaytoun.com",
+      "sitemap": "https://zaatarandzaytoun.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Palestinian. Good for sumac, za'atar, freekeh, etc."
+    },
+    {
+      "name": "Cardamom and Tea",
+      "url": "https://cardamomandtea.com",
+      "sitemap": "https://cardamomandtea.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Gulf / Persian-inspired. Covers rose water, dried limes, loomi."
     },
 
     {"_comment": "── African ───────────────────────────────────────────────────────"},
