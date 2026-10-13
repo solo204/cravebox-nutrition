@@ -99,6 +99,17 @@ jobs:
           fi
           python autotune/autotune.py $ARGS
 
+      - name: Save crawler progress (runs even on timeout/failure)
+        if: always()
+        run: |
+          git config user.name  "CraveBox Autotune Bot"
+          git config user.email "autotune@cravebox.app"
+          git diff --quiet autotune/crawled_ingredients.json autotune/crawled_sites_cache.json \
+            && echo "No crawler progress to save." \
+            || (git add autotune/crawled_ingredients.json autotune/crawled_sites_cache.json \
+                && git commit -m "autotune: save crawler progress [skip ci]" \
+                && git push)
+
       - name: Reset site cache on the 1st of each month
         run: |
           DAY=$(date -u +%d)
