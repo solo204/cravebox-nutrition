@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       max_per_site:
-        description: 'Max recipes per site (default: 200)'
+        description: 'Max recipes per site (default: 50)'
         required: false
-        default: '200'
+        default: '50'
       sites:
         description: 'Extra site URLs to crawl (comma-separated)'
         required: false
@@ -43,7 +43,7 @@ jobs:
   autotune:
     name: Run Autotune Pipeline
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 360
 
     permissions:
       contents: write
@@ -86,7 +86,7 @@ jobs:
         env:
           USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
         run: |
-          ARGS="--max-per-site ${{ github.event.inputs.max_per_site || '200' }} --max-gaps 2000"
+          ARGS="--max-per-site ${{ github.event.inputs.max_per_site || '50' }} --max-gaps 2000"
           [ "${{ github.event.inputs.skip_crawl }}" = "true" ] && ARGS="$ARGS --skip-crawl"
           [ "${{ github.event.inputs.dry_run }}"   = "true" ] && ARGS="$ARGS --dry-run"
           [ -n "${{ github.event.inputs.sites }}"  ] && ARGS="$ARGS --sites '${{ github.event.inputs.sites }}'"
