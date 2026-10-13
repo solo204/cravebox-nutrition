@@ -82,6 +82,43 @@ jobs:
             echo "Enricher will fall back to USDA FDC API only."
           fi
 
+      - name: Sync sites.json from cravebox-world-sites master_sites.json
+        run: |
+          python - <<'EOF'
+import json, urllib.request
+
+MASTER_URL = "https://raw.githubusercontent.com/solo204/cravebox-world-sites/main/data/master_sites.json"
+SITES_FILE  = "autotune/sites.json"
+
+# Load existing sites.json to preserve the crawler config block
+with open(SITES_FILE, encoding="utf-8") as f:
+    existing = json.load(f)
+crawler_config = existing.get("crawler", {})
+
+# Fetch master_sites.json
+with urllib.request.urlopen(MASTER_URL, timeout=15) as r:
+    master = json.loads(r.read().decode())
+
+# Convert: only active sites, map fields to autotune format
+sites = []
+for s in master:
+    if not s.get("active", True):
+        continue
+    sites.append({
+        "name":    s["name"],
+        "url":     s["url"],
+        "sitemap": "",        # crawler auto-discovers sitemaps
+        "enabled": True,
+    })
+
+out = {"_comment": "Auto-synced from cravebox-world-sites/data/master_sites.json", "sites": sites, "crawler": crawler_config}
+with open(SITES_FILE, "w", encoding="utf-8") as f:
+    json.dump(out, f, indent=2, ensure_ascii=False)
+    f.write("\n")
+
+print(f"Synced {len(sites)} active sites → {SITES_FILE}")
+EOF
+
       - name: Run autotune pipeline
         env:
           USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
