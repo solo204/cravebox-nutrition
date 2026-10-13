@@ -99,10 +99,18 @@ jobs:
           fi
           python autotune/autotune.py $ARGS
 
+      - name: Reset site cache on the 1st of each month
+        run: |
+          DAY=$(date -u +%d)
+          if [ "$DAY" = "01" ]; then
+            echo "Monthly reset — clearing crawled_sites_cache.json"
+            echo "[]" > autotune/crawled_sites_cache.json
+          fi
+
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet data/ \
+          git diff --quiet data/ autotune/crawled_ingredients.json autotune/crawled_sites_cache.json \
             && echo "changed=false" >> "$GITHUB_OUTPUT" \
             || echo "changed=true"  >> "$GITHUB_OUTPUT"
 
@@ -117,7 +125,7 @@ jobs:
           ENTRIES=$(python -c "import json; d=json.load(open('data/nutrition_db.json')); print(len(d))")
           BRANCH="autotune/v${VERSION}"
           git checkout -b "$BRANCH"
-          git add data/
+          git add data/ autotune/crawled_ingredients.json autotune/crawled_sites_cache.json
           git commit -m "autotune: v${VERSION} — ${ENTRIES} DB entries [skip ci]"
           git push origin "$BRANCH"
           gh pr create \

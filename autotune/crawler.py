@@ -74,6 +74,7 @@ _STEALTH_MODE = False  # set to True by --stealth flag
 SCRIPT_DIR = Path(__file__).parent
 SITES_FILE = SCRIPT_DIR / "sites.json"
 OUT_FILE = SCRIPT_DIR / "crawled_ingredients.json"
+SITES_CACHE_FILE = SCRIPT_DIR / "crawled_sites_cache.json"
 
 # ── Default config ─────────────────────────────────────────────────────────────
 DEFAULT_MAX_PER_SITE = 200
@@ -683,27 +684,66 @@ def main():
     if args.max_per_site:
         config["max_recipes_per_site"] = args.max_per_site
 
-    all_ingredients: list[str] = []
+    out_path = Path(args.out)
+
+    # ── Load existing ingredients + site cache (incremental runs) ──
+    seen: set[str] = set()
+    unique: list[str] = []
+    if out_path.exists():
+        try:
+            existing = json.loads(out_path.read_text(encoding="utf-8"))
+            for ing in existing:
+                key = ing.strip()
+                if key and key not in seen:
+                    seen.add(key)
+                    unique.append(key)
+            print(f"  Loaded {len(unique):,} existing ingredients from {out_path.name}")
+        except Exception:
+            pass
+
+    done_sites: set[str] = set()
+    if SITES_CACHE_FILE.exists():
+        try:
+            done_sites = set(json.loads(SITES_CACHE_FILE.read_text(encoding="utf-8")))
+            print(f"  Site cache: {len(done_sites)} already crawled — will skip")
+        except Exception:
+            pass
+
+    def _save_incremental():
+        out_path.write_text(json.dumps(unique, indent=2, ensure_ascii=False), encoding="utf-8")
+        SITES_CACHE_FILE.write_text(json.dumps(sorted(done_sites), indent=2, ensure_ascii=False), encoding="utf-8")
+
+    def _add_ingredients(ings: list[str]):
+        for ing in ings:
+            key = ing.strip()
+            if key and key not in seen:
+                seen.add(key)
+                unique.append(key)
 
     # ── Dataset ingestion (no HTTP needed) ──
     if args.dataset:
         print(f"\n=== CraveBox Dataset Ingestion ===")
         dataset_ings = load_from_dataset(args.dataset, args.max_dataset_rows)
-        all_ingredients.extend(dataset_ings)
+        _add_ingredients(dataset_ings)
 
     # ── Live site crawling ──
     if sites or args.urls:
         session = make_session()
 
+        pending = [s for s in sites if s.get("url", s.get("name", "")) not in done_sites]
+        skipped = len(sites) - len(pending)
         print(f"\n=== CraveBox Ingredient Crawler ===")
-        print(f"Sites: {len(sites)}  |  Max per site: {config.get('max_recipes_per_site', DEFAULT_MAX_PER_SITE)}")
+        print(f"Sites: {len(pending)} to crawl ({skipped} already done)  |  Max per site: {config.get('max_recipes_per_site', DEFAULT_MAX_PER_SITE)}")
 
-        for site in sites:
+        for site in tqdm(pending, desc="Sites", unit="site"):
+            site_key = site.get("url", site.get("name", ""))
             try:
                 ings = crawl_site(site, config, session)
-                all_ingredients.extend(ings)
+                _add_ingredients(ings)
+                done_sites.add(site_key)
+                _save_incremental()  # persist after each site
             except KeyboardInterrupt:
-                print("\nInterrupted — saving partial results ...")
+                print("\nInterrupted — partial results saved.")
                 break
             except Exception as e:
                 print(f"  ERROR crawling {site.get('name', '?')}: {e}")
@@ -712,23 +752,13 @@ def main():
             direct_urls = [u.strip() for u in args.urls.split(",") if u.strip()]
             print(f"\nScraping {len(direct_urls)} direct URL(s) ...")
             ings = crawl_urls_direct(direct_urls, config, session)
-            all_ingredients.extend(ings)
+            _add_ingredients(ings)
 
-    if not all_ingredients:
+    if not unique:
         print("\nNo ingredients collected. Use --dataset, --sites, or --urls.")
         sys.exit(0)
 
-    # Deduplicate (preserve order, case-sensitive — parser_sim lowercases)
-    seen: set[str] = set()
-    unique: list[str] = []
-    for ing in all_ingredients:
-        key = ing.strip()
-        if key and key not in seen:
-            seen.add(key)
-            unique.append(key)
-
-    out_path = Path(args.out)
-    out_path.write_text(json.dumps(unique, indent=2, ensure_ascii=False), encoding="utf-8")
+    _save_incremental()
     print(f"\n=== Done: {len(unique):,} unique ingredient strings → {out_path} ===")
 
 
