@@ -109,7 +109,7 @@ jobs:
           git config user.email "autotune@cravebox.app"
           git diff --quiet autotune/crawled_ingredients.json autotune/crawled_sites_cache.json \
             && echo "No crawler progress to save." \
-            || (git add autotune/crawled_ingredients.json autotune/crawled_sites_cache.json \
+            || (git add -f autotune/crawled_ingredients.json autotune/crawled_sites_cache.json \
                 && git commit -m "autotune: save crawler progress [skip ci]" \
                 && git push)
 
@@ -139,7 +139,7 @@ jobs:
           ENTRIES=$(python -c "import json; d=json.load(open('data/nutrition_db.json')); print(len(d))")
           BRANCH="autotune/v${VERSION}"
           git checkout -b "$BRANCH"
-          git add data/ autotune/crawled_ingredients.json autotune/crawled_sites_cache.json
+          git add -f data/ autotune/crawled_ingredients.json autotune/crawled_sites_cache.json
           git commit -m "autotune: v${VERSION} — ${ENTRIES} DB entries [skip ci]"
           git push origin "$BRANCH"
           gh pr create \
