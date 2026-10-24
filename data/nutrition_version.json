@@ -1,8 +1,8 @@
 {
-  "version": "1.0.46",
-  "updated_at": "2026-10-22T18:26:53.397735+00:00",
-  "entry_count": 7430,
-  "db_sha256": "8ebfdf4aa17105e00fc3bedd4ebe4aac939ba2121b30b941510b64d024a019e2",
-  "synonyms_sha256": "5cfa95c7eb030aaaf6b577e9d85bc7e294e1224f9686003bf0a6719647138496",
+  "version": "1.0.47",
+  "updated_at": "2026-10-24T00:23:39.659626+00:00",
+  "entry_count": 7440,
+  "db_sha256": "e82b46711374a243da9362ad0d1c4f2699be012935b26a2df951bc86efbd024d",
+  "synonyms_sha256": "a52e482afb4eb7d1db39914506e6a9944f183a4c5f3ab7d5ee43cd1f7561795f",
   "min_app_version": "3.4"
 }
