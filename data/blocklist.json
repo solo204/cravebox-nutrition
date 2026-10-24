@@ -1,0 +1,17 @@
+{
+  "_comment": "Human correction layer for autotune. Entries here override whatever autotune crawls.",
+
+  "quarantine": {
+    "hotdog casings": {
+      "reason": "50g carbs per 100g is wrong — collagen/natural casings are not high-carb",
+      "quarantined_at": "2026-10-22",
+      "last_seen_values": { "kcal": 279.0, "p": 9.8, "c": 50.1, "f": 3.9, "fb": 1.8, "sg": 7.3, "na": 494.0 }
+    }
+  },
+
+  "rename": {
+    "vnison shoulder": "venison shoulder"
+  },
+
+  "override": {}
+}
