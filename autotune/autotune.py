@@ -51,6 +51,8 @@ MODIFIERS_FILE = DATA_DIR_ROOT / "modifiers.json"
 VERSION_FILE = DATA_DIR_ROOT / "nutrition_version.json"
 
 SYNONYM_PROPOSALS_FILE = DATA_DIR_ROOT / "synonym_proposals.json"
+BLOCKLIST_FILE     = DATA_DIR_ROOT / "blocklist.json"
+QUARANTINE_LOG_FILE = DATA_DIR_ROOT / "quarantine_log.json"
 
 CRAWLED_FILE = SCRIPT_DIR / "crawled_ingredients.json"
 REPORT_FILE = SCRIPT_DIR / "parse_report.json"
@@ -447,6 +449,84 @@ def write_summary(data: dict, path: Path):
     print(f"\n  Summary → {path}")
 
 
+# ── Blocklist ─────────────────────────────────────────────────────────────────
+
+def apply_blocklist(db_path: Path, synonyms_path: Path,
+                    blocklist_path: Path, quarantine_log_path: Path,
+                    dry_run: bool) -> dict:
+    """Apply blocklist.json corrections to nutrition_db.json and synonyms.json.
+
+    Three operations (all non-destructive — originals are preserved in quarantine_log.json):
+      quarantine : move bad DB entries out of DB into the quarantine log
+      rename     : rename a DB key (fixes typos); updates synonyms that pointed to old key
+      override   : replace a DB entry's values with known-good values
+    """
+    if not blocklist_path.exists():
+        print("  No blocklist.json found — skipping.")
+        return {"quarantined": 0, "renamed": 0, "overridden": 0}
+
+    blocklist  = json.loads(blocklist_path.read_text(encoding="utf-8"))
+    db         = json.loads(db_path.read_text(encoding="utf-8"))
+    synonyms   = json.loads(synonyms_path.read_text(encoding="utf-8")) if synonyms_path.exists() else {}
+    qlog       = json.loads(quarantine_log_path.read_text(encoding="utf-8")) if quarantine_log_path.exists() else {"entries": {}}
+
+    quarantined = renamed = overridden = 0
+    from datetime import datetime, timezone
+    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
+
+    # ── Quarantine ──────────────────────────────────────────────────────────────
+    for key, meta in blocklist.get("quarantine", {}).items():
+        if key in db:
+            entry = {
+                "reason":          meta.get("reason", ""),
+                "quarantined_at":  meta.get("quarantined_at", now_str),
+                "last_seen_at":    now_str,
+                "last_seen_values": db[key],
+            }
+            if not dry_run:
+                qlog["entries"][key] = entry
+                del db[key]
+                # also remove any synonym pointing to this key
+                synonyms = {a: c for a, c in synonyms.items() if c != key}
+            print(f"  QUARANTINE: {key!r} → quarantine_log.json ({meta.get('reason','')})")
+            quarantined += 1
+        else:
+            print(f"  quarantine skip (not in DB): {key!r}")
+
+    # ── Rename ──────────────────────────────────────────────────────────────────
+    for old_key, new_key in blocklist.get("rename", {}).items():
+        if old_key in db:
+            if not dry_run:
+                db[new_key] = db.pop(old_key)
+                # update synonyms that pointed to the old key
+                synonyms = {a: (new_key if c == old_key else c) for a, c in synonyms.items()}
+                # remove the old_key synonym if it now self-loops
+                synonyms = {a: c for a, c in synonyms.items() if a != c}
+            print(f"  RENAME: {old_key!r} → {new_key!r}")
+            renamed += 1
+        else:
+            print(f"  rename skip (not in DB): {old_key!r}")
+
+    # ── Override ────────────────────────────────────────────────────────────────
+    for key, values in blocklist.get("override", {}).items():
+        if key in db:
+            if not dry_run:
+                db[key] = values
+            print(f"  OVERRIDE: {key!r} values locked to known-good")
+            overridden += 1
+
+    if not dry_run:
+        db_sorted = dict(sorted(db.items()))
+        db_path.write_text(json.dumps(db_sorted, indent=2, ensure_ascii=False), encoding="utf-8")
+        synonyms_path.write_text(json.dumps(synonyms, indent=2, ensure_ascii=False), encoding="utf-8")
+        quarantine_log_path.write_text(json.dumps(qlog, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"  Blocklist applied: {quarantined} quarantined, {renamed} renamed, {overridden} overridden")
+    else:
+        print(f"  [DRY RUN] Would apply blocklist: {quarantined} quarantine, {renamed} rename, {overridden} override")
+
+    return {"quarantined": quarantined, "renamed": renamed, "overridden": overridden}
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -556,6 +636,14 @@ def main():
     print(f"{'='*60}")
     candidates_result = apply_synonym_candidates(DB_FILE, SYNONYMS_FILE, dry_run=args.dry_run)
     summary["synonym_candidates"] = candidates_result
+
+    # ── Step 4c: Apply blocklist (quarantine / rename / override) ─────────────
+    print(f"\n{'='*60}")
+    print(f"  STEP: 4c/5  Apply blocklist corrections")
+    print(f"{'='*60}")
+    blocklist_result = apply_blocklist(
+        DB_FILE, SYNONYMS_FILE, BLOCKLIST_FILE, QUARANTINE_LOG_FILE, dry_run=args.dry_run)
+    summary["blocklist"] = blocklist_result
 
     # ── Step 5: Bump version ───────────────────────────────────────────────────
     print(f"\n{'='*60}")
