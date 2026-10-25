@@ -1,6 +1,95 @@
 {
   "_comment": "Add any recipe website here. The crawler will auto-detect Schema.org sitemaps or fall back to HTML scraping.",
   "sites": [
+
+    {"_comment": "── Spanish (native) — Priority 1 for synonym seeding ─────────────"},
+    {
+      "name": "Recetas Nestlé México",
+      "url": "https://www.recetasnestle.com.mx",
+      "sitemap": "https://www.recetasnestle.com.mx/sitemap.xml",
+      "enabled": true,
+      "notes": "Native Spanish. Huge ingredient coverage — staple Mexican/Latin ingredients."
+    },
+    {
+      "name": "KiwiLimón",
+      "url": "https://www.kiwilimon.com",
+      "sitemap": "https://www.kiwilimon.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Native Spanish. Mexican recipes, Schema.org markup, large site."
+    },
+    {
+      "name": "Recetas Gratis",
+      "url": "https://www.recetasgratis.net",
+      "sitemap": "https://www.recetasgratis.net/sitemap.xml",
+      "enabled": true,
+      "notes": "Native Spanish (Spain + LATAM). Broad cuisine coverage."
+    },
+
+    {"_comment": "── German — Priority 1 for synonym seeding ───────────────────────"},
+    {
+      "name": "Chefkoch",
+      "url": "https://www.chefkoch.de",
+      "sitemap": "https://www.chefkoch.de/sitemap.xml",
+      "enabled": true,
+      "notes": "Largest German recipe site. Native German. Essential for DE synonyms."
+    },
+    {
+      "name": "Lecker",
+      "url": "https://www.lecker.de",
+      "sitemap": "https://www.lecker.de/sitemap.xml",
+      "enabled": true,
+      "notes": "Major German recipe site. Native German."
+    },
+
+    {"_comment": "── Italian — Priority 1 for synonym seeding ──────────────────────"},
+    {
+      "name": "GialloZafferano",
+      "url": "https://www.giallozafferano.it",
+      "sitemap": "https://www.giallozafferano.it/sitemap.xml",
+      "enabled": true,
+      "notes": "Italy's largest recipe site. Native Italian. Essential for IT synonyms."
+    },
+    {
+      "name": "Cucchiaio d'Argento",
+      "url": "https://www.cucchiaio.it",
+      "sitemap": "https://www.cucchiaio.it/sitemap.xml",
+      "enabled": true,
+      "notes": "Major Italian recipe site. Native Italian."
+    },
+
+    {"_comment": "── Portuguese — Priority 1 for synonym seeding ───────────────────"},
+    {
+      "name": "TudoGostoso",
+      "url": "https://www.tudogostoso.com.br",
+      "sitemap": "https://www.tudogostoso.com.br/sitemap.xml",
+      "enabled": true,
+      "notes": "Brazil's largest recipe site. Native Portuguese. Essential for PT synonyms."
+    },
+    {
+      "name": "Receitas de Minuto",
+      "url": "https://www.receitasdeminuto.com",
+      "sitemap": "https://www.receitasdeminuto.com/sitemap.xml",
+      "enabled": true,
+      "notes": "Brazilian Portuguese recipes, Schema.org markup."
+    },
+
+    {"_comment": "── Indonesian/Malay — Priority 1 for synonym seeding ────────────"},
+    {
+      "name": "Resep Koki",
+      "url": "https://resepkoki.id",
+      "sitemap": "https://resepkoki.id/sitemap.xml",
+      "enabled": true,
+      "notes": "Indonesian recipes. Native Bahasa Indonesia. Good Schema.org markup."
+    },
+    {
+      "name": "Yummy",
+      "url": "https://www.yummy.co.id",
+      "sitemap": "https://www.yummy.co.id/sitemap.xml",
+      "enabled": true,
+      "notes": "Indonesian recipes. Large site, native Bahasa Indonesia."
+    },
+
+    {"_comment": "── English (existing) ────────────────────────────────────────────"},
     {
       "name": "AllRecipes",
       "url": "https://www.allrecipes.com",
