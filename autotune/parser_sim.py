@@ -76,15 +76,36 @@ def load_modifiers() -> list:
 _PAREN_RE = re.compile(r'\([^)]*\)')
 _DIGITS_LEAD_RE = re.compile(r'^\d+\s*')
 _MULTI_SPACE_RE = re.compile(r'\s+')
-_FRACTION_RE = re.compile(r'^\d+[/⁄]\d+\s*')
+_FRACTION_RE = re.compile(r'^(\d+[/⁄]\d+|[½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞])\s*')
+_LEADING_OF_RE = re.compile(r'^of\s+', re.IGNORECASE)
+_TRAILING_PAREN_RE = re.compile(r'\s*\)\s*$')
+_RANGE_TAIL_RE = re.compile(r'^[-–]\d+\s*')   # "-3 " from "2-3 garlic cloves" after digit strip
 _QTY_UNIT_RE = re.compile(
     r'^\s*(\d+[\d./⁄]*\s*)?(cup|cups|tbsp|tbs|tablespoon|tablespoons|tsp|teaspoon|teaspoons|'
-    r'oz|ounce|ounces|lb|lbs|pound|pounds|g|gram|grams|kg|kilogram|kilograms|'
-    r'ml|milliliter|milliliters|l|liter|liters|fl\.?\s*oz|'
-    r'pinch|dash|handful|bunch|clove|cloves|slice|slices|piece|pieces|'
+    r'oz|ounce|ounces|lb|lbs|pound|pounds|g|gram|grams|gramm|kg|kilogram|kilograms|'
+    r'ml|milliliter|milliliters|milliliter|l|liter|liters|fl\.?\s*oz|'
+    r'pinch|pinches|dash|dashes|handful|handfuls|handvoll|'
+    r'bunch|bunches|bund|clove|cloves|slice|slices|piece|pieces|pcs|'
     r'can|cans|package|packages|pkg|bag|bags|box|boxes|jar|jars|'
     r'sprig|sprigs|stalk|stalks|head|heads|ear|ears|sheet|sheets|'
-    r'large|medium|small|whole)\b\s*',
+    # German
+    r'el|tl|prisen|prise|msp|esslöffel|essl|teelöffel|teel|'
+    r'tasse|tassen|scheibe|scheiben|zehe|zehen|stück|stk|'
+    r'packung|pk|dose|dosen|flasche|flaschen|gläser|'
+    # Spanish
+    r'taza|tazas|cucharada|cucharadas|cucharadita|cucharaditas|cdta|cda|'
+    r'pizca|pizcas|diente|dientes|rebanada|rebanadas|trozo|trozos|'
+    r'lata|latas|manojo|manojos|'
+    # French
+    r'cuillère|cuillères|càs|càc|verre|verres|pincée|pincées|'
+    r'gousse|gousses|tranche|tranches|boîte|boîtes|'
+    # Italian
+    r'cucchiaio|cucchiai|cucchiaino|cucchiaini|tazzina|tazzine|'
+    r'pizzico|spicchio|spicchi|fetta|fette|lattina|lattine|mazzetto|mazzetti|'
+    # Portuguese/Brazilian
+    r'colher|colheres|xícara|xícaras|pitada|pitadas|dente|dentes|'
+    r'fatia|fatias|maço|maços|'
+    r'large|medium|small|whole|inch|inches|cm)\b\s*',
     re.IGNORECASE
 )
 
@@ -93,15 +114,26 @@ def clean_name(raw: str, modifiers: set) -> str:
     """Mirror of NutritionParser.kt cleanName()."""
     # Lowercase
     s = raw.lower()
+    # Normalize curly quotes/apostrophes to ASCII equivalents
+    s = s.replace('’', "'").replace('‘', "'").replace('“', '"').replace('”', '"')
     # Strip parenthetical notes
     s = _PAREN_RE.sub('', s)
+    # Strip orphaned trailing )
+    s = _TRAILING_PAREN_RE.sub('', s)
     # Split on comma, take first part
     s = s.split(',')[0]
     # Strip leading quantity + unit
     s = _QTY_UNIT_RE.sub('', s)
+    # Strip leading "of " (artifact from "2 cups of flour" after unit stripping)
+    s = _LEADING_OF_RE.sub('', s)
     # Strip leading fractions / digits
     s = _FRACTION_RE.sub('', s)
+    # Second unit pass: ½ cup butter → fraction strips "½" → "cup butter" → strip "cup"
+    s = _QTY_UNIT_RE.sub('', s)
+    s = _LEADING_OF_RE.sub('', s)
     s = _DIGITS_LEAD_RE.sub('', s)
+    # Strip range tail: "2-3 garlic" → digits strip "2" → "-3 garlic" → strip "-3"
+    s = _RANGE_TAIL_RE.sub('', s)
     # Tokenize, remove modifiers and duplicates
     tokens = _MULTI_SPACE_RE.split(s.strip())
     seen: set = set()
@@ -130,8 +162,23 @@ _TO_TASTE_RES = [
 _SKIP_RES = [
     re.compile(r'as\s+needed', re.I),
     re.compile(r'^water$', re.I),
-    re.compile(r'^salt\s+and\s+pepper$', re.I),
+    re.compile(r'^salt\s+and\s+pepper', re.I),   # "salt and pepper" / "salt and pepper to taste"
+    re.compile(r'^salt\s+&\s+pepper', re.I),
     re.compile(r'^optional$', re.I),
+    re.compile(r'^to\s+taste$', re.I),
+    re.compile(r'^of$', re.I),                    # stray "of" after stripping
+    re.compile(r'^c$', re.I),                     # stray "c" (abbreviation artifact)
+    re.compile(r'^ice$', re.I),                   # "ice" — not nutritionally meaningful
+    re.compile(r'^boiling', re.I),                # "boiling water" etc.
+    re.compile(r'^salt\s+and\s+black\s+pepper', re.I),
+    re.compile(r'^salt\s+pepper', re.I),
+    re.compile(r'^salt\s*/\s*pepper', re.I),
+    re.compile(r'^hot$', re.I),                   # stray "hot" (from "hot sauce", incomplete parse)
+    re.compile(r'^stock$', re.I),                 # stray "stock" (too generic)
+    re.compile(r'^half\s+and$', re.I),            # fragment of "half and half" quantity
+    re.compile(r'^kosher\s+salt\s+and', re.I),    # "kosher salt and black pepper"
+    re.compile(r'^\d+[\d./]+\s*(cups?|tbsp|tsp|oz)$', re.I),  # bare quantity strings
+    re.compile(r'^½\s*(cups?|tbsp|tsp|oz)?$', re.I),   # "½ cups" as bare measurement
 ]
 
 def _strip_to_taste(s: str) -> str:
@@ -195,6 +242,9 @@ def resolve(name: str, db: dict, synonyms: dict, modifiers: set,
     # Falls back to regex clean_name() if NLP unavailable or returns empty.
     nlp_name = nlp_extract_name(raw)
     if nlp_name:
+        # NLP sometimes leaves a leading unit token (e.g. "cup butter", "tsp salt") — strip it
+        nlp_name = _QTY_UNIT_RE.sub('', nlp_name).strip()
+        nlp_name = _LEADING_OF_RE.sub('', nlp_name).strip()
         # Strip any remaining modifiers from NLP output
         tokens = _MULTI_SPACE_RE.split(nlp_name.strip())
         cleaned = ' '.join(t for t in tokens if t and t not in modifiers).strip()
@@ -203,6 +253,10 @@ def resolve(name: str, db: dict, synonyms: dict, modifiers: set,
 
     if not cleaned:
         return 'SKIP', '', 'empty_after_clean'
+
+    # Skip compound noise strings that aren't meaningful ingredients
+    if _should_skip(cleaned):
+        return 'SKIP', '', 'skip_cleaned'
 
     # Stage 1: exact DB match
     if cleaned in db:
