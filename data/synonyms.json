@@ -4929,10 +4929,10 @@
   "apf": "all purpose flour",
   "apf/cf": "all purpose flour",
   "zucker": "sugar",
-  "brauner zucker": "brown sugar",
+  "brauner zucker": "sugar",
   "puderzucker": "powdered sugar",
   "backkakao": "cocoa powder",
-  "trockenhefe": "leavening agents yeast baker's active dry",
+  "trockenhefe": "yeast",
   "eier": "egg",
   "zartbitterschokolade": "dark chocolate",
   "frischkäse doppelrahmstufe": "cream cheese",
@@ -4967,5 +4967,14 @@
   "vanillezucker": "vanilla sugar",
   "zitronensaft": "lemon juice",
   "zitrone": "lemon",
-  "zimt": "cinnamon"
+  "zimt": "cinnamon",
+  "hefe": "yeast",
+  "rohrzucker": "sugar",
+  "instant-espressopulver": "coffee",
+  "espressopulver": "coffee",
+  "instantkaffee": "coffee",
+  "doppelrahmfrischkäse": "cream cheese",
+  "heisses wasser": "water",
+  "heißes wasser": "water",
+  "warmes wasser": "water"
 }
