@@ -44,6 +44,7 @@ DATA_DIR_ROOT = REPO_ROOT / "data"   # cravebox-nutrition/data/
 DB_FILE = DATA_DIR_ROOT / "nutrition_db.json"
 SYNONYMS_FILE = DATA_DIR_ROOT / "synonyms.json"
 MODIFIERS_FILE = DATA_DIR_ROOT / "modifiers.json"
+UNITS_FILE = DATA_DIR_ROOT / "units.json"
 DEFAULT_INPUT = SCRIPT_DIR / "crawled_ingredients.json"
 DEFAULT_OUT = SCRIPT_DIR / "parse_report.json"
 
@@ -70,6 +71,21 @@ def load_modifiers() -> list:
     return []
 
 
+def load_units() -> list:
+    """Load known_units list from units.json. Returns list of unit strings sorted longest-first."""
+    if UNITS_FILE.exists():
+        try:
+            data = json.loads(UNITS_FILE.read_text(encoding="utf-8"))
+            units = data.get("known_units", [])
+            if units:
+                return sorted(units, key=len, reverse=True)
+        except Exception as e:
+            print(f"  WARNING: units.json unreadable ({e}) — using hardcoded fallback.")
+    else:
+        print(f"  WARNING: units.json not found at {UNITS_FILE} — using hardcoded fallback.")
+    return []
+
+
 # ── cleanName — mirrors NutritionParser.kt cleanName() ───────────────────────
 
 # Patterns to strip (mirrors NutritionParser.kt)
@@ -80,34 +96,46 @@ _FRACTION_RE = re.compile(r'^(\d+[/⁄]\d+|[½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜
 _LEADING_OF_RE = re.compile(r'^of\s+', re.IGNORECASE)
 _TRAILING_PAREN_RE = re.compile(r'\s*\)\s*$')
 _RANGE_TAIL_RE = re.compile(r'^[-–]\d+\s*')   # "-3 " from "2-3 garlic cloves" after digit strip
-_QTY_UNIT_RE = re.compile(
-    r'^\s*(\d+[\d./⁄]*\s*)?(cup|cups|tbsp|tbs|tablespoon|tablespoons|tsp|teaspoon|teaspoons|'
+
+# _QTY_UNIT_RE is built dynamically from units.json so the sim shares one source of truth
+# with the app.  A hardcoded fallback fires only when units.json is missing.
+_HARDCODED_UNITS_ALT = (
+    r'cup|cups|tbsp|tbs|tablespoon|tablespoons|tsp|teaspoon|teaspoons|'
     r'oz|ounce|ounces|lb|lbs|pound|pounds|g|gram|grams|gramm|kg|kilogram|kilograms|'
-    r'ml|milliliter|milliliters|milliliter|l|liter|liters|fl\.?\s*oz|'
+    r'ml|milliliter|milliliters|l|liter|liters|fl\.?\s*oz|'
     r'pinch|pinches|dash|dashes|handful|handfuls|handvoll|'
     r'bunch|bunches|bund|clove|cloves|slice|slices|piece|pieces|pcs|'
     r'can|cans|package|packages|pkg|bag|bags|box|boxes|jar|jars|'
     r'sprig|sprigs|stalk|stalks|head|heads|ear|ears|sheet|sheets|'
-    # German
     r'el|tl|prisen|prise|msp|esslöffel|essl|teelöffel|teel|'
     r'tasse|tassen|scheibe|scheiben|zehe|zehen|stück|stk|'
     r'packung|pk|dose|dosen|flasche|flaschen|gläser|'
-    # Spanish
     r'taza|tazas|cucharada|cucharadas|cucharadita|cucharaditas|cdta|cda|'
     r'pizca|pizcas|diente|dientes|rebanada|rebanadas|trozo|trozos|'
     r'lata|latas|manojo|manojos|'
-    # French
     r'cuillère|cuillères|càs|càc|verre|verres|pincée|pincées|'
     r'gousse|gousses|tranche|tranches|boîte|boîtes|'
-    # Italian
     r'cucchiaio|cucchiai|cucchiaino|cucchiaini|tazzina|tazzine|'
     r'pizzico|spicchio|spicchi|fetta|fette|lattina|lattine|mazzetto|mazzetti|'
-    # Portuguese/Brazilian
     r'colher|colheres|xícara|xícaras|pitada|pitadas|dente|dentes|'
     r'fatia|fatias|maço|maços|'
-    r'large|medium|small|whole|inch|inches|cm)\b\s*',
-    re.IGNORECASE
+    r'large|medium|small|whole|inch|inches|cm'
 )
+
+def _build_qty_unit_re() -> re.Pattern:
+    """Build _QTY_UNIT_RE from units.json (longest-first), with hardcoded fallback."""
+    _EXTRA = r'large|medium|small|whole|inch|inches|cm'  # cleanName-only; not real units
+    units = load_units()
+    if units:
+        alt = '|'.join(re.escape(u) for u in units) + '|' + _EXTRA
+    else:
+        alt = _HARDCODED_UNITS_ALT
+    return re.compile(
+        r'^\s*(\d+[\d./⁄]*\s*)?(' + alt + r')\b\s*',
+        re.IGNORECASE
+    )
+
+_QTY_UNIT_RE = _build_qty_unit_re()
 
 
 def clean_name(raw: str, modifiers: set) -> str:
