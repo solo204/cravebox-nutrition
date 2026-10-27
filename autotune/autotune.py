@@ -397,11 +397,27 @@ def apply_approved_synonym_proposals(db_path: Path, synonyms_path: Path,
 # ── Version manifest ──────────────────────────────────────────────────────────
 
 def bump_version(db_path: Path, synonyms_path: Path, version_path: Path, dry_run: bool) -> dict:
-    """Compute SHA-256 hashes and bump the version manifest."""
-    # Load existing version
+    """Compute SHA-256 hashes and bump the version manifest with per-file version tracking."""
+    # Load existing manifest to carry over unchanged per-file versions
+    old_version = "1.0.0"
+    prev_db_version       = "0"
+    prev_synonyms_version = "0"
+    prev_units_version    = "0"
+    prev_db_sha256        = ""
+    prev_synonyms_sha256  = ""
+    prev_units_sha256     = ""
+    min_app_version       = "3.4"
+
     if version_path.exists():
         version_data = json.loads(version_path.read_text(encoding="utf-8"))
-        old_version = version_data.get("version", "1.0.0")
+        old_version           = version_data.get("version", "1.0.0")
+        prev_db_version       = version_data.get("db_version",       old_version)
+        prev_synonyms_version = version_data.get("synonyms_version", old_version)
+        prev_units_version    = version_data.get("units_version",    old_version)
+        prev_db_sha256        = version_data.get("db_sha256",        "")
+        prev_synonyms_sha256  = version_data.get("synonyms_sha256",  "")
+        prev_units_sha256     = version_data.get("units_sha256",     "")
+        min_app_version       = version_data.get("min_app_version",  "3.4")
         parts = old_version.split(".")
         try:
             major, minor, patch = int(parts[0]), int(parts[1]), int(parts[2])
@@ -412,30 +428,46 @@ def bump_version(db_path: Path, synonyms_path: Path, version_path: Path, dry_run
     else:
         new_version = "1.0.0"
 
-    db_bytes = db_path.read_bytes()
-    db = json.loads(db_bytes)
-    # Hash raw bytes so the stored SHA matches what any tool reading the file will see,
-    # regardless of platform line-ending normalisation (avoids \r\n vs \n mismatch on Windows).
+    # Compute SHA-256 for each file; carry over previous value if file unchanged
+    db_bytes  = db_path.read_bytes()
+    db        = json.loads(db_bytes)
     db_sha256 = hashlib.sha256(db_bytes).hexdigest()
+    db_version = new_version if db_sha256 != prev_db_sha256 else prev_db_version
 
-    synonyms_sha256 = ""
+    synonyms_sha256   = ""
+    synonyms_version  = prev_synonyms_version
     if synonyms_path.exists():
-        syn_bytes = synonyms_path.read_bytes()
-        synonyms_sha256 = hashlib.sha256(syn_bytes).hexdigest()
+        syn_bytes        = synonyms_path.read_bytes()
+        synonyms_sha256  = hashlib.sha256(syn_bytes).hexdigest()
+        synonyms_version = new_version if synonyms_sha256 != prev_synonyms_sha256 else prev_synonyms_version
+
+    units_path   = version_path.parent / "units.json"
+    units_sha256  = ""
+    units_version = prev_units_version
+    if units_path.exists():
+        units_bytes  = units_path.read_bytes()
+        units_sha256 = hashlib.sha256(units_bytes).hexdigest()
+        units_version = new_version if units_sha256 != prev_units_sha256 else prev_units_version
 
     manifest = {
-        "version": new_version,
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "entry_count": len(db),
-        "db_sha256": db_sha256,
-        "synonyms_sha256": synonyms_sha256,
-        "min_app_version": "3.4",
+        "version":          new_version,
+        "updated_at":       datetime.now(timezone.utc).isoformat(),
+        "entry_count":      len(db),
+        "db_version":       db_version,
+        "db_sha256":        db_sha256,
+        "synonyms_version": synonyms_version,
+        "synonyms_sha256":  synonyms_sha256,
+        "units_version":    units_version,
+        "units_sha256":     units_sha256,
+        "min_app_version":  min_app_version,
     }
 
     if not dry_run:
         version_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
-        print(f"  Version bumped: {old_version if version_path.exists() else '(new)'} → {new_version}")
-        print(f"  DB entries: {len(db):,}  |  SHA-256: {db_sha256[:16]}...")
+        print(f"  Version bumped: {old_version} → {new_version}")
+        print(f"  DB:       {len(db):,} entries | v{db_version} | SHA: {db_sha256[:16]}...")
+        print(f"  Synonyms: v{synonyms_version} | SHA: {synonyms_sha256[:16] if synonyms_sha256 else 'n/a'}...")
+        print(f"  Units:    v{units_version} | SHA: {units_sha256[:16] if units_sha256 else 'n/a'}...")
     else:
         print(f"  [DRY RUN] Would bump version to {new_version}, {len(db):,} entries")
 
