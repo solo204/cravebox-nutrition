@@ -500,8 +500,9 @@ def apply_blocklist(db_path: Path, synonyms_path: Path,
                 db[new_key] = db.pop(old_key)
                 # update synonyms that pointed to the old key
                 synonyms = {a: (new_key if c == old_key else c) for a, c in synonyms.items()}
-                # remove the old_key synonym if it now self-loops
-                synonyms = {a: c for a, c in synonyms.items() if a != c}
+                # remove only the specific synonym that now self-loops (old_key → new_key became new_key → new_key)
+                if old_key in synonyms and synonyms[old_key] == new_key:
+                    del synonyms[old_key]
             print(f"  RENAME: {old_key!r} → {new_key!r}")
             renamed += 1
         else:
