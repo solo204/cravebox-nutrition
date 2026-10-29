@@ -1,11 +1,11 @@
 {
-  "version": "1.0.64",
-  "updated_at": "2026-10-27T23:29:08.192936+00:00",
-  "entry_count": 7608,
-  "db_version": "1.0.63",
-  "db_sha256": "7618bd3845362fc10e32eb65e91c7a7beee1ef0856dc5d1b2e48c2763f81419c",
-  "synonyms_version": "1.0.63",
-  "synonyms_sha256": "e7a5c68c7a73934f4dd6a644b0dec539d726a821c08e7c236881682d2b76f34b",
+  "version": "1.0.65",
+  "updated_at": "2026-10-29T19:31:13.362585+00:00",
+  "entry_count": 7611,
+  "db_version": "1.0.65",
+  "db_sha256": "c72e5b2e36468d1efa2e6781e2e0f8c1b8f1af4cbc602700106c342a2bc85d4f",
+  "synonyms_version": "1.0.65",
+  "synonyms_sha256": "0e6f5ded7b528eaaee5db0c0b5698101c9a0828d0464af58834bd687505a41d4",
   "units_version": "1.0.64",
   "units_sha256": "182f18774c1dde6f0d509beac89281c05b1f687e2502de3f2086dbe85169a1c7",
   "min_app_version": "3.8.4"
