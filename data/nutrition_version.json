@@ -1,14 +1,11 @@
 {
-  "version": "1.0.68",
-  "updated_at": "2026-10-29T20:13:17.270121+00:00",
-  "entry_count": 7611,
-  "db_version": "1.0.67",
-  "db_sha256": "00e1e21fb825fc502bc6104f6c8568384a362d28f62afd2d791e20c75643cdf7",
-  "synonyms_version": "1.0.67",
-  "synonyms_sha256": "aa8169a68cf6ea8f3f12839395ade66e1778c1f6fec9598e81ff0dafa4e0a247",
-  "units_version": "1.0.64",
-  "units_sha256": "182f18774c1dde6f0d509beac89281c05b1f687e2502de3f2086dbe85169a1c7",
-  "min_app_version": "3.8.4",
-  "db_entries": 7611,
-  "syn_entries": 5704
+  "version": "1.0.69",
+  "db_version": "1.0.69",
+  "syn_version": "1.0.69",
+  "units_version": "1.0.68",
+  "db_sha256": "33a4f5bc68eceece07f42d532db420ea4f1c230dffb6000aec362b6797008e7e",
+  "synonyms_sha256": "66ee4ef6721372650f9354dd64b74745a541931ab2d211026fdb7e4829e02884",
+  "db_entries": 7622,
+  "syn_entries": 5707,
+  "min_app_version": "3.8.4"
 }
