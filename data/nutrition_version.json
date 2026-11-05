@@ -1,14 +1,14 @@
 {
-  "version": "1.0.70",
-  "updated_at": "2026-11-05T14:21:22.190077+00:00",
-  "entry_count": 7660,
-  "db_version": "1.0.70",
-  "db_sha256": "b721ed9f903bb5d556b7b16c1ec3da0a11f12bfe5a3587f469781e37d06f3be7",
-  "synonyms_version": "1.0.70",
-  "synonyms_sha256": "25548fdc72f384e22dd5bb6721f58f4c322c8737546fcf5d336a9a742d0a7108",
-  "units_version": "1.0.70",
-  "units_sha256": "833f04a8cf84f6e75c69192c98897152db0891fc262c1c3616dbca711ec489ac",
+  "version": "1.0.72",
+  "updated_at": "2026-11-05T16:38:22.453958+00:00",
+  "entry_count": 7659,
+  "db_version": "1.0.72",
+  "db_sha256": "6d43cb3ea3f7f9a30e88109a6c5c7742ea5f0bc42a1f453160fee5e1ba13c60a",
+  "synonyms_version": "1.0.72",
+  "synonyms_sha256": "794d483265a2e5b7ae6683a6b630a0acd5abc7a0c2234da31fe777fc09692b14",
+  "units_version": "1.0.71",
+  "units_sha256": "60edf68d81cbb5961dbd2709602e6def13a9bdfb6ea8db1e3710ddd6b968fede",
   "min_app_version": "3.8.4",
-  "db_entries": 7660,
-  "syn_entries": 5724
+  "db_entries": 7659,
+  "syn_entries": 5731
 }
