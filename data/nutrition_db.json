@@ -17,7 +17,7 @@
     "p": 15.5,
     "sg": 4.2
   },
-  "+ 2 el \u00f6l": {
+  "+ 2 el öl": {
     "c": 77.5,
     "f": 0.0,
     "fb": 5.0,
@@ -314,7 +314,7 @@
     "p": 10.6,
     "sg": 3.8
   },
-  "aj\u00ed amarillo paste": {
+  "ají amarillo paste": {
     "c": 47.8,
     "f": 27.7,
     "fb": 4.8,
@@ -395,7 +395,7 @@
     "p": 15.3,
     "sg": 5.4
   },
-  "ali\u00f1os sauce": {
+  "aliños sauce": {
     "c": 60.5,
     "f": 18.3,
     "fb": 1.0,
@@ -2680,6 +2680,15 @@
     "na": 656,
     "p": 1.44,
     "sg": 0
+  },
+  "bbq seasoning": {
+    "c": 50.0,
+    "f": 0.0,
+    "fb": 16.7,
+    "kcal": 333.0,
+    "na": 9167.0,
+    "p": 16.67,
+    "sg": 16.67
   },
   "bean liquid": {
     "c": 2.8,
@@ -6560,7 +6569,7 @@
     "p": 7.5,
     "sg": 37.5
   },
-  "bird\u2019s eye chillies": {
+  "bird’s eye chillies": {
     "c": 0.0,
     "f": 31.4,
     "fb": 0.0,
@@ -8575,6 +8584,15 @@
     "na": 227.0,
     "p": 7.6,
     "sg": 0.0
+  },
+  "brown splenda": {
+    "c": 91.2,
+    "f": 0.0,
+    "fb": 0.0,
+    "kcal": 336.0,
+    "na": 0.0,
+    "p": 0.0,
+    "sg": 80.3
   },
   "brown sugar": {
     "c": 98.1,
@@ -11627,6 +11645,15 @@
     "p": 1.9,
     "sg": 1.9
   },
+  "caviar substitute": {
+    "c": 23.7,
+    "f": 12.2,
+    "fb": 0.0,
+    "kcal": 248.0,
+    "na": 685.0,
+    "p": 11.5,
+    "sg": 23.7
+  },
   "cavolo nero leaves": {
     "c": 8.3,
     "f": 1.4,
@@ -14525,6 +14552,15 @@
     "p": 23.2,
     "sg": 0
   },
+  "chessman cookies": {
+    "c": 67.1,
+    "f": 13.2,
+    "fb": 0.2,
+    "kcal": 433.0,
+    "na": 300.0,
+    "p": 11.8,
+    "sg": 24.2
+  },
   "chestnuts": {
     "c": 53,
     "f": 2.2,
@@ -16640,7 +16676,7 @@
     "p": 0.8,
     "sg": 2.6
   },
-  "chile de \u00e1rbol": {
+  "chile de árbol": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17873,7 +17909,7 @@
     "p": 22.6,
     "sg": 0
   },
-  "colher de ch\u00e1 cominho": {
+  "colher de chá cominho": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17882,7 +17918,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colher de ch\u00e1 extrato baunilha": {
+  "colher de chá extrato baunilha": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17891,7 +17927,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colher de ch\u00e1 noz moscada": {
+  "colher de chá noz moscada": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17900,7 +17936,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colher de ch\u00e1 sal": {
+  "colher de chá sal": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17909,7 +17945,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colher de ch\u00e1 \u00f3leo": {
+  "colher de chá óleo": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17918,7 +17954,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colher de sopa a\u00e7\u00facar mascavo": {
+  "colher de sopa açúcar mascavo": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17954,7 +17990,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colher de sopa mostarda em gr\u00e3os": {
+  "colher de sopa mostarda em grãos": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -17972,7 +18008,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "colheres de sopa a\u00e7\u00facar mascavo": {
+  "colheres de sopa açúcar mascavo": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21581,7 +21617,7 @@
     "p": 5.4,
     "sg": 0.0
   },
-  "dano\u2019s italiano seasoning": {
+  "dano’s italiano seasoning": {
     "c": 63.5,
     "f": 18.3,
     "fb": 5.0,
@@ -21725,7 +21761,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de am\u00eandoas laminadas": {
+  "de amêndoas laminadas": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21752,7 +21788,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de a\u00e7\u00facar mascavo": {
+  "de açúcar mascavo": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21770,7 +21806,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de ch\u00e1 cominho": {
+  "de chá cominho": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21779,7 +21815,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de ch\u00e1 extrato baunilha": {
+  "de chá extrato baunilha": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21788,7 +21824,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de ch\u00e1 noz moscada": {
+  "de chá noz moscada": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21797,7 +21833,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de ch\u00e1 pimenta vermelha em flocos": {
+  "de chá pimenta vermelha em flocos": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21806,7 +21842,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de ch\u00e1 sal": {
+  "de chá sal": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21815,7 +21851,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de ch\u00e1 \u00f3leo": {
+  "de chá óleo": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21833,7 +21869,7 @@
     "p": 18.1,
     "sg": 2.3
   },
-  "de colher sopa p\u00e1prica": {
+  "de colher sopa páprica": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21860,7 +21896,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de farinha milho branco pr\u00e9 cozida": {
+  "de farinha milho branco pré cozida": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21914,7 +21950,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de miolo ac\u00e9m cortado em cubos": {
+  "de miolo acém cortado em cubos": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21941,7 +21977,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de p\u00eassegos em calda": {
+  "de pêssegos em calda": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21959,7 +21995,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de sementes girass\u00f3l cruas": {
+  "de sementes girassól cruas": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -21977,7 +22013,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de sopa a\u00e7\u00facar mascavo": {
+  "de sopa açúcar mascavo": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -22031,7 +22067,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de sopa mostarda em gr\u00e3os": {
+  "de sopa mostarda em grãos": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -22067,7 +22103,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "de \u00e1gua morna": {
+  "de água morna": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -22148,7 +22184,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "des \u00f6ls der getrockneten tomaten": {
+  "des öls der getrockneten tomaten": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -23948,7 +23984,7 @@
     "p": 21.43,
     "sg": 3.57
   },
-  "farmer\u2019s cheese": {
+  "farmer’s cheese": {
     "c": 0.0,
     "f": 21.43,
     "fb": 0.0,
@@ -24326,7 +24362,7 @@
     "p": 0.0,
     "sg": 80.95
   },
-  "fil\u00e9 powder": {
+  "filé powder": {
     "c": 79.6,
     "f": 0.5,
     "fb": 44.5,
@@ -26801,7 +26837,7 @@
     "p": 12.2,
     "sg": 1.2
   },
-  "frank\u2019s red hot": {
+  "frank’s red hot": {
     "c": 8.8,
     "f": 0.4,
     "fb": 1.5,
@@ -26871,6 +26907,15 @@
     "kcal": 213.0,
     "na": 495.0,
     "p": 7.4,
+    "sg": 0.0
+  },
+  "french's crispy onions": {
+    "c": 42.86,
+    "f": 50.0,
+    "fb": 0.0,
+    "kcal": 643.0,
+    "na": 857.0,
+    "p": 0.0,
     "sg": 0.0
   },
   "fresca": {
@@ -27521,7 +27566,7 @@
     "p": 14.0,
     "sg": 4.0
   },
-  "f\u00fcr das dressing": {
+  "für das dressing": {
     "c": 31.9,
     "f": 26.2,
     "fb": 0.7,
@@ -27530,7 +27575,7 @@
     "p": 0.7,
     "sg": 17.7
   },
-  "f\u00fcr die sauce": {
+  "für die sauce": {
     "c": 60.5,
     "f": 18.3,
     "fb": 1.0,
@@ -28925,6 +28970,15 @@
     "p": 9.6,
     "sg": 23.6
   },
+  "granulated sweetener": {
+    "c": 84.8,
+    "f": 0.0,
+    "fb": 0.6,
+    "kcal": 347.0,
+    "na": 572.0,
+    "p": 2.1,
+    "sg": 4.0
+  },
   "grape": {
     "c": 20.2,
     "f": 0.16,
@@ -30122,7 +30176,7 @@
     "p": 13.33,
     "sg": 3.33
   },
-  "hand voll minzbl\u00e4ttchen": {
+  "hand voll minzblättchen": {
     "c": 16.6,
     "f": 9.1,
     "fb": 0.9,
@@ -31409,7 +31463,7 @@
     "p": 0.74,
     "sg": 0
   },
-  "ice\u2011cold": {
+  "ice‑cold": {
     "c": 0.0,
     "f": 100.0,
     "fb": 0.0,
@@ -31760,7 +31814,7 @@
     "p": 0.0,
     "sg": 0.0
   },
-  "jalape\u00f1o": {
+  "jalapeño": {
     "c": 5.08,
     "f": 0.15,
     "fb": 1.72,
@@ -34379,7 +34433,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "lata de p\u00eassegos em calda": {
+  "lata de pêssegos em calda": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -34910,7 +34964,7 @@
     "p": 12.5,
     "sg": 3.57
   },
-  "liliko\u2019i juice": {
+  "liliko’i juice": {
     "c": 24.1,
     "f": 1.4,
     "fb": 0.1,
@@ -35774,7 +35828,7 @@
     "p": 4.0,
     "sg": 24.4
   },
-  "m&m\u2019s": {
+  "m&m’s": {
     "c": 26.8,
     "f": 6.5,
     "fb": 0.2,
@@ -36187,6 +36241,15 @@
     "na": 4.0,
     "p": 0.2,
     "sg": 38.8
+  },
+  "maraschino cherries juice": {
+    "c": 75.0,
+    "f": 0.0,
+    "fb": 0.0,
+    "kcal": 312.0,
+    "na": 0.0,
+    "p": 0.0,
+    "sg": 37.5
   },
   "margarine": {
     "c": 0.7,
@@ -36610,6 +36673,15 @@
     "na": 457.0,
     "p": 4.4,
     "sg": 54.8
+  },
+  "maruchan ramen noodle blocks": {
+    "c": 60.3,
+    "f": 17.6,
+    "fb": 2.9,
+    "kcal": 440.0,
+    "na": 1860.0,
+    "p": 10.2,
+    "sg": 2.0
   },
   "mary's gone crackers original crackers organic gluten free": {
     "c": 64.3,
@@ -40616,7 +40688,7 @@
     "p": 1.4,
     "sg": 0.0
   },
-  "of green peppercorns \u2013 optional": {
+  "of green peppercorns – optional": {
     "c": 3.5,
     "f": 61.4,
     "fb": 0.0,
@@ -42380,7 +42452,7 @@
     "p": 2.2,
     "sg": 80.7
   },
-  "packets goya saz\u00f3n seasoning": {
+  "packets goya sazón seasoning": {
     "c": 74.7,
     "f": 1.8,
     "fb": 1.8,
@@ -42641,7 +42713,7 @@
     "p": 11.5,
     "sg": 5.3
   },
-  "papas pequeu\u00f1as": {
+  "papas pequeuñas": {
     "c": 32.7,
     "f": 9.2,
     "fb": 1.9,
@@ -45314,7 +45386,7 @@
     "p": 1.1,
     "sg": 2.7
   },
-  "piment\u00f3n rojo asado": {
+  "pimentón rojo asado": {
     "c": 15.5,
     "f": 6.9,
     "fb": 4.7,
@@ -45332,7 +45404,7 @@
     "p": 0.0,
     "sg": 0.0
   },
-  "pimient\u00f3n rojo": {
+  "pimientón rojo": {
     "c": 15.5,
     "f": 6.9,
     "fb": 4.7,
@@ -50849,7 +50921,7 @@
     "p": 1.9,
     "sg": 5.3
   },
-  "red bird\u2019s eye chillies": {
+  "red bird’s eye chillies": {
     "c": 0.0,
     "f": 31.4,
     "fb": 0.0,
@@ -51299,7 +51371,7 @@
     "p": 10.24,
     "sg": 47.17
   },
-  "reese\u2019s pieces candies": {
+  "reese’s pieces candies": {
     "c": 59.9,
     "f": 24.8,
     "fb": 3.0,
@@ -52361,7 +52433,7 @@
     "p": 3.3,
     "sg": 0.0
   },
-  "ros\u00e9 wine": {
+  "rosé wine": {
     "c": 3.8,
     "f": 0.0,
     "fb": 0.0,
@@ -52459,6 +52531,15 @@
     "na": 3.0,
     "p": 0.0,
     "sg": 3.8
+  },
+  "rustler potatoes": {
+    "c": 47.1,
+    "f": 3.1,
+    "fb": 6.3,
+    "kcal": 266.0,
+    "na": 375.0,
+    "p": 12.5,
+    "sg": 9.4
   },
   "rutabaga": {
     "c": 8.6,
@@ -60722,7 +60803,7 @@
     "p": 5.0,
     "sg": 0.0
   },
-  "suco de 1 lim\u00e3o": {
+  "suco de 1 limão": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -61649,6 +61730,15 @@
     "p": 7.2,
     "sg": 0.0
   },
+  "taco sized tortillas": {
+    "c": 63.1,
+    "f": 24.2,
+    "fb": 5.3,
+    "kcal": 480.0,
+    "na": 787.0,
+    "p": 7.9,
+    "sg": 0.0
+  },
   "taco tortillas": {
     "c": 50.0,
     "f": 7.14,
@@ -61685,7 +61775,7 @@
     "p": 0.0,
     "sg": 0.0
   },
-  "taj\u00edn seasoning": {
+  "tajín seasoning": {
     "c": 63.5,
     "f": 18.3,
     "fb": 5.0,
@@ -62378,7 +62468,7 @@
     "p": 5.6,
     "sg": 0.0
   },
-  "tigela de \u00e1gua quase congelada": {
+  "tigela de água quase congelada": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -64979,7 +65069,7 @@
     "p": 4.8,
     "sg": 22.8
   },
-  "vanilleschote oder aus der m\u00fchle": {
+  "vanilleschote oder aus der mühle": {
     "c": 2.5,
     "f": 0.2,
     "fb": 0.0,
@@ -68030,7 +68120,7 @@
     "p": 10,
     "sg": 0
   },
-  "x\u00edcara de castanhas caju picadas": {
+  "xícara de castanhas caju picadas": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -68039,7 +68129,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "x\u00edcara de sementes girass\u00f3l cruas": {
+  "xícara de sementes girassól cruas": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -68048,7 +68138,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "x\u00edcara de vingar vinho tinto": {
+  "xícara de vingar vinho tinto": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -68057,7 +68147,7 @@
     "p": 6.8,
     "sg": 49.7
   },
-  "x\u00edcaras de flocos aveia": {
+  "xícaras de flocos aveia": {
     "c": 55.4,
     "f": 7.3,
     "fb": 0.0,
@@ -68894,7 +68984,7 @@
     "p": 7.0,
     "sg": 21.2
   },
-  "\u20133 hot green chillies": {
+  "–3 hot green chillies": {
     "c": 9.5,
     "f": 0.2,
     "fb": 1.5,
@@ -68903,7 +68993,7 @@
     "p": 2.0,
     "sg": 5.1
   },
-  "\u2153 cup + 1 tbsp double": {
+  "⅓ cup + 1 tbsp double": {
     "c": 17.1,
     "f": 12.7,
     "fb": 0.0,
@@ -68912,7 +69002,7 @@
     "p": 3.6,
     "sg": 17.1
   },
-  "\u2153 cup double": {
+  "⅓ cup double": {
     "c": 64.71,
     "f": 25.88,
     "fb": 3.5,
@@ -68921,7 +69011,7 @@
     "p": 3.53,
     "sg": 47.06
   },
-  "\u2154 cup gochugaru": {
+  "⅔ cup gochugaru": {
     "c": 55.4,
     "f": 30.5,
     "fb": 3.6,
