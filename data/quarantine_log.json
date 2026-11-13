@@ -3,7 +3,7 @@
     "hotdog casings": {
       "reason": "50g carbs per 100g is wrong — collagen/natural casings are not high-carb",
       "quarantined_at": "2026-10-22",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 279.0,
         "p": 9.8,
@@ -17,7 +17,7 @@
     "rosé sauce": {
       "reason": "Too vague — autotune maps to aliños sauce values (na=3200mg, sg=10.3). Dropped manually.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 438.0,
         "p": 7.7,
@@ -31,7 +31,7 @@
     "leftover rosé sauce": {
       "reason": "Overly specific leftover key, same bad values as rosé sauce.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 438.0,
         "p": 7.7,
@@ -45,7 +45,7 @@
     "sauces": {
       "reason": "Too generic — autotune assigns arbitrary sauce values.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 141.0,
         "p": 0.0,
@@ -59,7 +59,7 @@
     "seasoning mixture": {
       "reason": "Too generic — no meaningful nutrition data possible.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 125.0,
         "p": 24.11,
@@ -73,7 +73,7 @@
     "seasoning powder": {
       "reason": "Too generic — no meaningful nutrition data possible.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 250.0,
         "p": 3.7,
@@ -87,7 +87,7 @@
     "magic sauce": {
       "reason": "Vague recipe-specific sauce name, garbage values (sg=47.1).",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 609.0,
         "p": 2.9,
@@ -101,7 +101,7 @@
     "oreos and for topping": {
       "reason": "Measurement fragment key, not an ingredient name. Use oreo crumbs instead.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 476.0,
         "p": 4.8,
@@ -115,7 +115,7 @@
     "active and bubbly sourdough starter": {
       "reason": "Overly specific key + wrong values (p=40.4g protein). Use sourdough starter.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 325.0,
         "p": 40.4,
@@ -129,7 +129,7 @@
     "everything but the bagel seasoning": {
       "reason": "Missing all macros (p/c/f=0), only na=5900. Incomplete data.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 400.0,
         "p": 0.0,
@@ -143,7 +143,7 @@
     "low calorie tortillas": {
       "reason": "f=19.2g fat — not low calorie. Autotune data is wrong.",
       "quarantined_at": "2026-11-05",
-      "last_seen_at": "2026-11-12T21:32:07+00:00",
+      "last_seen_at": "2026-11-13T20:53:52+00:00",
       "last_seen_values": {
         "kcal": 231.0,
         "p": 0.3,
