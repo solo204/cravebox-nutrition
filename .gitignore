@@ -13,10 +13,14 @@ autotune/autotune_summary.json
 
 # USDA / GroceryDB raw data files (large, download locally)
 autotune/data/usda_sr_legacy.csv
+autotune/data/usda_compact.json
 autotune/data/food_nutrient.csv
 autotune/data/nutrient.csv
 autotune/data/grocerydb.csv
 autotune/data/.usda_cache_key
+
+# Autotune training data (large, never commit)
+data/train.json
 
 # RecipeNLG dataset (~900 MB — never commit, download via download_recipenlg.py)
 autotune/data/recipenlg_gathered.parquet
