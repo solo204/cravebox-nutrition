@@ -29211,13 +29211,11 @@
     "sg": 4.0
   },
   "grape": {
-    "c": 20.2,
-    "f": 0.16,
-    "fb": 0,
-    "kcal": 86,
-    "na": 7,
-    "p": 0.91,
-    "sg": 15.5
+    "kcal": 69,
+    "p": 0.7,
+    "f": 0.2,
+    "c": 18.1,
+    "fb": 0.9
   },
   "grape juice canned or bottled unsweetened with added ascorbic acid": {
     "c": 14.8,
